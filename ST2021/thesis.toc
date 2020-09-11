@@ -1,0 +1,9 @@
+\babel@toc {english}{}
+\contentsline {chapter}{Abstract}{iii}% 
+\contentsline {chapter}{Acknowledgements}{iv}% 
+\contentsline {chapter}{Main Text}{1}% 
+\contentsline {section}{Introduction }{1}% 
+\contentsline {section}{Methods }{2}% 
+\contentsline {section}{Results }{3}% 
+\contentsline {section}{Discussion }{4}% 
+\contentsline {section}{Conclusions }{5}% 
