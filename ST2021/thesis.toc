@@ -1,6 +1,9 @@
 \babel@toc {english}{}
 \contentsline {chapter}{Abstract}{iii}% 
 \contentsline {chapter}{Acknowledgements}{iv}% 
+\contentsline {chapter}{Contents}{v}% 
+\contentsline {chapter}{List of Figures}{vi}% 
+\contentsline {chapter}{List of Tables}{vii}% 
 \contentsline {chapter}{Main Text}{1}% 
 \contentsline {section}{Introduction }{1}% 
 \contentsline {section}{Methods }{2}% 
