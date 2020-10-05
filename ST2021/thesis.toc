@@ -1,7 +1,6 @@
 \babel@toc {english}{}
 \contentsline {chapter}{Abstract}{iii}% 
 \contentsline {chapter}{Acknowledgements}{iv}% 
-\contentsline {chapter}{Contents}{v}% 
 \contentsline {chapter}{List of Figures}{vi}% 
 \contentsline {chapter}{List of Tables}{vii}% 
 \contentsline {chapter}{Main Text}{1}% 
@@ -10,3 +9,4 @@
 \contentsline {section}{Results }{3}% 
 \contentsline {section}{Discussion }{4}% 
 \contentsline {section}{Conclusions }{5}% 
+\contentsline {chapter}{References}{6}% 
