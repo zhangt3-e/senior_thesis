@@ -80,7 +80,15 @@ Your Signature %%Sign here
 % \input{Histogram.tex}
 
 \section{Methods \label{sec:methods}}
-I shall define the following terms, $P(t)$ is the term to define a precipitation event, which consists of precipitation that has fallen over a time period. The precipitation event has $e_i$, a continuous set of non-zeros, flanked left and right by 0s. The minimum duration in order to define a precipitation event is $E_j$, where $j$ is the minimum duration in minutes. Furthermore we can define a non-precipitation event $N(t)$, which has a continuous set of zeros, $z_i$, flanked left and right by non-zero terms. A minimum duration for a non-precipitation event is $F_k$, where $k$ is the minimum duration in minute. One more term to define is intensity, which for a precipitation event is the total amount of precipitation divided by the duration of the event, which will be denoted as $I$.
+I shall define the following terms, $E_j^\tau $ is the term to define a precipitation event, which consists of precipitation that has fallen over a time period. The precipitation event has $e_i$, a continuous set of non-zeros precipitation, flanked left and right by 0s. The minimum duration in order to define a precipitation event is $\tau$, which is the minimum duration in minutes. Furthermore we can define a non-precipitation event $N_k^{\tau_1}$, which has a continuous set of zeros, $z_i$, flanked left and right by non-zero terms. A minimum duration for a non-precipitation event is $\tau_1$, which is the minimum duration in minutes. One more term to define is intensity, which for a precipitation event is the total amount of precipitation divided by the duration of the event, which will be denoted as $I_j = \frac{A_j}{d_j}$, in which $A_j = \int P(t) dt$ gives us the total precipitation of a precipitation event. 
+\\ 
+For further analysis, breaking the year down into seasons since different seasons will have different characteristics with regards to precipitation. I will define the seasons as follows: Winter will be December, January, and February. Spring will be March, April, and May. Summer is June, July, and August. Fall is September, October, November. To make sure that we can maintain temporal continuity, December will be pulled from the previous year, so for 2019 Winter, we take December from 2018. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Figures/More_detail_precip_2019.png}
+	\caption{\label{Precipitation histogram for 2019 seasons} Distribution of Precipitation duration in the 2019 year with a break down by seasons. The maximum precipitation represented here is the 98th percentile precipitation duration of the year.  The minimum acceptable duration, $E_j$ is $E_1$, which is one minute.  }
+\end{figure}
+
 \section{Results \label{sec:results}}
 
 
