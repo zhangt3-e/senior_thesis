@@ -7,6 +7,7 @@
 \newcommand{\ga}{\gtrsim}
 \newcommand{\Lpot}{(L+1)^2}
 \newcommand{\WS}{^{\mathrm{WS}}}
+\newcommand{\fracd}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}} 
 
 %--Format the section headers
 
@@ -81,40 +82,71 @@ Tyrone Zhang %%Sign here
 
 \section{Methods \label{sec:methods}}
 
-I shall define the following terms, $E_j^\tau $ is the term to define
-a precipitation event, which consists of precipitation that has fallen
-over a time period. The precipitation event has $e_i$, a continuous
-set of non-zeros precipitation, flanked left and right by 0s. The
-minimum duration in order to define a precipitation event is $\tau$,
-which is the minimum duration in minutes. Furthermore we can define a
-non-precipitation event $N_k^{\tau_1}$, which has a continuous set of
-zeros, $z_i$, flanked left and right by non-zero terms. A minimum
-duration for a non-precipitation event is $\tau_1$, which is the
-minimum duration in minutes. One more term to define is intensity,
-which for a precipitation event is the total amount of precipitation
-divided by the duration of the event, which will be denoted as $I_j =
-\frac{A_j}{d_j}$, in which $A_j = \int P(t) dt$ gives us the total
-precipitation of a precipitation event.  \\ For further analysis,
-breaking the year down into seasons since different seasons will have
-different characteristics with regards to precipitation. I will define
-the seasons as follows: Winter will be December, January, and
-February. Spring will be March, April, and May. Summer is June, July,
-and August. Fall is September, October, November. To make sure that we
-can maintain temporal continuity, December will be pulled from the
-previous year, so for 2019 Winter, we take December from 2018. 
+I shall define the following terms. The time series of
+\textbf{precipitation} as recorded by the instrument is denoted $e_i$,
+where $i$ indexes the measurement intervals, each 60~s long. I define
+a precipitation \textbf{event} $E_j^\tau $ as a sequence of
+\textbf{duration} $d_j>\tau$ containing contiguous nonzero
+precipitation measurements $e_i>0$, flanked left and right by zeros,
+$e_i=0$, and where $\tau$ is in minutes.
 
-Figure~(\ref{p2019}).
+Furthermore, I define a precipitation \textbf{non-event} $N_j^\tau$,
+  as having a contiguous set of zeros, $e_i=0$, whose combined duration
+  exceeds $\tau$, flanked left and right by non-zero values, $e_i=0$.
 
-\begin{figure}[h]
+One more term to define is \textbf{precipitation intensity}, which for
+a precipitation event $E_j^\tau$ is the total amount of precipitation
+divided by its duration, i.e., 
+\begin{equation}
+I_j^\tau = \fracd{\sum_i e_i }{d_j} ,
+\quad
+\mbox{for}\,\,\,\, i\,\,\,\, \mbox{belonging to the event}\,\,\,\, E_j^\tau
+.
+\end{equation}
+
+
+For further analysis, breaking the year down into seasons since
+different seasons will have different characteristics with regards to
+precipitation. I will define the seasons as follows: Winter will be
+December, January, and February. ``Winter'' of a certain year contains
+December of the previous year.  Spring will be March, April, and
+May. Summer is June, July, and August. Fall is September, October,
+November.
+
+Figure~\ref{p2019} shows the distribution of durations of XXXX
+precipitation events $E_j^1$, i.e. $E_j^\tau$ where $\tau=1$~min for
+the year 2019, broken down by season. I quote an exponential fit to
+the frequency-duration histograms for all YYYY events $E_j^2$,
+i.e. $E_j^\tau$ where $\tau=2$~min.
+
+\begin{figure}[t]
   \centering
-  \includegraphics[width=0.8\textwidth]{Figures/More_detail_precip_2019.png}
-  \caption[Precipitation histogram for 2019 seasons]{\label{p2019}
-    Distribution of Precipitation duration in the 2019 year with a
-    break down by seasons. The maximum precipitation represented here
-    is the 98th percentile precipitation duration of the year.  The
-    minimum acceptable duration, $E_j$ is $E_1$, which is one minute.
-  }
+  \includegraphics[width=0.675\textwidth]{Figures/More_detail_precip_2019.png}
+  \caption[Precipitation histogram for 2019 broken down by season]{\label{p2019}
+    Distribution of precipitation duration in 2019, with a breakdown
+    by seasons. The minimum duration, $\tau=1$~min, and the maximum
+    duration over the data set is XX~min, but the horizontal axis was
+    limited to the 98th percentile of the durations, 42~min, for
+    clarity. Superposed is a least-squares fit of a line in log-log
+    space of duration versus frequency for the entire year, excluding
+    the 1--2~min bin, quoted as the equivalent exponential in this
+    space.}
 \end{figure}
+\begin{figure}[b]
+  \centering
+  \includegraphics[width=0.675\textwidth]{Figures/More_detail_precip_2019.png}
+  \caption[Precipitation histogram for 2018 broken down by season]{\label{p2019}
+    Distribution of precipitation duration in 2018, with a breakdown
+    by seasons. The layout is as in Figure~\ref{p2019}.}
+\end{figure}
+
+\clearpage
+
+Is the exponential different for W/S/S/F? Can you tell the difference?
+Is the exponential different for different years? Can you tell the difference?
+And what summarizes it all.
+
+Table. 
 
 \section{Results \label{sec:results}}
 
