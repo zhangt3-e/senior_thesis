@@ -139,7 +139,7 @@ i.e. $E_j^\tau$ where $\tau=2$~min.
     Distribution of precipitation duration in 2018, with a breakdown
     by seasons. The layout is as in Figure~\ref{p2018}.}
 \end{figure}
-
+	
 \clearpage
 \begin{figure}[t]
 	\centering
@@ -151,24 +151,79 @@ i.e. $E_j^\tau$ where $\tau=2$~min.
 \begin{figure}[b]
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/precip_2020.png}
-	\caption[Precipitation histogram for 2018 broken down by season]{\label{p2020}
+	\caption[Precipitation histogram for 2020 broken down by season]{\label{p2020}
 		Distribution of precipitation duration in 2018, with a breakdown
 		by seasons. The layout is as in Figure~\ref{p2020}.}
 \end{figure}
 
 \clearpage
+Excluding the first interval, which covers the bare minimum precipitation duration necessary, we have an exponential curve fitting the histogram with the following equation: 
+\begin{equation}
+	y = \beta e^{\alpha x} 
+\end{equation}
+	Where $\beta$ is the frequency coefficient and $\alpha $ is the exponential coefficient. 
+	
 Is the exponential different for W/S/S/F? Can you tell the difference?
 Is the exponential different for different years? Can you tell the difference?
-And what summarizes it all.
-The following table shows the coefficients and the exponential coefficients from the looking at the yearly frequency of precipitation duration. 
-\begin{tabular}{l*{3}{c}r}
-	Year      & Coefficient & Exponential  \\
-	\hline
-	2017      & 169.1           & -0.61    \\
-	2018      & 391.6           & -0.59    \\
-	2019      & 307.8           & -0.54   \\
-	2020      & 407.8           & -0.65    \\
-\end{tabular}
+And what summarizes it all. \\
+The following table shows the coefficients and the exponential coefficients from the looking at the yearly frequency of precipitation duration. \\
+\begin{center}
+	\begin{tabular}{l*{3}{c}r}
+		\centering
+		Year      & $\beta $ & $\alpha$  \\
+		\hline
+		2017      & 169.1           & -0.61    \\
+		2018      & 391.6           & -0.59    \\
+		2019      & 307.8           & -0.54   \\
+		2020      & 407.8           & -0.65    \\
+	\end{tabular}
+\end{center}
+Based on this table, the $\beta$ values are similar to each other with the exception of 2017, which only had partial data starting from the summer. Even, with the partial data we have from 2017 and 2020, it is clear that the $\alpha$ values are similar to each other. Focusing on the years with complete data, 2018 and 2019, it is clear that yearly variations exists between them. 
+\\
+Winter Precipitation coefficients and exponential coefficients. \\
+
+
+\begin{center}
+	\begin{tabular}{l*{3}{c}r}
+		Year      & $\beta $ & $\alpha$  \\
+		\hline
+		2018      &            &      \\
+		2019      &            &    \\
+		2020      &             &      \\
+	\end{tabular}
+\end{center}
+Spring Precipitation coefficients and exponential coefficients.\\ 
+\begin{center}
+	\begin{tabular}{l*{3}{c}r}
+		Year      & $\beta $ & $\alpha$  \\
+		\hline
+		2018      &            &      \\
+		2019      &            &    \\
+		2020      &             &      \\
+	\end{tabular}
+\end{center}
+Summer Precipitation coefficients and exponential coefficients. \\
+\begin{center}
+	\begin{tabular}{l*{3}{c}r}
+		Year      & $\beta $ & $\alpha$  \\
+		\hline
+		2017      &            &     \\
+		2018      &             &     \\
+		2019      &            &    \\
+		2020      &             &      \\
+	\end{tabular}
+\end{center}
+Fall Precipitation coefficients and exponential coefficients. \\
+\begin{center}
+	\begin{tabular}{l*{3}{c}r}
+		Year      & $\beta $ & $\alpha$  \\
+		\hline
+		2017      &            &     \\
+		2018      &             &     \\
+		2019      &            &    \\
+		2020      &             &      \\
+	\end{tabular}
+\end{center}
 \section{Results \label{sec:results}}
 
 
