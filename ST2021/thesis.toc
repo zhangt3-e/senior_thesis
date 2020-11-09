@@ -1,12 +1,12 @@
 \babel@toc {english}{}
-\contentsline {chapter}{Abstract}{iii}% 
-\contentsline {chapter}{Acknowledgements}{iv}% 
-\contentsline {chapter}{List of Figures}{vi}% 
-\contentsline {chapter}{List of Tables}{vii}% 
-\contentsline {chapter}{Main Text}{1}% 
-\contentsline {section}{Introduction }{1}% 
-\contentsline {section}{Methods }{1}% 
-\contentsline {section}{Results }{3}% 
-\contentsline {section}{Discussion }{3}% 
-\contentsline {section}{Conclusions }{3}% 
-\contentsline {chapter}{References}{4}% 
+\contentsline {chapter}{Abstract}{iii}%
+\contentsline {chapter}{Acknowledgements}{iv}%
+\contentsline {chapter}{List of Figures}{vi}%
+\contentsline {chapter}{List of Tables}{vii}%
+\contentsline {chapter}{Main Text}{1}%
+\contentsline {section}{Introduction }{1}%
+\contentsline {section}{Methods }{1}%
+\contentsline {section}{Results }{3}%
+\contentsline {section}{Discussion }{3}%
+\contentsline {section}{Conclusions }{3}%
+\contentsline {chapter}{References}{4}%
