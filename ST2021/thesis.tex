@@ -121,19 +121,30 @@ i.e. $E_j^\tau$ where $\tau=2$~min.
 
 \begin{table}[b]
 	\begin{center}
-		\begin{tabular}{l*{3}{c}r}
+		\begin{tabular}{l*{11}{c}r}
 			\centering
-			Year      & $\beta $ & $\alpha$  \\
+			Season    &          &          &Winter &  & Spring &  & Summer & & Fall &  \\
+			Year      & $\beta $ & $\alpha$  & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$\\
 			\hline
-			2017      & \textit{169}           & \textit{-0.61}   \\
-			2018      & 392           & -0.59    \\
-			2019      & 308           & -0.54   \\
-			2020      & 408           & -0.65    \\
+			2017      & \textit{169}  & \textit{-0.61}  & NaN & NaN & NaN & NaN & $\beta $ & $\alpha$ & $\beta $ & $\alpha$  \\
+			2018      & 392           & -0.59  & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$  \\
+			2019      & 308           & -0.54  & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ \\
+			2020      & 408           & -0.65   & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ \\
 		\end{tabular}
 	\end{center}
-	\caption[Short title]{Long description. Italics refer to values
-		obtained using incomplete information. }
+	\caption[Year comparison of coefficients]{This is the co-efficients found from the yearly distribution of precipitation as well as the seasonl distribution of precipitation. Italics refer to values obtained using incomplete information. NaN means there was no information. }
 \end{table}
+Excluding the first interval shown, focusing on events of duration
+greater than or equal to 2 min, we propose an exponential model for
+the histogram, with the following equation:
+\begin{equation}
+	F = \beta e^{\alpha d}
+	,
+\end{equation}
+where $F$ is the frequency and $d$ the duration, and with $\beta$ the
+unitless frequency coefficient and $\alpha$ is the exponential
+coefficient (in units of 1/min). 
+
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.675\textwidth]{Figures/More_detail_precip_2019.png}
@@ -174,21 +185,12 @@ i.e. $E_j^\tau$ where $\tau=2$~min.
 \end{figure}
 
 \clearpage
-Excluding the first interval shown, focusing on events of duration
-greater than or equal to 2 min, we propose an exponential model for
-the histogram, with the following equation:
-\begin{equation}
-  F = \beta e^{\alpha d}
-,
-\end{equation}
-where $F$ is the frequency and $d$ the duration, and with $\beta$ the
-unitless frequency coefficient and $\alpha$ is the exponential
-coefficient (in units of 1/min). 
+
 	
 %Is the exponential different for W/S/S/F? Can you tell the difference?
 %Is the exponential different for different years? Can you tell the
 %difference?  And what summarizes it all. 
- The following table shows
+ The Table 1 shows
 the coefficients and the exponential coefficients from the looking at
 the yearly frequency of precipitation duration. \\
 
@@ -197,51 +199,9 @@ the exception of 2017, which only had partial data starting from the
 summer. Even, with the partial data we have from 2017 and 2020, it is
 clear that the $\alpha$ values are similar to each other. Focusing on
 the years with complete data, 2018 and 2019, it is clear that yearly
-variations exists between them.  \\ Winter Precipitation coefficients
-and exponential coefficients. \\
+variations exists between them.  
 
 
-\begin{center}
-	\begin{tabular}{l*{3}{c}r}
-		Year      & $\beta $ & $\alpha$  \\
-		\hline
-		2018      &            &      \\
-		2019      &            &    \\
-		2020      &             &      \\
-	\end{tabular}
-\end{center}
-Spring Precipitation coefficients and exponential coefficients.\\ 
-\begin{center}
-	\begin{tabular}{l*{3}{c}r}
-		Year      & $\beta $ & $\alpha$  \\
-		\hline
-		2018      &            &      \\
-		2019      &            &    \\
-		2020      &             &      \\
-	\end{tabular}
-\end{center}
-Summer Precipitation coefficients and exponential coefficients. \\
-\begin{center}
-	\begin{tabular}{l*{3}{c}r}
-		Year      & $\beta $ & $\alpha$  \\
-		\hline
-		2017      &            &     \\
-		2018      &             &     \\
-		2019      &            &    \\
-		2020      &             &      \\
-	\end{tabular}
-\end{center}
-Fall Precipitation coefficients and exponential coefficients. \\
-\begin{center}
-	\begin{tabular}{l*{3}{c}r}
-		Year      & $\beta $ & $\alpha$  \\
-		\hline
-		2017      &            &     \\
-		2018      &             &     \\
-		2019      &            &    \\
-		2020      &             &      \\
-	\end{tabular}
-\end{center}
 \section{Results \label{sec:results}}
 
 

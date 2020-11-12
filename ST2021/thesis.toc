@@ -6,7 +6,7 @@
 \contentsline {chapter}{Main Text}{1}%
 \contentsline {section}{Introduction }{1}%
 \contentsline {section}{Methods }{1}%
-\contentsline {section}{Results }{6}%
-\contentsline {section}{Discussion }{6}%
-\contentsline {section}{Conclusions }{6}%
-\contentsline {chapter}{References}{7}%
+\contentsline {section}{Results }{5}%
+\contentsline {section}{Discussion }{5}%
+\contentsline {section}{Conclusions }{5}%
+\contentsline {chapter}{References}{6}%
