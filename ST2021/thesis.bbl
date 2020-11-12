@@ -1,62 +1,19 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{3}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
-\bibitem[All\`egre et~al.(2010)All\`egre, Gaillardet, Meynadier, Rad, \&
-  Capmas]{Allegre2010a}
-All\`egre, C., Gaillardet, J., Meynadier, L., Rad, S., \& Capmas, F., 2010.
-\newblock {The fundamental role of island arc weathering in the oceanic Sr
-  isotope budget}, {\it Earth and Planetary Science Letters\/}, {\bf 292},
-  51--56.
+\bibitem[Peel et~al.(2007)Peel, Finlayson, \& McMahon]{Peel2008}
+Peel, M., Finlayson, B., \& McMahon, T., 2007.
+\newblock Updated world map of the koppen-geiger climate classification, {\it
+  Hydrol. Earth Syst. Sci.\/}, {\bf 11}, 1633--1644.
 
-\bibitem[Dahlen \& Simons(2008)]{Dahlen+2008}
-Dahlen, F.~A. \& Simons, F.~J., 2008.
-\newblock Spectral estimation on a sphere in geophysics and cosmology, {\it
-  Geophys.~J.~Int.\/}, {\bf 174}, 774--807.
+\bibitem[Scher \& Messori(2018)]{Scher}
+Scher, S. \& Messori, G., 2018.
+\newblock {Predicting weather forecast uncertainty with machine learning}, {\it
+  Q J R Meteorol Soc.\/}, {\bf 144}, 2830--2841.
 
-\bibitem[Elderfield \& Schultz(1996)]{Elderfield1996a}
-Elderfield, H. \& Schultz, A., 1996.
-\newblock {Mid-ocean ridge hydrothermal fluxes and the chemical composition of
-  the ocean}, {\it Annual Review of Earth and Planetary Sciences\/}, {\bf 24},
-  191--224.
-
-\bibitem[Halverson et~al.(2005)Halverson, Hoffman, Maloof, Schrag, Rice,
-  Bowring, \& Dudas]{Halverson2005a}
-Halverson, G., Hoffman, P., Maloof, A., Schrag, D., Rice, A. H.~N., Bowring,
-  S., \& Dudas, F., 2005.
-\newblock Toward a {N}eoproterozoic composite carbon-isotope record, {\it
-  Geological Society of America Bulletin\/}, {\bf 117}, 1181--1207.
-
-\bibitem[McGetchin et~al.(1973)McGetchin, Settle, \& Head]{Mcgetchin73}
-McGetchin, T.~R., Settle, M., \& Head, J.~W., 1973.
-\newblock Radial thickness variation in impact crater ejecta: Implications for
-  lunar basin deposits, {\it Earth and Planetary Science Letters\/}, {\bf 20},
-  226--236.
-
-\bibitem[Meybeck(2003)]{Meybeck2003a}
-Meybeck, M., 2003.
-\newblock {Global analysis of river systems: from Earth system controls to
-  Anthropocene syndromes}, {\it Philosophical Tansactions of the Royal Society
-  of London Series B - Biological Sciences\/}, {\bf 358}, 1935--1955.
-
-\bibitem[Mucci \& Morse(1983)]{Mucci1983a}
-Mucci, A. \& Morse, J., 1983.
-\newblock {The incorporation of Mg2+ and Sr2+ into calcite overgrowths:
-  influences of growth rate and solution composition}, {\it Geochimica et
-  Cosmochimica Acta\/}, {\bf 47}, 217--233.
-
-\bibitem[Preiss \& Robertson(2002)]{Preiss2002a}
-Preiss, W. \& Robertson, R., 2002.
-\newblock South {A}ustralian mineral explorers guide, Tech. rep., PIRSA.
-
-\bibitem[Stewart \& Valiant(2006)]{StewartValiant06}
-Stewart, S. \& Valiant, G., 2006.
-\newblock Martian subsurface properties and crater formation processes inferred
-  from fresh impact crater geometries, {\it Meteoritics and Planetary
-  Science\/}, {\bf 41}(10), 1509--1537.
-
-\bibitem[Wilkinson \& Algeo(1989)]{Wilkinson1989a}
-Wilkinson, B. \& Algeo, T., 1989.
-\newblock Sedimentary carbonate record of calcium-magnesium cycling, {\it
-  American Journal of Science\/}, {\bf 289}, 1158--1194.
+\bibitem[Vaisala(accessed Septemeber 26, 2020)]{Vaisala}
+Vaisala, accessed Septemeber 26, 2020.
+\newblock Vaisala weather transmitter wxt530 series,
+  \url{https://www.vaisala.com/sites/default/files/documents/WEA-MET-G-WXT530%20Datasheet__Low.pdf}.
 
 \end{thebibliography}
