@@ -86,7 +86,7 @@ I shall define the following terms. The time series of
 \textbf{precipitation} as recorded by the instrument is denoted $e_i$,
 where $i$ indexes the measurement intervals, each 60~s long. I define
 a precipitation \textbf{event} $E_j^\tau $ as a sequence of
-\textbf{duration} $d_j>\tau$ containing contiguous nonzero
+\textbf{duration} $d_j\ge \tau$ containing contiguous nonzero
 precipitation measurements $e_i>0$, flanked left and right by zeros,
 $e_i=0$, and where $\tau$ is in minutes.
 
@@ -122,14 +122,15 @@ i.e. $E_j^\tau$ where $\tau=2$~min.
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.675\textwidth]{Figures/More_detail_precip_2019.png}
-  \caption[Precipitation histogram for 2019 broken down by season]{\label{p2019}
-    Distribution of precipitation duration in 2019, with a breakdown
-    by seasons. The minimum duration, $\tau=1$~min, and the maximum
-    duration over the data set is 368 min, but the horizontal axis was limited to the 98th percentile of the durations, 42~min, for
-    clarity. Superposed is a least-squares fit of a line in log-log
-    space of duration versus frequency for the entire year, excluding
-    the 1--2~min bin, quoted as the equivalent exponential in this
-    space.}
+  \caption[Precipitation histogram for 2019 broken down by
+    season]{\label{p2019} Distribution of precipitation duration in
+    2019, with a breakdown by seasons. The minimum duration,
+    $\tau=1$~min, and the maximum duration over the data set is 368
+    min, but the horizontal axis was limited to the 98th percentile of
+    the durations, 42~min, for clarity. Superposed is a least-squares
+    fit of a line in log-log space of duration versus frequency for
+    the entire year, excluding the 1--2~min bin, quoted as the
+    equivalent exponential in this space.}
 \end{figure}
 \begin{figure}[b]
   \centering
@@ -143,9 +144,11 @@ i.e. $E_j^\tau$ where $\tau=2$~min.
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/precip_2017.png}
-	\caption[Precipitation histogram for 2017 broken down by season]{\label{p2017}
-		Distribution of precipitation duration in 2017, with a breakdown
-		by seasons. The layout is as in Figure~\ref{p2019}.}
+	\caption[Precipitation histogram for 2017 broken down by
+          season]{\label{p2017} Distribution of precipitation duration
+          in 2017, with a breakdown by seasons. The layout is as in
+          Figure~\ref{p2019}. Note that data collection began on XX YY
+          of this year.}
 \end{figure}
 \begin{figure}[b]
 	\centering
@@ -156,30 +159,44 @@ i.e. $E_j^\tau$ where $\tau=2$~min.
 \end{figure}
 
 \clearpage
-Excluding the first interval, which covers the bare minimum precipitation duration necessary, we have an exponential curve fitting the histogram with the following equation: 
+Excluding the first interval shown, focusing on events of duration
+greater than or equal to 2 min, we propose an exponential model for
+the histogram, with the following equation:
 \begin{equation}
-	y = \beta e^{\alpha x} 
+  F = \beta e^{\alpha d}
+,
 \end{equation}
-	Where $\beta$ is the frequency coefficient and $\alpha $ is the exponential coefficient. 
+where $F$ is the frequency and $d$ the duration, and with $\beta$ the
+unitless frequency coefficient and $\alpha$ is the exponential
+coefficient (in units of 1/min). .
 	
 Is the exponential different for W/S/S/F? Can you tell the difference?
-Is the exponential different for different years? Can you tell the difference?
-And what summarizes it all. \\
-The following table shows the coefficients and the exponential coefficients from the looking at the yearly frequency of precipitation duration. \\
+Is the exponential different for different years? Can you tell the
+difference?  And what summarizes it all. \\ The following table shows
+the coefficients and the exponential coefficients from the looking at
+the yearly frequency of precipitation duration. \\
+\begin{table}
 \begin{center}
 	\begin{tabular}{l*{3}{c}r}
 		\centering
 		Year      & $\beta $ & $\alpha$  \\
 		\hline
-		2017      & 169.1           & -0.61    \\
-		2018      & 391.6           & -0.59    \\
-		2019      & 307.8           & -0.54   \\
-		2020      & 407.8           & -0.65    \\
+		2017      & \textit{169}           & \textit{-0.61}   \\
+		2018      & 392           & -0.59    \\
+		2019      & 308           & -0.54   \\
+		2020      & 408           & -0.65    \\
 	\end{tabular}
 \end{center}
-Based on this table, the $\beta$ values are similar to each other with the exception of 2017, which only had partial data starting from the summer. Even, with the partial data we have from 2017 and 2020, it is clear that the $\alpha$ values are similar to each other. Focusing on the years with complete data, 2018 and 2019, it is clear that yearly variations exists between them. 
-\\
-Winter Precipitation coefficients and exponential coefficients. \\
+\caption[Short title]{Long description. Italics refer to values
+  obtained using incomplete information. }
+\end{table}
+Based on this table, the $\beta$ values are similar to each other with
+the exception of 2017, which only had partial data starting from the
+summer. Even, with the partial data we have from 2017 and 2020, it is
+clear that the $\alpha$ values are similar to each other. Focusing on
+the years with complete data, 2018 and 2019, it is clear that yearly
+variations exists between them.  \\ Winter Precipitation coefficients
+and exponential coefficients. \\
 
 
 \begin{center}
