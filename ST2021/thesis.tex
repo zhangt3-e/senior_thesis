@@ -67,7 +67,7 @@ Tyrone Zhang %%Sign here
 \fancyfoot{}
 \pagestyle{fancyplain}
 \rhead{\fancyplain{\thepage}{\noindent \textsc{\rightmark} \hfill \thepage~of~\pageref{LastPage}}}
-\rfoot{\hrule \today \hfill Your Name}
+\rfoot{\hrule \today \hfill Tyrone Zhang}
 \pagenumbering{arabic}
 
 %--Reset the page numbers and set them to arabic-- 
@@ -121,15 +121,17 @@ i.e. $E_j^\tau$ where $\tau=2$~min.
 
 \begin{table}[b]
 	\begin{center}
-		\begin{tabular}{l*{11}{c}r}
-			\centering
-			Season    &          &          &Winter &  & Spring &  & Summer & & Fall &  \\
+		\begin{tabular}{|l|*{11}{c|}r|}
+			\hline
+			Season    &       \multicolumn{2}{|c|}{Annual}          & \multicolumn{2}{|c|}{Winter}& \multicolumn{2}{|c|}{Spring}  & \multicolumn{2}{|c|}{Summer} &\multicolumn{2}{|c|}{Fall}  \\
+			\hline
 			Year      & $\beta $ & $\alpha$  & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$\\
 			\hline
 			2017      & \textit{169}  & \textit{-0.61}  & NaN & NaN & NaN & NaN & $\beta $ & $\alpha$ & $\beta $ & $\alpha$  \\
 			2018      & 392           & -0.59  & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$  \\
 			2019      & 308           & -0.54  & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ \\
 			2020      & 408           & -0.65   & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ \\
+			\hline
 		\end{tabular}
 	\end{center}
 	\caption[Year comparison of coefficients]{This is the co-efficients found from the yearly distribution of precipitation as well as the seasonl distribution of precipitation. Italics refer to values obtained using incomplete information. NaN means there was no information. }
@@ -144,8 +146,14 @@ the histogram, with the following equation:
 where $F$ is the frequency and $d$ the duration, and with $\beta$ the
 unitless frequency coefficient and $\alpha$ is the exponential
 coefficient (in units of 1/min). 
-
 \begin{figure}[t]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/precip_2020.png}
+	\caption[Precipitation histogram for 2020 broken down by season]{\label{p2020}
+		Distribution of precipitation duration in 2020, with a breakdown
+		by seasons. The layout is as in Figure~\ref{p2019}.}
+\end{figure}
+\begin{figure}[b]
   \centering
   \includegraphics[width=0.675\textwidth]{Figures/More_detail_precip_2019.png}
   \caption[Precipitation histogram for 2019 broken down by
@@ -158,16 +166,16 @@ coefficient (in units of 1/min).
     the entire year, excluding the 1--2~min bin, quoted as the
     equivalent exponential in this space.}
 \end{figure}
-\begin{figure}[b]
+\clearpage
+\begin{figure}[t]
   \centering
   \includegraphics[width=0.675\textwidth]{Figures/precip_2018.png}
   \caption[Precipitation histogram for 2018 broken down by season]{\label{p2018}
     Distribution of precipitation duration in 2018, with a breakdown
     by seasons. The layout is as in Figure~\ref{p2019}.}
 \end{figure}
-	
-\clearpage
-\begin{figure}[t]
+
+\begin{figure}[b]
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/precip_2017.png}
 	\caption[Precipitation histogram for 2017 broken down by
@@ -176,13 +184,7 @@ coefficient (in units of 1/min).
           Figure~\ref{p2019}. Note that data collection began on XX YY
           of this year.}
 \end{figure}
-\begin{figure}[b]
-	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/precip_2020.png}
-	\caption[Precipitation histogram for 2020 broken down by season]{\label{p2020}
-		Distribution of precipitation duration in 2020, with a breakdown
-		by seasons. The layout is as in Figure~\ref{p2019}.}
-\end{figure}
+
 
 \clearpage
 
@@ -203,13 +205,13 @@ variations exists between them.
 
 
 \section{Results \label{sec:results}}
-
+This section is blank for now. (Quite likely that the stuff in Methods may constitute results)
 
 \section{Discussion \label{sec:discussion}}
-
+This section is blank for now. 
 
 \section{Conclusions \label{sec:conclusions}}
-
+This section is blank for now. 
 
 %--References
 \small
