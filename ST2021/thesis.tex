@@ -77,9 +77,11 @@ Tyrone Zhang %%Sign here
 \addcontentsline{toc}{chapter}{Main Text}
 
 \section{Introduction \label{sec:introduction}}
-The Climatology of Princeton is clearly one that belongs to the mid-latitudes, which is characterized by having four seasons that results in having a large variation in temperature throughout a year. In terms of the average calculated between 1981 and 2010, Princeton gets an average of 48.27 inches (1227 mm) of precipitation annually, and the precipitation distribution throughout the year is fairly even, with less precipitation in the winter (PRISM Project).  According to the Koppen-Geiger Climate Classification, Princeton, NJ lies in the classification Cfa, which denotes a temperate climate, with no dry season, and hot summers defined as reaching 22 degrees Celsius or higher \cite{Peel2008}. Princeton having no dry season means that precipitation should be well spread throughout the year. The weather station that I am getting my data from is a Vaisala weather transmitter WXT530 series. It measures the six weather parameters of air pressure, temperature, humidity, rainfall, wind speed ,and wind direction. The rainfall is measured using an acoustic Vaisala RAINCAP Sensor, which helps avoid the complications of flooding, wetting, and evaporation losses \cite{Vaisala}. One of the good aspects in using machine learning for weather forecasting over numerical weather models is that machine learning costs much less computationally, which allows outperforms many non-numerical weather models \cite{Scher}. 
+The Climatology of Princeton is clearly one that belongs to the mid-latitudes, which is characterized by having four seasons that results in having a large variation in temperature throughout a year. In terms of the average calculated between 1981 and 2010, Princeton gets an average of 48.27 inches (1227 mm) of precipitation annually, and the precipitation distribution throughout the year is fairly even, with less precipitation in the winter (PRISM Project).  According to the Koppen-Geiger Climate Classification, Princeton, NJ lies in the classification Cfa, which denotes a temperate climate, with no dry season, and hot summers defined as reaching 22 $^\circ C $ or higher \cite{Peel2008}. Princeton having no dry season means that precipitation should be well spread throughout the year. 
+
 % \input{Histogram.tex}
 
+ The weather station that I am getting my data from is a Vaisala weather transmitter WXT530 series. It measures the six weather parameters of air pressure, temperature, humidity, rainfall, wind speed ,and wind direction. The rainfall is measured using an acoustic Vaisala RAINCAP Sensor, which helps avoid the complications of flooding, wetting, and evaporation losses \cite{Vaisala}. By analyzing the precipitation that is measured from Professor Simons' Vaisala weather station on the top of Guyot Hall from 2017 to present day, I can first summarize the data that is being characterized, then start using this climatology to start predicting precipitation events based on other variables that are observed in the weather station. 
 \section{Methods \label{sec:methods}}
 
 I shall define the following terms. The time series of
@@ -113,11 +115,14 @@ December of the previous year.  Spring will be March, April, and
 May. Summer is June, July, and August. Fall is September, October,
 November.
 
-Figure~\ref{p2019} shows the distribution of durations of XXXX
+Figure~\ref{p2019} shows the distribution of durations of 3198
 precipitation events $E_j^1$, i.e. $E_j^\tau$ where $\tau=1$~min for
-the year 2019, broken down by season. I quote an exponential fit to
-the frequency-duration histograms for all YYYY events $E_j^2$,
-i.e. $E_j^\tau$ where $\tau=2$~min.
+the year 2019, broken down by season. I used an exponential fit to
+the frequency-duration histograms for all 1253 events $E_j^2$,
+i.e. $E_j^\tau$ where $\tau=2$~min. For all the other years, I have 
+used similar procedure in which the distribution of the duration of 
+precipitation events for events $E_j^1$ are graphed and an exponential 
+fit is used for events $E_j^2$ and correspondingly graphed. 
 
 \begin{table}[b]
 	\begin{center}
@@ -127,31 +132,22 @@ i.e. $E_j^\tau$ where $\tau=2$~min.
 			\hline
 			Year      & $\beta $ & $\alpha$  & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$\\
 			\hline
-			2017      & \textit{169}  & \textit{-0.61}  & NaN & NaN & NaN & NaN & $\beta $ & $\alpha$ & $\beta $ & $\alpha$  \\
-			2018      & 392           & -0.59  & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$  \\
-			2019      & 308           & -0.54  & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ \\
-			2020      & 408           & -0.65   & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ \\
+			2017      & \textit{169}  & \textit{-0.61}  & NaN & NaN & NaN & NaN &  &  &  &   \\
+			2018      & 392           & -0.59  &  & &  & &  &  &  &   \\
+			2019      & 308           & -0.54  &  & &  & &  &  &  & \\
+			2020      & 408           & -0.65   &   & &  & &  &  &  &\\
 			\hline
 		\end{tabular}
 	\end{center}
-	\caption[Year comparison of coefficients]{This is the co-efficients found from the yearly distribution of precipitation as well as the seasonl distribution of precipitation. Italics refer to values obtained using incomplete information. NaN means there was no information. }
+	\caption[Year comparison of coefficients]{This is the co-efficients found from the yearly distribution of precipitation as well as the seasonl distribution of precipitation. Italics refer to values obtained using incomplete information. NaN means there was no information. Blanks mean have not calculated it yet.}
 \end{table}
-Excluding the first interval shown, focusing on events of duration
-greater than or equal to 2 min, we propose an exponential model for
-the histogram, with the following equation:
-\begin{equation}
-	F = \beta e^{\alpha d}
-	,
-\end{equation}
-where $F$ is the frequency and $d$ the duration, and with $\beta$ the
-unitless frequency coefficient and $\alpha$ is the exponential
-coefficient (in units of 1/min). 
+ 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/precip_2020.png}
 	\caption[Precipitation histogram for 2020 broken down by season]{\label{p2020}
 		Distribution of precipitation duration in 2020, with a breakdown
-		by seasons. The layout is as in Figure~\ref{p2019}.}
+		by seasons. 2020 is also incomplete as collection still ongoing. The layout is as in Figure~\ref{p2019}.}
 \end{figure}
 \begin{figure}[b]
   \centering
@@ -181,7 +177,7 @@ coefficient (in units of 1/min).
 	\caption[Precipitation histogram for 2017 broken down by
           season]{\label{p2017} Distribution of precipitation duration
           in 2017, with a breakdown by seasons. The layout is as in
-          Figure~\ref{p2019}. Note that data collection began on XX YY
+          Figure~\ref{p2019}. Note that data collection began on July 16th
           of this year.}
 \end{figure}
 
@@ -192,11 +188,19 @@ coefficient (in units of 1/min).
 %Is the exponential different for W/S/S/F? Can you tell the difference?
 %Is the exponential different for different years? Can you tell the
 %difference?  And what summarizes it all. 
- The Table 1 shows
+Excluding the first interval shown, focusing on events of duration
+greater than or equal to 2 min, we propose an exponential model for
+the histogram, with the following equation:
+\begin{equation}
+	F = \beta e^{\alpha d},
+\end{equation}
+where $F$ is the frequency and $d$ the duration, and with $\beta$ the
+unitless frequency coefficient and $\alpha$ is the exponential
+coefficient (in units of 1/min).
+The Table 1 shows
 the coefficients and the exponential coefficients from the looking at
-the yearly frequency of precipitation duration. \\
-
-Based on this table, the $\beta$ values are similar to each other with
+the yearly frequency of precipitation duration. 
+\\ Based on this table, the $\beta$ values are similar to each other with
 the exception of 2017, which only had partial data starting from the
 summer. Even, with the partial data we have from 2017 and 2020, it is
 clear that the $\alpha$ values are similar to each other. Focusing on

@@ -1,5 +1,11 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{4}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[Eagleson(1978)]{Eagleson}
+Eagleson, P., 1978.
+\newblock Climate, soil, and vegatation: 2. the distribution of annual
+  precipitation derived from observed storm sequences, {\it Water Resources
+  Research\/}, {\bf 14}(5), 713--721.
 
 \bibitem[Peel et~al.(2007)Peel, Finlayson, \& McMahon]{Peel2008}
 Peel, M., Finlayson, B., \& McMahon, T., 2007.
