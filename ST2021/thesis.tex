@@ -132,14 +132,14 @@ fit is used for events $E_j^2$ and correspondingly graphed.
 			\hline
 			Year      & $\beta $ & $\alpha$  & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$\\
 			\hline
-			2017      & \textit{169}  & \textit{-0.61}  & NaN & NaN & NaN & NaN &  &  &  &   \\
-			2018      & 392           & -0.59  &  & &  & &  &  &  &   \\
-			2019      & 308           & -0.54  &  & &  & &  &  &  & \\
-			2020      & 408           & -0.65   &   & &  & &  &  &  &\\
+			2017      & \textit{169}  & \textit{-0.61}  & NaN & NaN & NaN & NaN & \textit{57}  & \textit{-0.70}  & 108  & -0.57  \\
+			2018      & 392           & -0.59  & 148 & -0.74 & 125 & -0.76 & 65  & -0.52  & 91 & -0.50  \\
+			2019      & 308           & -0.54  & 118  & -0.62 & 107 & -0.58 & 32 & -0.31  & 57 &  -0.60 \\
+			2020      & 408           & -0.65   & 201  & -0.80 & 112  & -0.66 & 48  & -0.42 & \textit{64} & \textit{-0.66}\\
 			\hline
 		\end{tabular}
 	\end{center}
-	\caption[Year comparison of coefficients]{This is the co-efficients found from the yearly distribution of precipitation as well as the seasonl distribution of precipitation. Italics refer to values obtained using incomplete information. NaN means there was no information. Blanks mean have not calculated it yet.}
+	\caption[Year comparison of coefficients]{This is the co-efficients found from the yearly distribution of precipitation as well as the seasonl distribution of precipitation. Italics refer to values obtained using incomplete information. NaN means there was no information. }
 \end{table}
  
 \begin{figure}[t]
@@ -188,6 +188,23 @@ fit is used for events $E_j^2$ and correspondingly graphed.
 %Is the exponential different for W/S/S/F? Can you tell the difference?
 %Is the exponential different for different years? Can you tell the
 %difference?  And what summarizes it all. 
+\begin{table}[t]
+	\begin{center}
+		\begin{tabular}{|l|*{11}{c|}r|}
+			\hline
+			Season    &       \multicolumn{2}{|c|}{Annual}          & \multicolumn{2}{|c|}{Winter}& \multicolumn{2}{|c|}{Spring}  & \multicolumn{2}{|c|}{Summer} &\multicolumn{2}{|c|}{Fall}  \\
+			\hline
+			Year      & T & I  & T & I  & T & I  & T & I  & T & I \\
+			\hline
+			2017      & \textit{520}  & \textit{0.07}  & NaN & NaN & NaN & NaN & \textit{131}  & \textit{0.07}  & 388  & 0.07  \\
+			2018      & 1104           & 0.06  & 147 & 0.03 & 301 & 0.07 & 268  & 0.08  & 388 & 0.07  \\
+			2019      & 1016           & 0.06  & 218  & 0.04 & 318 & 0.06 & 352 & 0.11  & 127 &  0.05 \\
+			2020      & \textit{858}           & \textit{0.06}   & 151  & 0.03 & 191  & 0.04 & 322  & 0.12 & \textit{194} & \textit{0.06}\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption[Summary of total precipitation and intensity]{This is the total precipitation and intensity of precipitation for each year and season. Italics refer to values obtained using incomplete information. NaN means there was no information. }
+\end{table}
 Excluding the first interval shown, focusing on events of duration
 greater than or equal to 2 min, we propose an exponential model for
 the histogram, with the following equation:
