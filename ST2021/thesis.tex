@@ -67,7 +67,7 @@ Tyrone Zhang %%Sign here
 \fancyfoot{}
 \pagestyle{fancyplain}
 \rhead{\fancyplain{\thepage}{\noindent \textsc{\rightmark} \hfill \thepage~of~\pageref{LastPage}}}
-\rfoot{\hrule \today \hfill Your Name}
+\rfoot{\hrule \today \hfill Tyrone Zhang}
 \pagenumbering{arabic}
 
 %--Reset the page numbers and set them to arabic-- 
@@ -77,9 +77,11 @@ Tyrone Zhang %%Sign here
 \addcontentsline{toc}{chapter}{Main Text}
 
 \section{Introduction \label{sec:introduction}}
+The Climatology of Princeton is clearly one that belongs to the mid-latitudes, which is characterized by having four seasons that results in having a large variation in temperature throughout a year. In terms of the average calculated between 1981 and 2010, Princeton gets an average of 48.27 inches (1227 mm) of precipitation annually, and the precipitation distribution throughout the year is fairly even, with less precipitation in the winter (PRISM Project).  According to the Koppen-Geiger Climate Classification, Princeton, NJ lies in the classification Cfa, which denotes a temperate climate, with no dry season, and hot summers defined as reaching 22 $^\circ C $ or higher \cite{Peel2008}. Princeton having no dry season means that precipitation should be well spread throughout the year. 
 
 % \input{Histogram.tex}
 
+ The weather station that I am getting my data from is a Vaisala weather transmitter WXT530 series. It measures the six weather parameters of air pressure, temperature, humidity, rainfall, wind speed ,and wind direction. The rainfall is measured using an acoustic Vaisala RAINCAP Sensor, which helps avoid the complications of flooding, wetting, and evaporation losses \cite{Vaisala}. By analyzing the precipitation that is measured from Professor Simons' Vaisala weather station on the top of Guyot Hall from 2017 to present day, I can first summarize the data that is being characterized, then start using this climatology to start predicting precipitation events based on other variables that are observed in the weather station. 
 \section{Methods \label{sec:methods}}
 
 I shall define the following terms. The time series of
@@ -113,13 +115,41 @@ December of the previous year.  Spring will be March, April, and
 May. Summer is June, July, and August. Fall is September, October,
 November.
 
-Figure~\ref{p2019} shows the distribution of durations of XXXX
+Figure~\ref{p2019} shows the distribution of durations of 3198
 precipitation events $E_j^1$, i.e. $E_j^\tau$ where $\tau=1$~min for
-the year 2019, broken down by season. I quote an exponential fit to
-the frequency-duration histograms for all YYYY events $E_j^2$,
-i.e. $E_j^\tau$ where $\tau=2$~min.
+the year 2019, broken down by season. I used an exponential fit to
+the frequency-duration histograms for all 1253 events $E_j^2$,
+i.e. $E_j^\tau$ where $\tau=2$~min. For all the other years, I have 
+used similar procedure in which the distribution of the duration of 
+precipitation events for events $E_j^1$ are graphed and an exponential 
+fit is used for events $E_j^2$ and correspondingly graphed. 
 
+\begin{table}[b]
+	\begin{center}
+		\begin{tabular}{|l|*{11}{c|}r|}
+			\hline
+			Season    &       \multicolumn{2}{|c|}{Annual}          & \multicolumn{2}{|c|}{Winter}& \multicolumn{2}{|c|}{Spring}  & \multicolumn{2}{|c|}{Summer} &\multicolumn{2}{|c|}{Fall}  \\
+			\hline
+			Year      & $\beta $ & $\alpha$  & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$ & $\beta $ & $\alpha$\\
+			\hline
+			2017      & \textit{169}  & \textit{-0.61}  & NaN & NaN & NaN & NaN & \textit{57}  & \textit{-0.70}  & 108  & -0.57  \\
+			2018      & 392           & -0.59  & 148 & -0.74 & 125 & -0.76 & 65  & -0.52  & 91 & -0.50  \\
+			2019      & 308           & -0.54  & 118  & -0.62 & 107 & -0.58 & 32 & -0.31  & 57 &  -0.60 \\
+			2020      & 408           & -0.65   & 201  & -0.80 & 112  & -0.66 & 48  & -0.42 & \textit{64} & \textit{-0.66}\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption[Year comparison of coefficients]{This is the co-efficients found from the yearly distribution of precipitation as well as the seasonl distribution of precipitation. Italics refer to values obtained using incomplete information. NaN means there was no information. }
+\end{table}
+ 
 \begin{figure}[t]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/precip_2020.png}
+	\caption[Precipitation histogram for 2020 broken down by season]{\label{p2020}
+		Distribution of precipitation duration in 2020, with a breakdown
+		by seasons. 2020 is also incomplete as collection still ongoing. The layout is as in Figure~\ref{p2019}.}
+\end{figure}
+\begin{figure}[b]
   \centering
   \includegraphics[width=0.675\textwidth]{Figures/More_detail_precip_2019.png}
   \caption[Precipitation histogram for 2019 broken down by
@@ -132,122 +162,79 @@ i.e. $E_j^\tau$ where $\tau=2$~min.
     the entire year, excluding the 1--2~min bin, quoted as the
     equivalent exponential in this space.}
 \end{figure}
-\begin{figure}[b]
+\clearpage
+\begin{figure}[t]
   \centering
   \includegraphics[width=0.675\textwidth]{Figures/precip_2018.png}
   \caption[Precipitation histogram for 2018 broken down by season]{\label{p2018}
     Distribution of precipitation duration in 2018, with a breakdown
     by seasons. The layout is as in Figure~\ref{p2019}.}
 \end{figure}
-	
-\clearpage
-\begin{figure}[t]
+
+\begin{figure}[b]
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/precip_2017.png}
 	\caption[Precipitation histogram for 2017 broken down by
           season]{\label{p2017} Distribution of precipitation duration
           in 2017, with a breakdown by seasons. The layout is as in
-          Figure~\ref{p2019}. Note that data collection began on XX YY
+          Figure~\ref{p2019}. Note that data collection began on July 16th
           of this year.}
 \end{figure}
-\begin{figure}[b]
-	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/precip_2020.png}
-	\caption[Precipitation histogram for 2020 broken down by season]{\label{p2020}
-		Distribution of precipitation duration in 2020, with a breakdown
-		by seasons. The layout is as in Figure~\ref{p2019}.}
-\end{figure}
+
 
 \clearpage
+
+	
+%Is the exponential different for W/S/S/F? Can you tell the difference?
+%Is the exponential different for different years? Can you tell the
+%difference?  And what summarizes it all. 
+\begin{table}[t]
+	\begin{center}
+		\begin{tabular}{|l|*{11}{c|}r|}
+			\hline
+			Season    &       \multicolumn{2}{|c|}{Annual}          & \multicolumn{2}{|c|}{Winter}& \multicolumn{2}{|c|}{Spring}  & \multicolumn{2}{|c|}{Summer} &\multicolumn{2}{|c|}{Fall}  \\
+			\hline
+			Year      & T & I  & T & I  & T & I  & T & I  & T & I \\
+			\hline
+			2017      & \textit{520}  & \textit{0.07}  & NaN & NaN & NaN & NaN & \textit{131}  & \textit{0.07}  & 388  & 0.07  \\
+			2018      & 1104           & 0.06  & 147 & 0.03 & 301 & 0.07 & 268  & 0.08  & 388 & 0.07  \\
+			2019      & 1016           & 0.06  & 218  & 0.04 & 318 & 0.06 & 352 & 0.11  & 127 &  0.05 \\
+			2020      & \textit{858}           & \textit{0.06}   & 151  & 0.03 & 191  & 0.04 & 322  & 0.12 & \textit{194} & \textit{0.06}\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption[Summary of total precipitation and intensity]{This is the total precipitation and intensity of precipitation for each year and season. Italics refer to values obtained using incomplete information. NaN means there was no information. }
+\end{table}
 Excluding the first interval shown, focusing on events of duration
 greater than or equal to 2 min, we propose an exponential model for
 the histogram, with the following equation:
 \begin{equation}
-  F = \beta e^{\alpha d}
-,
+	F = \beta e^{\alpha d},
 \end{equation}
 where $F$ is the frequency and $d$ the duration, and with $\beta$ the
 unitless frequency coefficient and $\alpha$ is the exponential
-coefficient (in units of 1/min). .
-	
-Is the exponential different for W/S/S/F? Can you tell the difference?
-Is the exponential different for different years? Can you tell the
-difference?  And what summarizes it all. \\ The following table shows
+coefficient (in units of 1/min).
+Table 1 shows
 the coefficients and the exponential coefficients from the looking at
-the yearly frequency of precipitation duration. \\
-\begin{table}
-\begin{center}
-	\begin{tabular}{l*{3}{c}r}
-		\centering
-		Year      & $\beta $ & $\alpha$  \\
-		\hline
-		2017      & \textit{169}           & \textit{-0.61}   \\
-		2018      & 392           & -0.59    \\
-		2019      & 308           & -0.54   \\
-		2020      & 408           & -0.65    \\
-	\end{tabular}
-\end{center}
-\caption[Short title]{Long description. Italics refer to values
-  obtained using incomplete information. }
-\end{table}
-Based on this table, the $\beta$ values are similar to each other with
+the yearly frequency of precipitation duration. 
+\\ Based on this table, the $\beta$ values are similar to each other with
 the exception of 2017, which only had partial data starting from the
 summer. Even, with the partial data we have from 2017 and 2020, it is
 clear that the $\alpha$ values are similar to each other. Focusing on
 the years with complete data, 2018 and 2019, it is clear that yearly
-variations exists between them.  \\ Winter Precipitation coefficients
-and exponential coefficients. \\
+variations exists between them. 
+\\In the seasonal variations, we see that the Summer has $\alpha $ that are closer to 0 compared to the other seasons as well as having a lower $\beta$ compared to the other seasons. However looking at table 2, we see  that the summers also have a lot of precipitation. The fewer amounts of precipitation events in the summer, but with a lot of precipitation gives a higher intensity for the summer. For the winter, the $\alpha$ are the furtherest from 0 and the $\beta$ are large. However, the winter tends to have the lowest values for total precipitation and the combination of lots of preciptation events and low precipitation totals results in the lowest intensities among the four seasons. 
+\\ The spring seems to mimic the winter in that there are a lot of preciptiation events, but also shares the quality of summer in having fairly high precipitation totals. The Fall shares the summer quality of having relatively few preciptation events, but tends to have less precipitation totals, so its intensity is less than the Summer, but greater than the winter precipitation intensity. 
 
 
-\begin{center}
-	\begin{tabular}{l*{3}{c}r}
-		Year      & $\beta $ & $\alpha$  \\
-		\hline
-		2018      &            &      \\
-		2019      &            &    \\
-		2020      &             &      \\
-	\end{tabular}
-\end{center}
-Spring Precipitation coefficients and exponential coefficients.\\ 
-\begin{center}
-	\begin{tabular}{l*{3}{c}r}
-		Year      & $\beta $ & $\alpha$  \\
-		\hline
-		2018      &            &      \\
-		2019      &            &    \\
-		2020      &             &      \\
-	\end{tabular}
-\end{center}
-Summer Precipitation coefficients and exponential coefficients. \\
-\begin{center}
-	\begin{tabular}{l*{3}{c}r}
-		Year      & $\beta $ & $\alpha$  \\
-		\hline
-		2017      &            &     \\
-		2018      &             &     \\
-		2019      &            &    \\
-		2020      &             &      \\
-	\end{tabular}
-\end{center}
-Fall Precipitation coefficients and exponential coefficients. \\
-\begin{center}
-	\begin{tabular}{l*{3}{c}r}
-		Year      & $\beta $ & $\alpha$  \\
-		\hline
-		2017      &            &     \\
-		2018      &             &     \\
-		2019      &            &    \\
-		2020      &             &      \\
-	\end{tabular}
-\end{center}
 \section{Results \label{sec:results}}
-
+This section is blank for now. (Quite likely that the stuff in Methods may constitute results)
 
 \section{Discussion \label{sec:discussion}}
-
+This section is blank for now. 
 
 \section{Conclusions \label{sec:conclusions}}
-
+This section is blank for now. 
 
 %--References
 \small
