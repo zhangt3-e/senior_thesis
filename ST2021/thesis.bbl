@@ -1,25 +1,15 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{2}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
-
-\bibitem[Eagleson(1978)]{Eagleson}
-Eagleson, P., 1978.
-\newblock Climate, soil, and vegatation: 2. the distribution of annual
-  precipitation derived from observed storm sequences, {\it Water Resources
-  Research\/}, {\bf 14}(5), 713--721.
 
 \bibitem[Peel et~al.(2007)Peel, Finlayson, \& McMahon]{Peel2008}
 Peel, M., Finlayson, B., \& McMahon, T., 2007.
-\newblock Updated world map of the koppen-geiger climate classification, {\it
-  Hydrol. Earth Syst. Sci.\/}, {\bf 11}, 1633--1644.
+\newblock Updated world map of the {K}oppen-{G}eiger climate classification,
+  {\it Hydrol. Earth Syst. Sci.\/}, {\bf 11}, 1633--1644.
 
-\bibitem[Scher \& Messori(2018)]{Scher}
-Scher, S. \& Messori, G., 2018.
-\newblock {Predicting weather forecast uncertainty with machine learning}, {\it
-  Q J R Meteorol Soc.\/}, {\bf 144}, 2830--2841.
-
-\bibitem[Vaisala(accessed Septemeber 26, 2020)]{Vaisala}
-Vaisala, accessed Septemeber 26, 2020.
-\newblock Vaisala weather transmitter wxt530 series,
-  \url{https://www.vaisala.com/sites/default/files/documents/WEA-MET-G-WXT530%20Datasheet__Low.pdf}.
+\bibitem[Vaisala(accessed Sept.~26, 2020)]{Vaisala}
+Vaisala, accessed Sept.~26, 2020.
+\newblock Vaisala weather transmitter {WXT530} series,
+  \url{https://www.vaisala.com/sites/default/files/documents/WEA-MET-G-WXT530%
+\%20Datasheet__Low.pdf}.
 
 \end{thebibliography}
