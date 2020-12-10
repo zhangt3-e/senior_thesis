@@ -87,7 +87,7 @@ throughout the year is fairly even, with less precipitation in the
 winter~\cite[]{PRISM_Project}.  According to the Koppen-Geiger Climate
 Classification, Princeton, NJ lies in the classification Cfa, which
 denotes a temperate climate, with no dry season, and hot summers
-defined as reaching~22$^\circ C $ or higher \cite{Peel2008}. Princeton
+defined as reaching~22$^\circ$C or higher \cite[]{Peel2008}. Princeton
 having no dry season means that precipitation is well spread out
 throughout the year.
 
@@ -98,11 +98,11 @@ transmitter WXT530 series. It measures six weather parameters of air
 pressure, temperature, humidity, rainfall, wind speed, and wind
 direction. The rainfall is measured using an acoustic Vaisala RAINCAP
 Sensor, which helps avoid the complications of flooding, wetting, and
-evaporation losses \cite{Vaisala}. By analyzing the precipitation
+evaporation losses \cite[]{Vaisala}. By analyzing the precipitation
 bwteen 2017 and today, I first summarize the data using this
 climatology, in terms of exponential distributions and their
-parameters, by season and by year, before attepting to predic
-precipitation events based on other variables that are observe dby the
+parameters, by season and by year, before attepting to predict
+precipitation events based on other variables that are observed by the
 weather station.
 
 \section{Methods \label{sec:methods}}
@@ -140,7 +140,8 @@ November.
 
 Figure~\ref{p2019} shows the distribution of durations of 3198
 precipitation events $E_j^1$, i.e. $E_j^\tau$ where $\tau=1$~min for
-the year 2019, broken down by season. I used an exponential fit to the
+the year 2019, broken down by season. EXPLAIN THE X-BIN SPACING. 
+I used an exponential fit to the
 frequency-duration histograms for all 1253 events $E_j^2$,
 i.e. $E_j^\tau$ where $\tau=2$~min. For all the other years, as shown
 in Figures~\ref{p2020}, \ref{p2018} and~\ref{p2017}, I used a similar
@@ -150,13 +151,13 @@ Excluding the first interval shown, focusing on events of duration
 greater than or equal to 2~min, we propose an exponential model for
 the histogram, with the following equation:
 \begin{equation}\label{expod}
-  F = \beta e^{\alpha d},
+  F = \beta \,e^{\alpha d},
 \end{equation}
 where $F$ is the frequency and $d$ the duration, and with $\beta$ the
 unitless frequency coefficient and $\alpha$ is the exponential
-coefficient (in units of 1/min) Table~\ref{firsttable} shows the
-coefficients and the exponential coefficients from looking at the
-yearly frequency of precipitation duration.
+coefficient (in units of min$^{-1}$). Table~\ref{firsttable} shows the
+coefficients~$\beta$ and the exponential coefficients~$\alpha$ from
+looking at the yearly frequency of precipitation duration.
 
 \clearpage
 \begin{figure}[t]
@@ -210,14 +211,15 @@ yearly frequency of precipitation duration.
  
 Based on Table~\ref{firsttable}, the $\beta$ values are similar to
 each other with the exception of 2017, which only had partial data
-starting in the Summer. Even, with the partial data we have from
-2017 and 2020, it is clear that the $\alpha$ values are similar to
-each other. Focusing on the years with complete data, 2018 and 2019,
-it is clear that yearly variations exists between them.
+starting in the Summer. Even, with the partial data we have from 2017
+and 2020, it is clear that the $\alpha$ values are similar to each
+other. Focusing on the years with complete data, 2018 and 2019, it is
+clear that yearly variations exists between them. All $\alpha$ values
+are negative.
 
 In the seasonal variations, we see that Summer has $\alpha$ values
-that are closer to 0 compared to the other seasons as well as having a
-lower $\beta$ compared to the other seasons. However looking at
+that are less negative compared to the other seasons as well as having
+a lower $\beta$ compared to the other seasons. However looking at
 Table~\ref{secondtable}, we see that the summers also have a lot of
 precipitation. The fewer amounts of precipitation events in the
 Summer, but with a lot of precipitation gives a higher intensity for
@@ -230,24 +232,25 @@ among the four seasons.
 The Spring appears to mimic the Winter in that there are a lot of
 preciptiation events, but also shares the quality of Summer in having
 fairly high precipitation totals. The Fall shares the Summer quality
-of having relatively few preciptation events, but tends to have smalelr
-precipitation totals, so its intensity is less than the Summer, but
-greater than the winter precipitation intensity.
+of having relatively few preciptation events, but tends to have
+smaller precipitation totals, so its intensity is less than the
+Summer, but greater than the winter precipitation intensity.
 
 
 \clearpage
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/nonprecip_2019.png}
-	\caption[Histogram of non-precipitation events for 2019 broken down by
-	season]{\label{np2019} Distribution of non-precipitation event duration in
-		2019, with a breakdown by seasons. The minimum duration,
-		$\tau=1$~min, and the maximum duration over the data set is 2613
-		min, but the horizontal axis was limited to the 98th percentile of 2350
-		the durations, ~min, for clarity. Superposed is a least-squares
-		fit of a line in log-log space of duration versus frequency for
-		the entire year, excluding the 1--2~min bin, quoted as the
-		equivalent exponential in this space.}
+	\caption[Histogram of non-precipitation events for 2019 broken
+          down by season]{\label{np2019} Distribution of
+          non-precipitation event duration in 2019, with a breakdown
+          by seasons. The minimum duration, $\tau=1$~min, and the
+          maximum duration over the data set is 2613~min, but the
+          horizontal axis was limited to the 98th percentile of
+          2350~min, for clarity. Superposed is a least-squares fit of
+          a line in log-log space of duration versus frequency for the
+          entire year, excluding the 1--2~min bin, quoted as the
+          equivalent exponential in this space.}
 \end{figure}
 \begin{figure}[b]
 	\centering
@@ -280,44 +283,46 @@ greater than the winter precipitation intensity.
 
 \clearpage
 \begin{figure}[t]
-	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/inten2019.png}
-	\caption[Intensity histogram for 2019 broken down by
-	season]{\label{i2019} Distribution of precipitation intensity in
-		2019, with a breakdown by seasons. The minimum duration,
-		$I=0.01$~mm/min, and the maximum duration over the data set is 0.4 mm/min
-		min, but the horizontal axis was limited to the 98th percentile of 
-		the intensity, 0.1 mm/min, for clarity. Superposed is a least-squares
-		fit of a line in log-log space of duration versus frequency for
-		the entire year, excluding the 0.01 mm/day--0.02 mm/day bin, quoted as the
-		equivalent exponential in this space.}
+\centering
+\includegraphics[width=0.675\textwidth]{Figures/inten2019.png}
+\caption[Intensity histogram for 2019 broken down by season]
+        {\label{i2019}Distribution of precipitation intensity in
+          2019, with a breakdown by seasons. The minimum duration,
+          $I=0.01$~mm/min, and the maximum duration over the data set
+          is 0.4~mm/min, but the horizontal axis was limited to the
+          98th percentile of the intensity, 0.1~mm/min, for
+          clarity. Superposed is a least-squares fit of a line in
+          log-log space of duration versus frequency for the entire
+          year, excluding the 0.01~mm/day--0.02~mm/day bin, quoted as
+          the equivalent exponential in this space.}
 \end{figure}
 \begin{figure}[b]
-	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/inten2020.png}
-	\caption[Intensity histogram for 2020 broken down by
-	season]{\label{i2020} Distribution of precipitation intensity
-		in 2020, with a breakdown by seasons. 2020 is also
-		incomplete as collection still ongoing. The layout is as in
-		Figure~\ref{i2019}.}
+\centering
+\includegraphics[width=0.675\textwidth]{Figures/inten2020.png}
+\caption[Intensity histogram for 2020 broken down by season]
+        {\label{i2020}Distribution of precipitation intensity in
+          2020, with a breakdown by seasons. 2020 is also incomplete
+          as collection still ongoing. The layout is as in
+          Figure~\ref{i2019}.}
 \end{figure}
 \clearpage
 \begin{figure}[t]
-	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/inten2018.png}
-	\caption[Intensity histogram for 2018 broken down by season]{\label{i2018}
-		Distribution of precipitation intensity in 2018, with a breakdown
-		by seasons. The layout is as in Figure~\ref{i2019}.}
+\centering
+\includegraphics[width=0.675\textwidth]{Figures/inten2018.png}
+\caption[Intensity histogram for 2018 broken down by season]
+        {\label{i2018}Distribution of precipitation intensity in 2018,
+          with a breakdown by seasons. The layout is as in
+          Figure~\ref{i2019}.}
 \end{figure}
 
 \begin{figure}[b]
-	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/inten2017.png}
-	\caption[Intensity histogram for 2017 broken down by
-	season]{\label{i2017} Distribution of precipitation intensity in
-		2017, with a breakdown by seasons. The layout is as in
-		Figure~\ref{i2019}. Note that data collection began on 16 July
-		2017.}
+\centering
+\includegraphics[width=0.675\textwidth]{Figures/inten2017.png}
+\caption[Intensity histogram for 2017 broken down by season]
+        {\label{i2017}Distribution of precipitation intensity in 2017,
+          with a breakdown by seasons. The layout is as in
+          Figure~\ref{i2019}. Note that data collection began on 16
+          July 2017.}
 \end{figure}
 \clearpage
 
