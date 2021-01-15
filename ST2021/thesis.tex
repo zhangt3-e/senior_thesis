@@ -84,7 +84,7 @@ variation in temperature throughout a year. In terms of the average
 calculated between 1981 and 2010, Princeton gets an average of 1227~mm
 of precipitation annually, and the precipitation distribution
 throughout the year is fairly even, with less precipitation in the
-winter~\cite[]{PRISM_Project}.  According to the Koppen-Geiger Climate
+winter~\cite[]{PRISM}.  According to the Koppen-Geiger Climate
 Classification, Princeton, NJ lies in the classification Cfa, which
 denotes a temperate climate, with no dry season, and hot summers
 defined as reaching~22$^\circ$C or higher \cite[]{Peel2008}. Princeton
@@ -218,7 +218,7 @@ where $F_{inten}$ is the frequency of intensity of precipitation events, $I$ is 
 %difference?  And what summarizes it all. 
 
 \input{firsttable}
-\input{secondtable}
+
  
 Based on Table~\ref{firsttable}, the $\beta$ values are similar to
 each other with the exception of 2017, which only had partial data
@@ -246,7 +246,9 @@ fairly high precipitation totals. The Fall shares the Summer quality
 of having relatively few preciptation events, but tends to have
 smaller precipitation totals, so its intensity is less than the
 Summer, but greater than the winter precipitation intensity.
+\input{secondtable} 
 
+Looking at trying to extend the exponential fit towards non-precipitation event durations, the exponentials for such duration, $\delta$ is less negative overall compared to the exponentials from the precipitation event duration, $\alpha$. Some of this is explained from the fact that the duration of non-precipitation events range from 1 minute to over 2000 minutes, whereas the duration of precipitation events range from 1 minute to just over 300 minutes. At the same time how we bin the durations for both precipitation and non-precipitation events will affect how we get the fits. 
 
 \clearpage
 \begin{figure}[t]
@@ -291,6 +293,8 @@ Summer, but greater than the winter precipitation intensity.
 		2017.}
 \end{figure}
 \clearpage
+
+
 
 \clearpage
 \begin{figure}[t]
@@ -342,33 +346,20 @@ Summer, but greater than the winter precipitation intensity.
 \input{thirdtable.tex}
 \input{fourthtable.tex}
 
-\begin{figure}[b]
+In contrast, Table~\ref{fourthtable} for intensity of precipitation events show a more negative exponential compared to either precipitation or non-precipitation event durations. This is partially due to the fact that there are less bins in the intensity of preciptiation events as seen that the vast majority of precipitation events are not particularly intense on average. 
+
+
+
+
+\section{Results\label{sec:results}}
+\begin{figure}[t]
 	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/better_one_run.png}
+	\includegraphics[width=0.75\textwidth]{Figures/better_one_run.png}
 	\caption[One run using Summer 2018 climatology]
 	{\label{crudemodel}One model run using the exponentials calculated from Summer 2018.  }
 \end{figure}
-Running the model one hundred times let us look at what the average precipitation total the model yields, it yields 195 mm compared to the Summer 2018 total of 268 mm that we used. Furthermore, the accuracy of model precipitation matching model precipitation is only 6$\%$. 
+Running the model one hundred times let us look at what the average precipitation total the model yields, it yields 195 mm compared to the Summer 2018 total of 268 mm that we used. Furthermore, the accuracy of model precipitation matching model precipitation is only 6$\%$. Looking at \ref{crudemodel}, we see that the model precipitation total is lower than the actual precipitation observed in the Summer of 2018. Furthermore, the precipitation seem to be more frequent compared to the observed 2018 Summer data. 
 
-
-Define the accuracy of model vs. observed. 
-
-Make sure you work on making more intensity as well as longer non-precipitation duration. 
-
-Need to change the parameters that the model takes in. 
-
-How to match the observed total precipitation as well as making more realistic model simulation aka matches observations.
-  
-Make sure you run the same analysis on the model run to see if the co-efficients are similar. 
-
-Compare the two data sets. 
-
-Try to find the best one, show yourself the average one and the worst one in terms of looking of figure 13. 
-What is the percent of complete emptiness, what is the percent of non-precipitation minutes for each dataset? 
-\section{Results\label{sec:results}}
-
-This section is blank for now. (Quite likely that the stuff in Methods
-may constitute results)
 
 \section{Discussion\label{sec:discussion}}
 This section is blank for now. 
