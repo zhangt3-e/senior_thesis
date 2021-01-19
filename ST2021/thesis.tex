@@ -130,6 +130,7 @@ I_j^\tau = \fracd{\sum_i e_i }{d_j} ,
 \end{equation}
 
 
+
 For further analysis, I breaking down the year into seasons, as
 different seasons may have different characteristics with regards to
 precipitation. I will define the seasons as follows: Winter will be
@@ -137,6 +138,9 @@ December, January, and February. ``Winter'' of a certain year contains
 December of the previous year.  Spring will be March, April, and
 May. Summer is June, July, and August. Fall is September, October,
 November.
+
+Once we have characterized the climatology of precipitation, we will start moving towards buidling predictive models for precipitation. In order to see how accurate such models are in comparison to observed precipitation. Such accuracy we shall use is to see whether the model and the observed data match in terms of whether there exists precipitation at a given minute. We ignore the non-precipitation when looking at accuracy because by matching non-precipitation minutes in both the model and the observed data, we end up getting an accuracy of over 90\%, which not useful. So, if the model and the observed data do not match in terms whether there exists precipitation, this contributes to the model being deemed less accurate. We can have a stricter definition of accuracy, in which we set up the precipitation condition, in addition to saying that the intensity must match too, otherwise we can not say the model and observed data match. This stricter definition of model accuracy might be used when thinking about 
+
 
 Figure~\ref{p2019} shows the distribution of durations of 3198
 precipitation events $E_j^1$, i.e. $E_j^\tau$ where $\tau=1$~min for
@@ -365,9 +369,16 @@ Running the model one hundred times let us look at what the average precipitatio
 	\centering
 	\includegraphics[width=0.75\textwidth]{Figures/best_one_run.png}
 	\caption[Modified run using Summer 2018 climatology]
-	{\label{crudemodel} One model run using the exponentials calculated from Summer 2018, did some adjustments to get a better model to match the actual summer 2018 run.}
+	{\label{crudermodel} One model run using the exponentials calculated from Summer 2018. Made some adjustments to get a better match for the actual summer 2018 run.}
 \end{figure}
 
+\clearpage
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.75\textwidth]{Figures/run_with_more_info.png}
+	\caption[More  run using Summer 2018 climatology]
+	{\label{crudesmodel} One model run using the exponentials calculated from Summer 2018. Put up some more information such as how much of the time was non-dominated by no precipitation. }
+\end{figure}
 \section{Discussion\label{sec:discussion}}
 This section is blank for now. 
 
