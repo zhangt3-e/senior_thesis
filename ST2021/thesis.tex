@@ -144,7 +144,8 @@ Once we have characterized the climatology of precipitation, we will start movin
 
 Figure~\ref{p2019} shows the distribution of durations of 3198
 precipitation events $E_j^1$, i.e. $E_j^\tau$ where $\tau=1$~min for
-the year 2019, broken down by season. EXPLAIN THE X-BIN SPACING. 
+the year 2019, broken down by season. In order to make bins that contain non-zero values, I created bins using duration percentiles. I used unique values obtained from using a range of percentiles from 0 to 100, in 2 and 5 percent intervals. For one analysis, I stopped at 98 \% believing this would be the best approach in terms of fitting. At the same time, I also made sure to analyze the data including the 100 percentile, to see how it differs when including the extremes. Such purpose is also to realize that excluding such extremes produced modelled precipitation that did not last long as well as well as the gaps between precipitation events being too small.  
+
 I used an exponential fit to the
 frequency-duration histograms for all 1253 events $E_j^2$,
 i.e. $E_j^\tau$ where $\tau=2$~min. For all the other years, as shown
