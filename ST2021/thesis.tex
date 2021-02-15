@@ -102,8 +102,51 @@ evaporation losses \cite[]{Vaisala}. By analyzing the precipitation
 bwteen 2017 and today, I first summarize the data using this
 climatology, in terms of exponential distributions and their
 parameters, by season and by year, before attepting to predict
-precipitation events based on other variables that are observed by the
-weather station.
+precipitation events based on other variables that are observed by the weather station.
+
+These following histograms show the distribution of precipitation event duration in terms of minutes and shows the different duration distributions per season. 
+
+\clearpage
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/precip_2017.png}
+	\caption[Precipitation histogram for 2017 broken down by
+	season]{\label{p2017} Distribution of precipitation duration in
+		2017, with a breakdown by seasons. Note that data collection began on 16 July
+		2017. Which means we only have part of the summer and all of the fall data. }
+\end{figure}
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/precip_2018.png}
+	\caption[Precipitation histogram for 2018 broken down by season]{\label{p2018}
+		Distribution of precipitation duration in 2018, with a breakdown
+		by seasons. 2018 is the first full year of data collections.}
+\end{figure}
+
+\clearpage
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/precip_2019.png}
+	\caption[Precipitation histogram for 2019 broken down by
+	season]{\label{p2019} Distribution of precipitation duration in
+		2019, with a breakdown by seasons. %The minimum duration,
+		%$\tau=1$~min, and the maximum duration over the data set is 368	min, but the horizontal axis was limited to the 98th percentile of
+		%the durations, 42~min, for clarity. Superposed is a least-squares
+		%fit of a line in log-log space of duration versus frequency for the entire year, excluding the 1--2~min bin, quoted as the
+		%equivalent exponential in this space.
+	}
+\end{figure}
+
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/precip_2020.png}
+	\caption[Precipitation histogram for 2020 broken down by
+	season]{\label{p2020} Distribution of precipitation duration
+		in 2020, with a breakdown by seasons. %%	incomplete as collection still ongoing. The layout is as in
+		%Figure~\ref{p2019}. 
+	}
+\end{figure}
+\clearpage
 
 \section{Methods \label{sec:methods}}
 
@@ -175,47 +218,7 @@ Another similar equation for precipitation intensity can be described by the fol
 	F_{inten} = \epsilon \,e^{\zeta I},
 \end{equation}
 where $F_{inten}$ is the frequency of intensity of precipitation events, $I$ is the intensity of the precipitation events, $\epsilon$ is the unitless frequency coefficient, and $\zeta$ is the exponential coefficient. Table~\ref{fourthtable} shows the coefficients~$\epsilon$ and the exponential coefficients~$\zeta$ from looking at yearly frequency of intensity of precipitation events.  
-\clearpage
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=0.675\textwidth]{Figures/More_detail_precip_2019.png}
-  \caption[Precipitation histogram for 2019 broken down by
-    season]{\label{p2019} Distribution of precipitation duration in
-    2019, with a breakdown by seasons. The minimum duration,
-    $\tau=1$~min, and the maximum duration over the data set is 368
-    min, but the horizontal axis was limited to the 98th percentile of
-    the durations, 42~min, for clarity. Superposed is a least-squares
-    fit of a line in log-log space of duration versus frequency for
-    the entire year, excluding the 1--2~min bin, quoted as the
-    equivalent exponential in this space.}
-\end{figure}
-\begin{figure}[b]
-  \centering
-  \includegraphics[width=0.675\textwidth]{Figures/precip_2020.png}
-  \caption[Precipitation histogram for 2020 broken down by
-    season]{\label{p2020} Distribution of precipitation duration
-    in 2020, with a breakdown by seasons. 2020 is also
-    incomplete as collection still ongoing. The layout is as in
-    Figure~\ref{p2019}.}
-\end{figure}
-\clearpage
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=0.675\textwidth]{Figures/precip_2018.png}
-  \caption[Precipitation histogram for 2018 broken down by season]{\label{p2018}
-    Distribution of precipitation duration in 2018, with a breakdown
-    by seasons. The layout is as in Figure~\ref{p2019}.}
-\end{figure}
 
-\begin{figure}[b]
-  \centering
-  \includegraphics[width=0.675\textwidth]{Figures/precip_2017.png}
-  \caption[Precipitation histogram for 2017 broken down by
-    season]{\label{p2017} Distribution of precipitation duration in
-    2017, with a breakdown by seasons. The layout is as in
-    Figure~\ref{p2019}. Note that data collection began on 16 July
-    2017.}
-\end{figure}
 \clearpage
 
 %Is the exponential different for W/S/S/F? Can you tell the difference?
@@ -387,9 +390,31 @@ Running the model one hundred times let us look at what the average precipitatio
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.75\textwidth]{Figures/precip18_new.png}
-	\caption[Redone Exponentials with contrasting curve fitting]
+	\caption[2018 Exponentials with contrasting curve fitting]
 	{\label{precip18_redone}
 	 Shows curve fitting using different percentile usages. Both curves seems better at fitting different parts of the histogram, with the 98 percentile curve fitting the smaller durations better, while the 100 percentile curve fitting the larger durations better. }
+\end{figure}
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.75\textwidth]{Figures/precip20_new.png}
+	\caption[2020 Exponentials with contrasting curve fitting]
+	{\label{precip20_redone}
+		Shows curve fitting using different percentile usages. Both curves seems better at fitting different parts of the histogram, with the 98 percentile curve fitting the smaller durations better, while the 100 percentile curve fitting the larger durations better. }
+\end{figure}
+\clearpage
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.75\textwidth]{Figures/precip17_new.png}
+	\caption[2017 Exponentials with contrasting curve fitting]
+	{\label{precip17_redone}
+		Shows curve fitting using different percentile usages. Both curves seems better at fitting different parts of the histogram, with the 98 percentile curve fitting the smaller durations better, while the 100 percentile curve fitting the larger durations better. }
+\end{figure}
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.75\textwidth]{Figures/precip19_new.png}
+	\caption[2019 Exponentials with contrasting curve fitting]
+	{\label{precip19_redone}
+		Shows curve fitting using different percentile usages. Both curves seems better at fitting different parts of the histogram, with the 98 percentile curve fitting the smaller durations better, while the 100 percentile curve fitting the larger durations better. }
 \end{figure}
 
 	
