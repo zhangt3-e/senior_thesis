@@ -142,11 +142,88 @@ These following histograms show the distribution of precipitation event duration
 	\includegraphics[width=0.675\textwidth]{Figures/precip_2020.png}
 	\caption[Precipitation histogram for 2020 broken down by
 	season]{\label{p2020} Distribution of precipitation duration
-		in 2020, with a breakdown by seasons. %%	incomplete as collection still ongoing. The layout is as in
+		in 2020, with a breakdown by seasons.  %The layout is as in
 		%Figure~\ref{p2019}. 
 	}
 \end{figure}
+
 \clearpage
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/nonprecip_2017.png}
+	\caption[Histogram of non-precipitation events for 2017 broken down by
+	season]{\label{np2017} Distribution of non-precipitation event duration in	2017, with a breakdown by seasons. The minimum duration, $\tau = 1$~min. Note that data collection began on 16 July 2017, which means that Summer is only partially complete.}
+\end{figure}
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/nonprecip_2018.png}
+	\caption[Histogram of non-precipitation events for 2018 broken down by season]{\label{np2018}
+		Distribution of precipitation duration in 2018, with a breakdown
+		by seasons. The minimum duration, $\tau=1$~min. }
+\end{figure}
+
+\clearpage
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/nonprecip_2019.png}
+	\caption[Histogram of non-precipitation events for 2019 broken
+	down by season]{\label{np2019} Distribution of
+		non-precipitation event duration in 2019, with a breakdown
+		by seasons. The minimum duration, $\tau=1$~min %, and the
+		%maximum duration over the data set is 2613~min, but the
+		%horizontal axis was limited to the 98th percentile of
+		%2350~min, for clarity. Superposed is a least-squares fit of
+		%a line in log-log space of duration versus frequency for the
+		%entire year, excluding the 1--2~min bin, quoted as the
+		%equivalent exponential in this space.
+	}
+\end{figure}
+
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/nonprecip_2020.png}
+	\caption[Histogram of non-precipitation events for 2020 broken down by
+	season]{\label{np2020} Distribution of non precipitation event duration
+		in 2020, with a breakdown by seasons. }
+\end{figure}
+
+
+\clearpage
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/inten2017.png}
+	\caption[Intensity histogram for 2017 broken down by season]
+	{\label{i2017}Distribution of precipitation intensity in 2017,
+		with a breakdown by seasons. Note that data collection began on 16
+		July 2017.}
+\end{figure}
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/inten2018.png}
+	\caption[Intensity histogram for 2018 broken down by season]
+	{\label{i2018}Distribution of precipitation intensity in 2018,
+		with a breakdown by seasons.}
+\end{figure}
+\clearpage
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/inten2019.png}
+	\caption[Intensity histogram for 2019 broken down by season]
+	{\label{i2019}Distribution of precipitation intensity in
+		2019, with a breakdown by seasons. The minimum intensity,
+		$I=0.01$~mm/min. 
+	}
+\end{figure}
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/inten2020.png}
+	\caption[Intensity histogram for 2020 broken down by season]
+	{\label{i2020} Distribution of precipitation intensity in
+		2020, with a breakdown by seasons.}
+\end{figure}
+\clearpage
+
 
 \section{Methods \label{sec:methods}}
 
@@ -289,98 +366,10 @@ Summer, but greater than the winter precipitation intensity.
 
 Looking at trying to extend the exponential fit towards non-precipitation event durations, the exponentials for such duration, $\delta$ is less negative overall compared to the exponentials from the precipitation event duration, $\alpha$. Some of this is explained from the fact that the duration of non-precipitation events range from 1 minute to over 2000 minutes, whereas the duration of precipitation events range from 1 minute to just over 300 minutes. At the same time how we bin the durations for both precipitation and non-precipitation events will affect how we get the fits. 
 
-\clearpage
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/nonprecip_2019.png}
-	\caption[Histogram of non-precipitation events for 2019 broken
-          down by season]{\label{np2019} Distribution of
-          non-precipitation event duration in 2019, with a breakdown
-          by seasons. The minimum duration, $\tau=1$~min, and the
-          maximum duration over the data set is 2613~min, but the
-          horizontal axis was limited to the 98th percentile of
-          2350~min, for clarity. Superposed is a least-squares fit of
-          a line in log-log space of duration versus frequency for the
-          entire year, excluding the 1--2~min bin, quoted as the
-          equivalent exponential in this space.}
-\end{figure}
-\begin{figure}[b]
-	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/nonprecip_2020.png}
-	\caption[Histogram of non-precipitation events for 2020 broken down by
-	season]{\label{np2020} Distribution of non precipitation event duration
-		in 2020, with a breakdown by seasons. 2020 is also
-		incomplete as collection still ongoing. The layout is as in
-		Figure~\ref{np2019}.}
-\end{figure}
-\clearpage
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/nonprecip_2018.png}
-	\caption[Histogram of non-precipitation events for 2018 broken down by season]{\label{np2018}
-		Distribution of precipitation duration in 2018, with a breakdown
-		by seasons. The layout is as in Figure~\ref{np2019}.}
-\end{figure}
-
-\begin{figure}[b]
-	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/nonprecip_2017.png}
-	\caption[Histogram of non-precipitation events for 2017 broken down by
-	season]{\label{np2017} Distribution of non-precipitation event duration in
-		2017, with a breakdown by seasons. The layout is as in
-		Figure~\ref{np2019}. Note that data collection began on 16 July
-		2017.}
-\end{figure}
-\clearpage
 
 
 
-\clearpage
-\begin{figure}[t]
-\centering
-\includegraphics[width=0.675\textwidth]{Figures/inten2019.png}
-\caption[Intensity histogram for 2019 broken down by season]
-        {\label{i2019}Distribution of precipitation intensity in
-          2019, with a breakdown by seasons. The minimum intensity,
-          $I=0.01$~mm/min, and the maximum intensity over the data set
-          is 0.4~mm/min, but the horizontal axis was limited to the
-          98th percentile of the intensity, 0.1~mm/min, for
-          clarity. Superposed is a least-squares fit of a line in
-          log-log space of duration versus frequency for the entire
-          year, %excluding the 0.01~mm/day--0.02~mm/day bin, 
-          %quoted as
-          %the equivalent exponential in this space.
-      }
-\end{figure}
-\begin{figure}[b]
-\centering
-\includegraphics[width=0.675\textwidth]{Figures/inten2020.png}
-\caption[Intensity histogram for 2020 broken down by season]
-        {\label{i2020}Distribution of precipitation intensity in
-          2020, with a breakdown by seasons. 2020 is also incomplete
-          as collection still ongoing. The layout is as in
-          Figure~\ref{i2019}.}
-\end{figure}
-\clearpage
-\begin{figure}[t]
-\centering
-\includegraphics[width=0.675\textwidth]{Figures/inten2018.png}
-\caption[Intensity histogram for 2018 broken down by season]
-        {\label{i2018}Distribution of precipitation intensity in 2018,
-          with a breakdown by seasons. The layout is as in
-          Figure~\ref{i2019}.}
-\end{figure}
 
-\begin{figure}[b]
-\centering
-\includegraphics[width=0.675\textwidth]{Figures/inten2017.png}
-\caption[Intensity histogram for 2017 broken down by season]
-        {\label{i2017}Distribution of precipitation intensity in 2017,
-          with a breakdown by seasons. The layout is as in
-          Figure~\ref{i2019}. Note that data collection began on 16
-          July 2017.}
-\end{figure}
-\clearpage
 
 \input{thirdtable.tex}
 \input{thirdtable_100.tex}
