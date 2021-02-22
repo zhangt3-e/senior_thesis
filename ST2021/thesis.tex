@@ -76,35 +76,44 @@ Tyrone Zhang %%Sign here
 %--Have sections but use chapter counters
 \addcontentsline{toc}{chapter}{Main Text}
 
-\section{Introduction \label{sec:introduction}}
+\section{Introduction}\label{sec:introduction}
 
-The climatology of Princeton is one that belongs to the mid-latitudes,
-which is characterized by having four seasons that results in a large
-variation in temperature throughout a year. In terms of the average
-calculated between 1981 and 2010, Princeton gets an average of 1227~mm
-of precipitation annually, and the precipitation distribution
-throughout the year is fairly even, with less precipitation in the
-winter~\cite[]{PRISM}.  According to the Koppen-Geiger Climate
-Classification, Princeton, NJ lies in the classification Cfa, which
-denotes a temperate climate, with no dry season, and hot summers
-defined as reaching~22$^\circ$C or higher \cite[]{Peel2008}. Princeton
-having no dry season means that precipitation is well spread out
-throughout the year.
+The climatology of Princeton is one that belongs to the mid-latitudes, which
+is characterized by having four seasons that results in a large variation in
+temperature throughout a year. In terms of the average calculated between
+1981 and 2010, Princeton gets an average of 1227~mm of precipitation
+annually, and the precipitation distribution throughout the year is fairly
+even, with less precipitation in the winter~\cite[]{PRISM}.  According to
+the Koppen-Geiger Climate Classification, Princeton, NJ lies in the
+classification Cfa, which denotes a temperate climate, with no dry season,
+and hot summers defined as reaching~22$^\circ$C or higher
+\cite[]{Peel2008}. Princeton having no dry season means that precipitation
+is well spread out throughout the year.
 
 % \input{Histogram.tex}
 
-Our weather station on the top of Guyot Hall is Vaisala weather
-transmitter WXT530 series. It measures six weather parameters of air
-pressure, temperature, humidity, rainfall, wind speed, and wind
-direction. The rainfall is measured using an acoustic Vaisala RAINCAP
-Sensor, which helps avoid the complications of flooding, wetting, and
-evaporation losses \cite[]{Vaisala}. By analyzing the precipitation
-bwteen 2017 and today, I first summarize the data using this
-climatology, in terms of exponential distributions and their
-parameters, by season and by year, before attepting to predict
-precipitation events based on other variables that are observed by the weather station.
+Our weather station on the top of Guyot Hall is Vaisala weather transmitter
+WXT530 series. It measures six weather parameters of air pressure,
+temperature, humidity, rainfall, wind speed, and wind direction. The
+rainfall is measured using an acoustic Vaisala RAINCAP Sensor, which helps
+avoid the complications of flooding, wetting, and evaporation losses
+\cite[]{Vaisala}. By analyzing the precipitation bwteen 2017 and today, I
+first summarize the data using this climatology, in terms of exponential
+distributions and their parameters, by season and by year, before attepting
+to predict precipitation events based on other variables that are observed
+by the weather station.
 
-These following histograms show the distribution of precipitation event duration in terms of minutes and shows the different duration distributions per season. 
+% FJS BASIC CLIMATOLOGY FIGURES TEMPERATURE, PRECIPITATION, RELHUM
+
+%FJS In Section~{\textit{\nameref{sec:dcp}} I show this and that. 
+
+\clearpage
+
+\section{Descriptive Climatology of Precipitation}\label{sec:dcp}
+
+These following histograms show the distribution of precipitation event
+duration in terms of minutes and shows the different duration distributions
+per season.
 
 \clearpage
 \begin{figure}[t]
@@ -125,16 +134,18 @@ These following histograms show the distribution of precipitation event duration
 
 \clearpage
 \begin{figure}[t]
-	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/precip_2019.png}
-	\caption[Precipitation histogram for 2019 broken down by
-	season]{\label{p2019} Distribution of precipitation duration in
-		2019, with a breakdown by seasons. %The minimum duration,
-		%$\tau=1$~min, and the maximum duration over the data set is 368	min, but the horizontal axis was limited to the 98th percentile of
-		%the durations, 42~min, for clarity. Superposed is a least-squares
-		%fit of a line in log-log space of duration versus frequency for the entire year, excluding the 1--2~min bin, quoted as the
-		%equivalent exponential in this space.
-	}
+  \centering
+  \includegraphics[width=0.675\textwidth]{Figures/precip_2019.png}
+  \caption[Precipitation histogram for 2019 broken down by season]
+          {\label{p2019}Distribution of precipitation duration in 2019, with
+            a breakdown by seasons.
+            %The minimum duration, $\tau=1$~min, and the maximum duration over the data
+            %set is 368 min, but the horizontal axis was limited to the 98th percentile
+            %of the durations, 42~min, for clarity. Superposed is a least-squares fit of
+            %a line in log-log space of duration versus frequency for the entire year,
+            %excluding the 1--2~min bin, quoted as the equivalent exponential in this
+            %space.  
+}
 \end{figure}
 
 \begin{figure}[b]
@@ -152,8 +163,11 @@ These following histograms show the distribution of precipitation event duration
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/nonprecip_2017.png}
-	\caption[Histogram of non-precipitation events for 2017 broken down by
-	season]{\label{np2017} Distribution of non-precipitation event duration in	2017, with a breakdown by seasons. The minimum duration, $\tau = 1$~min. Note that data collection began on 16 July 2017, which means that Summer is only partially complete.}
+	\caption[Histogram of non-precipitation events for 2017 broken down
+          by season]{\label{np2017} Distribution of non-precipitation event
+          duration in 2017, with a breakdown by seasons. The minimum
+          duration, $\tau = 1$~min. Note that data collection began on 16
+          July 2017, which means that Summer is only partially complete.}
 \end{figure}
 \begin{figure}[b]
 	\centering
@@ -224,24 +238,27 @@ These following histograms show the distribution of precipitation event duration
 \end{figure}
 \clearpage
 
+\section{Analysis of Precipitation}\label{sec:apc}
 
-\section{Methods \label{sec:methods}}
+% FJS Here I do something. 
+
+\subsection{Methods}\label{sec:methods}
 
 I shall define the following terms. The time series of
-\textbf{precipitation} as recorded by the instrument is denoted $e_i$,
-where $i$ indexes the measurement intervals, each 60~s long. I define
-a precipitation \textbf{event} $E_j^\tau $ as a sequence of
-\textbf{duration} $d_j\ge \tau$ containing contiguous nonzero
-precipitation measurements $e_i>0$, flanked left and right by zeros,
-$e_i=0$, and where $\tau$ is in minutes.
+\textbf{precipitation} as recorded by the instrument is denoted $e_i$, where
+$i$ indexes the measurement intervals, each 60~s long. I define a
+precipitation \textbf{event} $E_j^\tau $ as a sequence of \textbf{duration}
+$d_j\ge \tau$ containing contiguous nonzero precipitation measurements
+$e_i>0$, flanked left and right by zeros, $e_i=0$, and where $\tau$ is in
+minutes.
 
-Furthermore, I define a precipitation \textbf{non-event} $N_j^\tau$,
-  as having a contiguous set of zeros, $e_i=0$, whose combined duration
-  exceeds $\tau$, flanked left and right by non-zero values, $e_i=0$.
+Furthermore, I define a precipitation \textbf{non-event} $N_j^\tau$, as
+having a contiguous set of zeros, $e_i=0$, whose combined duration exceeds
+$\tau$, flanked left and right by non-zero values, $e_i=0$.
 
-One more term to define is \textbf{precipitation intensity}, which for
-a precipitation event $E_j^\tau$ is the total amount of precipitation
-divided by its duration, i.e., 
+One more term to define is \textbf{precipitation intensity}, which for a
+precipitation event $E_j^\tau$ is the total amount of precipitation divided
+by its duration, i.e.,
 \begin{equation}
 I_j^\tau = \fracd{\sum_i e_i }{d_j} ,
 \quad
@@ -249,28 +266,46 @@ I_j^\tau = \fracd{\sum_i e_i }{d_j} ,
 .
 \end{equation}
 
+For further analysis, I breaking down the year into seasons, as different
+seasons may have different characteristics with regards to precipitation. I
+will define the seasons as follows: Winter will be December, January, and
+February. ``Winter'' of a certain year contains December of the previous
+year.  Spring will be March, April, and May. Summer is June, July, and
+August. Fall is September, October, November.
 
+Once we have characterized the climatology of precipitation, we will start
+moving towards buidling predictive models for precipitation. In order to see
+how accurate such models are in comparison to observed precipitation. Such
+accuracy we shall use is to see whether the model and the observed data
+match in terms of whether there exists precipitation at a given minute. We
+ignore the non-precipitation when looking at accuracy because by matching
+non-precipitation minutes in both the model and the observed data, we end up
+getting an accuracy of over 90\%, which not useful. So, if the model and the
+observed data do not match in terms whether there exists precipitation, this
+contributes to the model being deemed less accurate. We can have a stricter
+definition of accuracy, in which we set up the precipitation condition, in
+addition to saying that the intensity must match too, otherwise we can not
+say the model and observed data match. This stricter definition of model
+accuracy might be used when thinking about
 
-For further analysis, I breaking down the year into seasons, as
-different seasons may have different characteristics with regards to
-precipitation. I will define the seasons as follows: Winter will be
-December, January, and February. ``Winter'' of a certain year contains
-December of the previous year.  Spring will be March, April, and
-May. Summer is June, July, and August. Fall is September, October,
-November.
+\subsection{Results}\label{sec:apcr}
 
-Once we have characterized the climatology of precipitation, we will start moving towards buidling predictive models for precipitation. In order to see how accurate such models are in comparison to observed precipitation. Such accuracy we shall use is to see whether the model and the observed data match in terms of whether there exists precipitation at a given minute. We ignore the non-precipitation when looking at accuracy because by matching non-precipitation minutes in both the model and the observed data, we end up getting an accuracy of over 90\%, which not useful. So, if the model and the observed data do not match in terms whether there exists precipitation, this contributes to the model being deemed less accurate. We can have a stricter definition of accuracy, in which we set up the precipitation condition, in addition to saying that the intensity must match too, otherwise we can not say the model and observed data match. This stricter definition of model accuracy might be used when thinking about 
+Figure~\ref{p2019} shows the distribution of durations of 3198 precipitation
+events $E_j^1$, i.e. $E_j^\tau$ where $\tau=1$~min for the year 2019, broken
+down by season. In order to make bins that contain non-zero values, I
+created bins using duration percentiles. I used unique values obtained from
+using a range of percentiles from 0 to 100, in 2 and 5 percent
+intervals. For one analysis, I stopped at 98 \% believing this would be the
+best approach in terms of fitting. At the same time, I also made sure to
+analyze the data including the 100 percentile, to see how it differs when
+including the extremes. Such purpose is also to realize that excluding such
+extremes produced modelled precipitation that did not last long as well as
+well as the gaps between precipitation events being too small.
 
-
-Figure~\ref{p2019} shows the distribution of durations of 3198
-precipitation events $E_j^1$, i.e. $E_j^\tau$ where $\tau=1$~min for
-the year 2019, broken down by season. In order to make bins that contain non-zero values, I created bins using duration percentiles. I used unique values obtained from using a range of percentiles from 0 to 100, in 2 and 5 percent intervals. For one analysis, I stopped at 98 \% believing this would be the best approach in terms of fitting. At the same time, I also made sure to analyze the data including the 100 percentile, to see how it differs when including the extremes. Such purpose is also to realize that excluding such extremes produced modelled precipitation that did not last long as well as well as the gaps between precipitation events being too small.  
-
-I used an exponential fit to the
-frequency-duration histograms for all 1253 events $E_j^2$,
-i.e. $E_j^\tau$ where $\tau=2$~min. For all the other years, as shown
-in Figures~\ref{p2020}, \ref{p2018} and~\ref{p2017}, I used a similar
-procedure.
+I used an exponential fit to the frequency-duration histograms for all 1253
+events $E_j^2$, i.e. $E_j^\tau$ where $\tau=2$~min. For all the other years,
+as shown in Figures~\ref{p2020}, \ref{p2018} and~\ref{p2017}, I used a
+similar procedure.
 
 Excluding the first interval shown, focusing on events of duration
 greater than or equal to 2~min, we propose an exponential model for
@@ -279,90 +314,129 @@ the histogram, with the following equation:
   F = \beta \,e^{\alpha d},
 \end{equation}
 where $F$ is the frequency and $d$ the duration, and with $\beta$ the
-unitless frequency coefficient and $\alpha$ is the exponential
-coefficient (in units of min$^{-1}$). Table~\ref{firsttable} shows the
-coefficients~$\beta$ and the exponential coefficients~$\alpha$ from
-looking at the yearly frequency of precipitation duration.
+unitless frequency coefficient and $\alpha$ is the exponential coefficient
+(in units of min$^{-1}$). Table~\ref{firsttable} shows the
+coefficients~$\beta$ and the exponential coefficients~$\alpha$ from looking
+at the yearly frequency of precipitation duration.
 
-We shall also propose the following equations which will also describe an exponential model for the histogram regarding non-precipitation events, which is described by the following equation: 
+We shall also propose the following equations which will also describe an
+exponential model for the histogram regarding non-precipitation events,
+which is described by the following equation:
 \begin{equation}\label{expod_np}
 	F_{np} = \gamma \,e^{\delta D},
 \end{equation}
-where $F_{np}$ is the frequency of non-precipitation events, $D$ being duration, and $\gamma $ being the unitless frequency coefficient and $\delta $ is the exponential coefficient. Table~\ref{thirdtable_98} shows the coefficients~$\gamma$ and exponential coefficients~$\delta$ from looking at yearly frequency of non-precipitation event durations. 
+where $F_{np}$ is the frequency of non-precipitation events, $D$ being
+duration, and $\gamma $ being the unitless frequency coefficient and $\delta
+$ is the exponential coefficient. Table~\ref{thirdtable_98} shows the
+coefficients~$\gamma$ and exponential coefficients~$\delta$ from looking at
+yearly frequency of non-precipitation event durations.
 
-Another similar equation for precipitation intensity can be described by the following equation: 
+Another similar equation for precipitation intensity can be described by the
+following equation:
 \begin{equation}\label{expod_inten}
 	F_{inten} = \epsilon \,e^{\zeta I},
 \end{equation}
-where $F_{inten}$ is the frequency of intensity of precipitation events, $I$ is the intensity of the precipitation events, $\epsilon$ is the unitless frequency coefficient, and $\zeta$ is the exponential coefficient. Table~\ref{fourthtable} shows the coefficients~$\epsilon$ and the exponential coefficients~$\zeta$ from looking at yearly frequency of intensity of precipitation events.  
+where $F_{inten}$ is the frequency of intensity of precipitation events, $I$
+is the intensity of the precipitation events, $\epsilon$ is the unitless
+frequency coefficient, and $\zeta$ is the exponential
+coefficient. Table~\ref{fourthtable} shows the coefficients~$\epsilon$ and
+the exponential coefficients~$\zeta$ from looking at yearly frequency of
+intensity of precipitation events.
 
 \clearpage
 \begin{figure}[t]
-	\centering
-	\includegraphics[width=0.625\textwidth]{Figures/precip17_new.png}
-	\caption[2017 precipitation duration Exponentials with contrasting curve fitting]
-	{\label{precip17_redone}
-		Shows curve fitting of the precipitation histogram excluding 1 minute duration events for the incomplete 2017 data. The red curve denotes the curve that fits to the 100th percentile, while the black curve fits the data to the 98th percentile. Has similar trends to the other years, though 2017 has incomplete data.   }
-\end{figure}
-\begin{figure}[b]
-	\centering
-	\includegraphics[width=0.625\textwidth]{Figures/precip18_new.png}
-	\caption[2018 precipitation duration Exponentials with contrasting curve fitting]
-	{\label{precip18_redone}
-		Shows curve fitting of the precipitation histogram excluding 1 minute duration events for the entire 2018 data. Format is the same as \ref{precip17_redone}, with the understanding that 2018 has complete data.   }
+\centering
+\includegraphics[width=0.625\textwidth]{Figures/precip17_new.png}
+\caption[2017 precipitation duration exponentials with contrasting curve fitting]
+{\label{precip17_redone}Curve fitting of the precipitation histogram
+  excluding 1 minute duration events for the incomplete 2017 data. The red
+  curve denotes the curve that fits to the 100th percentile, while the black
+  curve fits the data to the 98th percentile. Has similar trends to the
+  other years, though 2017 has incomplete data.}
 \end{figure}
 
-\clearpage
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/precip19_new.png}
-	\caption[2019 precipitation duration Exponentials with contrasting curve fitting]
-	{\label{precip19_redone}
-		Shows curve fitting of the precipitation histogram excluding 1 minute duration events for the entire 2019 data. The layout is the same as seen in \ref{precip17_redone}, with 2019 having complete data like 2018. 2018 and 2019 have similar trends and similar curves for both best fit curves.  }
-\end{figure}
 \begin{figure}[b]
-	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/precip20_new.png}
-	\caption[2020 precipitation duration Exponentials with contrasting curve fitting]
-	{\label{precip20_redone}
-		Shows curve fitting of the histogram excluding 1 minute duration events for the entire 2020 data. The layout is the same as seen in \ref{precip17_redone} with 2020 having completed data as well. 2018, 2019, and 2020 all look similar looking at the histogram and the best fit curves.   }
-\end{figure}
-\clearpage
-
-\clearpage
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.625\textwidth]{Figures/nonprecip_2017_new.png}
-	\caption[2017 Non-precipitation duration Exponentials with contrasting curve fitting]
-	{\label{nonprecip17_redone}
-		Shows curve fitting of the histogram excluding 1 minute duration events for the incomplete 2017 data. The red curve denotes the curve that fits to the 100th percentile, while the black curve fits the data to the 98th percentile. Has similar trends to the other years, though 2017 has incomplete data.   }
-\end{figure}
-\begin{figure}[b]
-	\centering
-	\includegraphics[width=0.625\textwidth]{Figures/nonprecip_2018_new.png}
-	\caption[2018 Non-precipitation duration Exponentials with contrasting curve fitting]
-	{\label{nonprecip18_redone}
-		Shows curve fitting of the histogram excluding 1 minute duration events for the entire 2018 data. The red curve denotes the curve that fits to the 100th percentile, while the black curve fits the data to the 98th percentile. The 98 percentile curve fitting the smaller durations better, while the 100 percentile curve fitting the larger durations better.  Perhaps the only real difference between 2017 and 2018 is the frequency, with 2018 having complete data.  }
+\centering
+\includegraphics[width=0.625\textwidth]{Figures/precip18_new.png}
+\caption[2018 precipitation duration exponentials with contrasting curve fitting]
+{\label{precip18_redone}Curve fitting of the precipitation histogram
+  excluding 1 minute duration events for the entire 2018 data. Format is the
+  same as \ref{precip17_redone}, with the understanding that 2018 has
+  complete data.}
 \end{figure}
 
 \clearpage
 
 \begin{figure}[t]
-	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/nonprecip_2019_new.png}
-	\caption[2019 Non-precipitation duration Exponentials with contrasting curve fitting]
-	{\label{nonprecip19_redone}
-		Shows curve fitting of the histogram excluding 1 minute duration events for the entire 2019 data. The layout is the same as seen in \ref{precip18_redone}. 2018 and 2019 have similar trends and similar curves for both best fit curves.  }
+\centering
+\includegraphics[width=0.675\textwidth]{Figures/precip19_new.png}
+\caption[2019 precipitation duration exponentials with contrasting curve fitting]
+{\label{precip19_redone}Curve fitting of the precipitation histogram
+  excluding 1 minute duration events for the entire 2019 data. The layout is
+  the same as seen in \ref{precip17_redone}, with 2019 having complete data
+  like 2018. 2018 and 2019 have similar trends and similar curves for both
+  best fit curves.}
 \end{figure}
+
 \begin{figure}[b]
-	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/nonprecip_2020_new.png}
-	\caption[2020 Non-precipitation duration Exponentials with contrasting curve fitting]
-	{\label{nonprecip20_redone}
-		Shows curve fitting of the histogram excluding 1 minute duration events for the entire 2020 data. The layout is the same as seen in \ref{nonprecip18_redone}. 2018, 2019, and 2020 all look similar looking at the histogram and the best fit curves.   }
+\centering
+\includegraphics[width=0.675\textwidth]{Figures/precip20_new.png}
+\caption[2020 precipitation duration exponentials with contrasting curve fitting]
+{\label{precip20_redone}Curve fitting of the histogram excluding 1
+  minute duration events for the entire 2020 data. The layout is the same as
+  seen in \ref{precip17_redone} with 2020 having completed data as
+  well. 2018, 2019, and 2020 all look similar looking at the histogram and
+  the best fit curves.}
 \end{figure}
+
 \clearpage
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.625\textwidth]{Figures/nonprecip_2017_new.png}
+\caption[2017 Non-precipitation duration Exponentials with contrasting curve fitting]
+
+{\label{nonprecip17_redone}Curve fitting of the histogram excluding 1 minute
+  duration events for the incomplete 2017 data. The red curve denotes the
+  curve that fits to the 100th percentile, while the black curve fits the
+  data to the 98th percentile. Has similar trends to the other years, though
+  2017 has incomplete data.}
+\end{figure}
+
+\begin{figure}[b]
+  \centering
+  \includegraphics[width=0.625\textwidth]{Figures/nonprecip_2018_new.png}
+  \caption[2018 Non-precipitation duration Exponentials with contrasting curve fitting]
+  {\label{nonprecip18_redone} Shows curve fitting of the histogram excluding
+    1 minute duration events for the entire 2018 data. The red curve denotes
+    the curve that fits to the 100th percentile, while the black curve fits
+    the data to the 98th percentile. The 98 percentile curve fitting the
+    smaller durations better, while the 100 percentile curve fitting the
+    larger durations better.  Perhaps the only real difference between 2017
+    and 2018 is the frequency, with 2018 having complete data.}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.675\textwidth]{Figures/nonprecip_2019_new.png}
+  \caption[2019 Non-precipitation duration Exponentials with contrasting curve fitting]
+  {\label{nonprecip19_redone} Shows curve fitting of the histogram excluding
+    1 minute duration events for the entire 2019 data. The layout is the
+    same as seen in \ref{precip18_redone}. 2018 and 2019 have similar trends
+    and similar curves for both best fit curves.}
+\end{figure}
+
+\begin{figure}[b]
+  \centering
+  \includegraphics[width=0.675\textwidth]{Figures/nonprecip_2020_new.png}
+  \caption[2020 Non-precipitation duration Exponentials with contrasting curve fitting]
+  {\label{nonprecip20_redone}Curve fitting of the histogram excluding
+    1 minute duration events for the entire 2020 data. The layout is the
+    same as seen in \ref{nonprecip18_redone}. 2018, 2019, and 2020 all look
+    similar looking at the histogram and the best fit curves.}
+\end{figure}
+
 %Is the exponential different for W/S/S/F? Can you tell the difference?
 %Is the exponential different for different years? Can you tell the
 %difference?  And what summarizes it all. 
@@ -373,12 +447,14 @@ where $F_{inten}$ is the frequency of intensity of precipitation events, $I$ is 
 	\caption[Fitting Intensity histogram for 2017 with different bins]
 	{\label{i2017_fit} }
 \end{figure}
+
 \begin{figure}[b]
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/inten2018_fit.png}
 	\caption[Fitting Intensity histogram for 2018 with different bins]
 	{\label{i2018_fit} }
 \end{figure}
+
 \clearpage
 \begin{figure}[t]
 	\centering
@@ -387,13 +463,18 @@ where $F_{inten}$ is the frequency of intensity of precipitation events, $I$ is 
 	{\label{i2019_fit}  
 	}
 \end{figure}
+
 \begin{figure}[b]
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/inten2020_fit.png}
 	\caption[Fitting Intensity histogram for 2020 with different bins]
 	{\label{i2020_fit}  }
 \end{figure}
+
 \clearpage
+
+
+\subsection{Discussion}\label{sec:apcd}
 
 \input{firsttable}
 
@@ -426,53 +507,102 @@ smaller precipitation totals, so its intensity is less than the
 Summer, but greater than the winter precipitation intensity.
 \input{secondtable} 
 
-Looking at trying to extend the exponential fit towards non-precipitation event durations, the exponentials for such duration, $\delta$ is less negative overall compared to the exponentials from the precipitation event duration, $\alpha$. Some of this is explained from the fact that the duration of non-precipitation events range from 1 minute to over 2000 minutes, whereas the duration of precipitation events range from 1 minute to just over 300 minutes. At the same time how we bin the durations for both precipitation and non-precipitation events will affect how we get the fits. 
-
-
-
-
-
+Looking at trying to extend the exponential fit towards non-precipitation
+event durations, the exponentials for such duration, $\delta$ is less
+negative overall compared to the exponentials from the precipitation event
+duration, $\alpha$. Some of this is explained from the fact that the
+duration of non-precipitation events range from 1 minute to over 2000
+minutes, whereas the duration of precipitation events range from 1 minute to
+just over 300 minutes. At the same time how we bin the durations for both
+precipitation and non-precipitation events will affect how we get the fits.
 
 \input{thirdtable.tex}
 \input{thirdtable_100.tex}
 \input{fourthtable.tex}
 \input{fourthtable_100.tex}
 
-In contrast, Table~\ref{fourthtable} for intensity of precipitation events show a more negative exponential compared to either precipitation or non-precipitation event durations. This is partially due to the fact that there are less bins in the intensity of preciptiation events as seen that the vast majority of precipitation events are not particularly intense on average. 
+In contrast, Table~\ref{fourthtable} for intensity of precipitation events
+show a more negative exponential compared to either precipitation or
+non-precipitation event durations. This is partially due to the fact that
+there are less bins in the intensity of preciptiation events as seen that
+the vast majority of precipitation events are not particularly intense on
+average.
 
+\clearpage
+
+\section{Simulation for Prediction}\label{sec:sfp}
+
+\subsection{Method}\label{sec:sfp}
+
+
+\clearpage 
+
+\subsection{Results}\label{sec:sfp}
+
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.75\textwidth]{Figures/better_one_run.png}
+  \caption[One run using Summer 2018 climatology]
+
+  {\label{crudemodel}One model run using the exponentials calculated from Summer 2018.}
+\end{figure}
+
+Running the model one hundred times let us look at what the average
+precipitation total the model yields, it yields 195 mm compared to the
+Summer 2018 total of 268 mm that we used. Furthermore, the accuracy of model
+precipitation matching model precipitation is only 6$\%$. Looking at
+\ref{crudemodel}, we see that the model precipitation total is lower than
+the actual precipitation observed in the Summer of 2018. Furthermore, the
+precipitation seem to be more frequent compared to the observed 2018 Summer
+data.
+
+\clearpage
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.75\textwidth]{Figures/best_one_run.png}
+  \caption[Modified run using Summer 2018 climatology]
+  {\label{crudermodel} One model run using the exponentials calculated from
+    Summer 2018. Made some adjustments to get a better match for the actual
+    summer 2018 run.}
+\end{figure}
+
+\clearpage
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.75\textwidth]{Figures/run_with_more_info.png}
+  \caption[More  run using Summer 2018 climatology]
+  {\label{crudesmodel} One model run using the exponentials calculated from
+    Summer 2018. Put up some more information such as how much of the time
+    was non-dominated by no precipitation.}
+\end{figure}
+
+\subsection{Discussion}\label{sec:spcd}
+
+\clearpage
+
+\section{Machine Learning for Prediction}\label{sec:sfp}
+
+% FJS Simulation from learned exponential fits gives you a baseline
+
+% FJS ML approach random forest gives you new results
+
+% FJS Contrast with a traditional multiple linear regression
+
+% FJS take into account the time frame for lagged prediction
+
+
+\subsection{Method}
+
+\subsection{Results}
+
+\subsection{Discussion}
 
 
 \clearpage
-\section{Results\label{sec:results}}
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.75\textwidth]{Figures/better_one_run.png}
-	\caption[One run using Summer 2018 climatology]
-	{\label{crudemodel}One model run using the exponentials calculated from Summer 2018.  }
-\end{figure}
-Running the model one hundred times let us look at what the average precipitation total the model yields, it yields 195 mm compared to the Summer 2018 total of 268 mm that we used. Furthermore, the accuracy of model precipitation matching model precipitation is only 6$\%$. Looking at \ref{crudemodel}, we see that the model precipitation total is lower than the actual precipitation observed in the Summer of 2018. Furthermore, the precipitation seem to be more frequent compared to the observed 2018 Summer data. 
 
-\clearpage
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.75\textwidth]{Figures/best_one_run.png}
-	\caption[Modified run using Summer 2018 climatology]
-	{\label{crudermodel} One model run using the exponentials calculated from Summer 2018. Made some adjustments to get a better match for the actual summer 2018 run.}
-\end{figure}
+\section{Discussion and Conclusions}\label{sec:conclusions}
 
-\clearpage
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.75\textwidth]{Figures/run_with_more_info.png}
-	\caption[More  run using Summer 2018 climatology]
-	{\label{crudesmodel} One model run using the exponentials calculated from Summer 2018. Put up some more information such as how much of the time was non-dominated by no precipitation. }
-\end{figure}
-
-
-\section{Discussion\label{sec:discussion}}
-This section is blank for now. 
-
-\section{Conclusions\label{sec:conclusions}}
 This section is blank for now. 
 
 %--References
