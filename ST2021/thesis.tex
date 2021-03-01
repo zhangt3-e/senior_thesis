@@ -102,8 +102,17 @@ first summarize the data using this climatology, in terms of exponential
 distributions and their parameters, by season and by year, before attepting
 to predict precipitation events based on other variables that are observed
 by the weather station.
-\\
-Air temperature is just measuring the temperature that the air reaches. Atmospheric Pressure is just measuring the air pressure that exists in the area. Relative Humidity is the amount of water vapor present relative to the temperature of the air. For example, you can have the same amount of water vapor for two parcels of air, but if one air parcel is a warmer temperature than the other parcel, the higher temperature air parcel has a lower relative humidity than the lower temperature air parcel, since warmer air can hold more water vapor. 
+
+
+Air temperature is just measuring the temperature that the air reaches. 
+Atmospheric Pressure is just measuring the air pressure that exists in the area. 
+Relative Humidity is the amount of water vapor present relative to the temperature of the air. 
+For example, you can have the same amount of water vapor for two parcels 
+of air, but if one air parcel is a warmer temperature than the other parcel,
+the higher temperature air parcel has a lower relative humidity than the lower 
+temperature air parcel, since warmer air can hold more water vapor. 
+Rain accumulation or precipitation accumulation just measures the amount of 
+precipitation that has fallen from a precipitation event, usually rain or snow.  
 
 % FJS BASIC CLIMATOLOGY FIGURES TEMPERATURE, PRECIPITATION, RELHUM
 From the data that I analyzed, the following is the climatology of Princeton from 2017 to 2021. 
@@ -120,12 +129,27 @@ From the data that I analyzed, the following is the climatology of Princeton fro
 	\caption[Climatology of temperature and precipitation of Princeton (2017- 2021) version 2]{\label{Clim2}
 	A similar graph with \ref{Clim1} but expressing the interpercentile ranges as a bar and the mean temperatures as a line graph.}
 \end{figure}
-
 \clearpage
+
 %FJS In Section~{\textit{\nameref{sec:dcp}} I show this and that. 
+As expected, Princeton has four seasons with cold winters and warm summers. At the same time, there is more precipitation in the spring and summer compared to the relative lack of precipitation in the fall and winter.
 
+We also see that relative humidity for Princeton is higher in the months of August to October, whereas the lowest relative humidity seems to be in the months of March and April. % Will add 25-75th percentile range, since I think that would make sense. 
+
+For atmospheric air pressure, the lowest monthly air pressure are found in the months of April and June, while the highest monthly air pressure are found in the month of Feburary. % Again will add 25-75th percentile ranges too, since it would also make sense! 
 \clearpage
-
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/RH_clim.png}
+	\caption[Climatology of Relative Humidity of Princeton (2017- 2021)]{\label{RH_Clim} Average Climatology for relative humidity for Princeton. }
+\end{figure}
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/AP_clim.png}
+	\caption[Climatology of Air Pressure of Princeton (2017- 2021) ]{\label{AP_Clim}
+		A similar graph with \ref{RH_Clim} looking at the anomaly from average air pressure at sea level. }
+\end{figure}
+\clearpage
 \section{Descriptive Climatology of Precipitation}\label{sec:dcp}
 
 These following histograms show the distribution of precipitation event
@@ -549,12 +573,12 @@ average.
 
 \section{Simulation for Prediction}\label{sec:sfp}
 
-\subsection{Method}\label{sec:sfp}
-To make a base line model for us to look at, we need to first use the exponentials that we calculated for each of the three 
+\subsection{Method}\label{sec:sfp_m}
+To make a base line model for us to look at, we need to first use the exponentials that we calculated for the duration of the precipitation event, intensity of the precipitation event, and duration of the non-precipitation events. However, we also need to manually add back in the lowest durations and lowest intensities, since we excluded those values when calculating the exponential distributions. Since the frequencies are in the bins of values that are distributed by percentiles, we make use of the fact that there is an equal chance of pulling a value in the bin ranges. 
 
 \clearpage 
 
-\subsection{Results}\label{sec:sfp}
+\subsection{Results}\label{sec:sfp_r}
 
 
 \begin{figure}[t]
@@ -594,11 +618,11 @@ data.
     was non-dominated by no precipitation.}
 \end{figure}
 
-\subsection{Discussion}\label{sec:spcd}
+\subsection{Discussion}\label{sec:spc_d}
 
 \clearpage
 
-\section{Machine Learning for Prediction}\label{sec:sfp}
+\section{Machine Learning for Prediction}\label{sec:MLP}
 
 % FJS Simulation from learned exponential fits gives you a baseline
 
