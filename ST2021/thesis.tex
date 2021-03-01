@@ -102,9 +102,26 @@ first summarize the data using this climatology, in terms of exponential
 distributions and their parameters, by season and by year, before attepting
 to predict precipitation events based on other variables that are observed
 by the weather station.
+\\
+Air temperature is just measuring the temperature that the air reaches. Atmospheric Pressure is just measuring the air pressure that exists in the area. Relative Humidity is the amount of water vapor present relative to the temperature of the air. For example, you can have the same amount of water vapor for two parcels of air, but if one air parcel is a warmer temperature than the other parcel, the higher temperature air parcel has a lower relative humidity than the lower temperature air parcel, since warmer air can hold more water vapor. 
 
 % FJS BASIC CLIMATOLOGY FIGURES TEMPERATURE, PRECIPITATION, RELHUM
+From the data that I analyzed, the following is the climatology of Princeton from 2017 to 2021. 
 
+\clearpage
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/Climate1.png}
+	\caption[Climatology of temperature and precipitation of Princeton (2017- 2021)]{\label{Clim1} Climatology shown for Princeton from August 2017 to January 2021. The black interval lines show the 25-75th interpercentile range for temperature of the month. }
+\end{figure}
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.675\textwidth]{Figures/Climate2.png}
+	\caption[Climatology of temperature and precipitation of Princeton (2017- 2021) version 2]{\label{Clim2}
+	A similar graph with \ref{Clim1} but expressing the interpercentile ranges as a bar and the mean temperatures as a line graph.}
+\end{figure}
+
+\clearpage
 %FJS In Section~{\textit{\nameref{sec:dcp}} I show this and that. 
 
 \clearpage
@@ -533,7 +550,7 @@ average.
 \section{Simulation for Prediction}\label{sec:sfp}
 
 \subsection{Method}\label{sec:sfp}
-
+To make a base line model for us to look at, we need to first use the exponentials that we calculated for each of the three 
 
 \clearpage 
 
