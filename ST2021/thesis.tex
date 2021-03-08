@@ -88,7 +88,7 @@ the Koppen-Geiger Climate Classification, Princeton, NJ lies in the
 classification Cfa, which denotes a temperate climate, with no dry season,
 and hot summers defined as reaching~22$^\circ$C or higher
 \cite[]{Peel2008}. Princeton having no dry season means that precipitation
-is well spread out throughout the year.
+is well spread out throughout the year. 
 
 % \input{Histogram.tex}
 
@@ -97,37 +97,48 @@ WXT530 series. It measures six weather parameters of air pressure,
 temperature, humidity, rainfall, wind speed, and wind direction. The
 rainfall is measured using an acoustic Vaisala RAINCAP Sensor, which helps
 avoid the complications of flooding, wetting, and evaporation losses
-\cite[]{Vaisala}. By analyzing the precipitation bwteen 2017 and today, I
-first summarize the data using this climatology, in terms of exponential
-distributions and their parameters, by season and by year, before attepting
-to predict precipitation events based on other variables that are observed
-by the weather station.
+\cite[]{Vaisala}. 
 
-
-Air temperature is just measuring the temperature that the air reaches. 
-Atmospheric Pressure is just measuring the air pressure that exists in the area. 
-Relative Humidity is the amount of water vapor present relative to the temperature of the air. 
-For example, you can have the same amount of water vapor for two parcels 
-of air, but if one air parcel is a warmer temperature than the other parcel,
+Air temperature is the temperature that the thermometer measures when exposed to the air, while sheltered from direct solar radiation.
+Atmospheric Pressure is measuring the pressure exerted by the atmosphere due to gravitation attraction on the air column above a point in question \cite{AMS}.  
+Relative Humidity is the ratio of vapor pressure to saturation vapor pressure with respect to water \cite{AMS}.  
+This means that two air parcels can the same amount of water vapor, but if one air parcel is a warmer temperature than the other parcel,
 the higher temperature air parcel has a lower relative humidity than the lower 
-temperature air parcel, since warmer air can hold more water vapor. 
-Rain accumulation or precipitation accumulation just measures the amount of 
-precipitation that has fallen from a precipitation event, usually rain or snow. 
+temperature air parcel, since warmer air has a higher saturation vapor pressure for water. 
+%At the same time, relative humidity becomes important especially during warmer temperatures, as increases in relative humidity can mean the apparent temperature felt by humans will increase. This is the heat index, in which 
 
-% FJS BASIC CLIMATOLOGY FIGURES TEMPERATURE, PRECIPITATION, RELHUM
-From the data that I analyzed, the following is the climatology of Princeton from 2017 to 2021. 
-\clearpage
-\begin{figure}[t]
+Precipitation accumulation is the amount of water substance that has fallen at a given point over a specified period of time \cite{AMS}. 
+
+
+Shown in Figure~\ref{daily}, data is being recorded every minute and air pressure, air temperature, relative humidity, and Precipitation accumulation is being plotted. This day happens to have precipitation, thus we can see some of the variables that could lead to precipitation actually occuring. It appears that relative humidity becomes higher before a precipitation event, and that the air pressure is low, while a precipitation event occurs. However, this is only one event and many precipitation events will be 
+\begin{figure}
 	\centering 
 	\includegraphics[trim = 0.5cm 5.0cm 0.5cm 6.0cm, clip, width = 1.0\textwidth]{Figures/guyotweather_ywt_feb_22_2021.pdf}
-	\caption[Weather Station Data]{\label{daily} This is a daily plot of the parameters that the Vaisala station measures on top of Guyot Hall. }
+	\caption[Weather Station Data]{\label{daily} This is a daily plot of the meteorological variables that the Vaisala station measures on top of Guyot Hall. }
 \end{figure}
+
+% FJS BASIC CLIMATOLOGY FIGURES TEMPERATURE, PRECIPITATION, RELHUM
+From the data that I analyzed, the following is the climatology of Princeton from 2017 to 2021. Looking at Figure~\ref{Clim1}, we see that we have temperature and precipitation that varies throughout the year. Temperatures start increasing before peaking in July, before decreasing until January. This is consistent with the fact that Princeton has four seasons, which shows cold winters, warm summers, and mild springs and falls. At the same time, there is more precipitation in the spring and summer compared to the relative lack of precipitation in the fall and winter.
+
+
+
+The month with the lowest average precipitation appears to be January at an average monthly precipitation of 44~mm. Whereas, the month with the highest average precipitation is July with 123~mm. 
+
+
+When looking at Figure~\ref{Temp_range}, we see that the ranges of temperature are not equal in throughout the months. For example winter months of January and Feburary have a big range that span from about $20 ^\circ $C to $-10 ^\circ$C. Meanwhile we have summer months such as July and August whose range of temperatures is smaller, from about $30 ^\circ $C to about $15 ^\circ $C.
+
+
+We also see that relative humidity for Princeton is higher in the months of August to October, whereas the lowest relative humidity seems to be in the months of March and April.
+With Figure~\ref{RH_range}, we can see that all the months have similar upper extremes of about 90\% for relative humidity, which can indicate precipitation. At the same time, the range for relative humidity is largest in the Spring time, with March, April, and May seem to have a range between 15\% to 90\% for relative humidity, with caution that this is just data from 3 years. 
+
+For atmospheric pressure, the lowest monthly air pressure are found in the months of April and June, while the highest monthly air pressure are found in the month of Feburary. Though the values for the mean atmospheric pressure are all pretty close to each other ranging from about 1.00~bar to 1.01~bar. The more interesting aspects of atmospheric pressure comes from the range of atmospheric pressure, where the months of May to September all seem to have a small range that vary between 0.995~bar to about 1.02~bar. Meanwhile we have months like October, which have a larger range of atmospheric pressure, which ranges from 0.97~bar to 1.03~bar. Clearly these low atmospheric pressure must come from an intense low pressure that passed near Princeton and it turns out that for the month of October from 2017-2020, we see that the values between 0.97~bar to 0.985~bar represent the 0 to 1st percentile of all atmospheric pressures for the month of October, so they are extremely low pressures. Other months such as November to February have relatively large ranges for atmospheric pressure as well. 
 \clearpage
-\begin{figure}[t]
+\begin{figure}[b]
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/Climate1.png}
 	\caption[Climatology of temperature and precipitation of Princeton (2017- 2021)]{\label{Clim1} Climatology shown for Princeton from August 2017 to January 2021. The black interval lines show the 25-75th interpercentile range for temperature of the month. }
 \end{figure}
+
 \begin{figure}[b]
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/Temp_range.png}
@@ -137,22 +148,19 @@ From the data that I analyzed, the following is the climatology of Princeton fro
 \clearpage
 
 %FJS In Section~{\textit{\nameref{sec:dcp}} I show this and that. 
-As expected, Princeton has four seasons with cold winters and warm summers. At the same time, there is more precipitation in the spring and summer compared to the relative lack of precipitation in the fall and winter.
-
-We also see that relative humidity for Princeton is higher in the months of August to October, whereas the lowest relative humidity seems to be in the months of March and April. % Will add 25-75th percentile range, since I think that would make sense. 
-
-For atmospheric air pressure, the lowest monthly air pressure are found in the months of April and June, while the highest monthly air pressure are found in the month of Feburary. % Again will add 25-75th percentile ranges too, since it would also make sense! 
+ % Will add 25-75th percentile range, since I think that would make sense. 
+  % Again will add 25-75th percentile ranges too, since it would also make sense! 
 \clearpage
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/RH_clim.png}
-	\caption[Climatology of Relative Humidity of Princeton (2017- 2021)]{\label{RH_Clim} Average Climatology for relative humidity for Princeton. }
+	\includegraphics[width=0.65\textwidth]{Figures/RH_range.png}
+	\caption[Range of Relative Humidity in Princeton (2017- 2021)]{\label{RH_range} Range of relative humidity for Princeton with the mean relative humidity for the month indicated by the orange line.}
 \end{figure}
 \begin{figure}[b]
 	\centering
-	\includegraphics[width=0.675\textwidth]{Figures/AP_clim.png}
-	\caption[Climatology of Air Pressure of Princeton (2017- 2021) ]{\label{AP_Clim}
-		A similar graph with \ref{RH_Clim} looking at the anomaly from average air pressure at sea level. }
+	\includegraphics[width=0.65\textwidth]{Figures/AP_range.png}
+	\caption[Range of Atmospheric Pressure in Princeton (2017- 2021) ]{\label{AP_range}
+		A similar graph with \ref{RH_range} looking at range of atmospheric pressure through out the months.  }
 \end{figure}
 \clearpage
 \section{Descriptive Climatology of Precipitation}\label{sec:dcp}
@@ -301,7 +309,7 @@ minutes.
 Furthermore, I define a precipitation \textbf{non-event} $N_j^\tau$, as
 having a contiguous set of zeros, $e_i=0$, whose combined duration exceeds
 $\tau$, flanked left and right by non-zero values, $e_i=0$.
-
+% Basically we want the hand-drawn figure shown here!
 One more term to define is \textbf{precipitation intensity}, which for a
 precipitation event $E_j^\tau$ is the total amount of precipitation divided
 by its duration, i.e.,

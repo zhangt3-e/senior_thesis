@@ -1,5 +1,10 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{4}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[Glickman(2000)]{AMS}
+Glickman, T.~S., 2000.
+\newblock {\it Glossary of Meteorology\/}, Am. Meteorol. Soc., Boston, Mass,
+  2nd edn.
 
 \bibitem[Peel et~al.(2007)Peel, Finlayson, \& McMahon]{Peel2008}
 Peel, M., Finlayson, B., \& McMahon, T., 2007.
