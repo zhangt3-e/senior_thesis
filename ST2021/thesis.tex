@@ -164,10 +164,39 @@ For atmospheric pressure, the lowest monthly air pressure are found in the month
 \end{figure}
 \clearpage
 \section{Descriptive Climatology of Precipitation}\label{sec:dcp}
+Despite the information given to us in looking the ranges of meteorological variables like temperature, relative humidity, and atmospheric pressure, precipitation events are no where to be seen. 
+I shall define the following terms. The time series of
+\textbf{precipitation} as recorded by the instrument is denoted $e_i$, where
+$i$ indexes the measurement intervals, each 60~s long. I define a
+precipitation \textbf{event} $E_j^\tau $ as a sequence of \textbf{duration}
+$d_j\ge \tau$ containing contiguous nonzero precipitation measurements
+$e_i>0$, flanked left and right by zeros, $e_i=0$, and where $\tau$ is in
+minutes \cite{Eagleson}.
+
+Furthermore, I define a precipitation \textbf{non-event} $N_j^\tau$, as
+having a contiguous set of zeros, $e_i=0$, whose combined duration exceeds
+$\tau$, flanked left and right by non-zero values, $e_i=0$ \cite{Eagleson}.
+% Basically we want the hand-drawn figure shown here!
+One more term to define is \textbf{precipitation intensity}, which for a
+precipitation event $E_j^\tau$ is the total amount of precipitation divided
+by its duration, i.e.,
+\begin{equation}
+	I_j^\tau = \fracd{\sum_i e_i }{d_j} ,
+	\quad
+	\mbox{for}\,\,\,\, i\,\,\,\, \mbox{belonging to the event}\,\,\,\, E_j^\tau
+	.
+\end{equation}
+
+For further analysis, I am breaking down the year into seasons, as different
+seasons may have different characteristics with regards to precipitation. I
+will define the seasons as follows: Winter will be December, January, and
+February. `Winter' of a certain year contains December of the previous
+year. Spring will be March, April, and May. Summer is June, July, and
+August. Fall is September, October, November.
 
 These following histograms show the distribution of precipitation event
 duration in terms of minutes and shows the different duration distributions
-per season.
+per season. For precipitation and non-precipitation events, $\tau = 1$~min, which means we will be recording all precipitation events that are 1 minute or longer in duration. This covers all potential precipitation events. 
 
 \clearpage
 \begin{figure}[t]
@@ -175,15 +204,15 @@ per season.
 	\includegraphics[width=0.675\textwidth]{Figures/precip_2017.png}
 	\caption[Precipitation histogram for 2017 broken down by
 	season]{\label{p2017} Distribution of precipitation duration in
-		2017, with a breakdown by seasons. Note that data collection began on 16 July
-		2017. Which means we only have part of the summer and all of the fall data. }
+		2017, with a breakdown by seasons. The minimum duration is $\tau = 1$~min.  Note that data collection began on 16 July
+		2017. Which means we only have part of the summer and all of the fall data.  }
 \end{figure}
 \begin{figure}[b]
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/precip_2018.png}
 	\caption[Precipitation histogram for 2018 broken down by season]{\label{p2018}
 		Distribution of precipitation duration in 2018, with a breakdown
-		by seasons. 2018 is the first full year of data collections.}
+		by seasons. 2018 is the first full year of data collections. The minimum duration is $\tau = 1$~min.}
 \end{figure}
 
 \clearpage
@@ -192,7 +221,7 @@ per season.
   \includegraphics[width=0.675\textwidth]{Figures/precip_2019.png}
   \caption[Precipitation histogram for 2019 broken down by season]
           {\label{p2019}Distribution of precipitation duration in 2019, with
-            a breakdown by seasons.
+            a breakdown by seasons. The minimum duration is $\tau = 1$~min.
             %The minimum duration, $\tau=1$~min, and the maximum duration over the data
             %set is 368 min, but the horizontal axis was limited to the 98th percentile
             %of the durations, 42~min, for clarity. Superposed is a least-squares fit of
@@ -207,7 +236,7 @@ per season.
 	\includegraphics[width=0.675\textwidth]{Figures/precip_2020.png}
 	\caption[Precipitation histogram for 2020 broken down by
 	season]{\label{p2020} Distribution of precipitation duration
-		in 2020, with a breakdown by seasons.  %The layout is as in
+		in 2020, with a breakdown by seasons. The minimum duration is $\tau = 1$~min. %The layout is as in
 		%Figure~\ref{p2019}. 
 	}
 \end{figure}
@@ -219,8 +248,7 @@ per season.
 	\includegraphics[width=0.675\textwidth]{Figures/nonprecip_2017.png}
 	\caption[Histogram of non-precipitation events for 2017 broken down
           by season]{\label{np2017} Distribution of non-precipitation event
-          duration in 2017, with a breakdown by seasons. The minimum
-          duration, $\tau = 1$~min. Note that data collection began on 16
+          duration in 2017, with a breakdown by seasons. The minimum duration is $\tau = 1$~min. Note that data collection began on 16
           July 2017, which means that Summer is only partially complete.}
 \end{figure}
 \begin{figure}[b]
@@ -228,7 +256,7 @@ per season.
 	\includegraphics[width=0.675\textwidth]{Figures/nonprecip_2018.png}
 	\caption[Histogram of non-precipitation events for 2018 broken down by season]{\label{np2018}
 		Distribution of precipitation duration in 2018, with a breakdown
-		by seasons. The minimum duration, $\tau=1$~min. }
+		by seasons. The minimum duration is $\tau = 1$~min. }
 \end{figure}
 
 \clearpage
@@ -238,7 +266,7 @@ per season.
 	\caption[Histogram of non-precipitation events for 2019 broken
 	down by season]{\label{np2019} Distribution of
 		non-precipitation event duration in 2019, with a breakdown
-		by seasons. The minimum duration, $\tau=1$~min %, and the
+		by seasons. The minimum duration is $\tau = 1$~min. %, and the
 		%maximum duration over the data set is 2613~min, but the
 		%horizontal axis was limited to the 98th percentile of
 		%2350~min, for clarity. Superposed is a least-squares fit of
@@ -253,7 +281,7 @@ per season.
 	\includegraphics[width=0.675\textwidth]{Figures/nonprecip_2020.png}
 	\caption[Histogram of non-precipitation events for 2020 broken down by
 	season]{\label{np2020} Distribution of non precipitation event duration
-		in 2020, with a breakdown by seasons. }
+		in 2020, with a breakdown by seasons. The minimum duration is $\tau = 1$~min.}
 \end{figure}
 
 
@@ -264,14 +292,16 @@ per season.
 	\caption[Intensity histogram for 2017 broken down by season]
 	{\label{i2017}Distribution of precipitation intensity in 2017,
 		with a breakdown by seasons. Note that data collection began on 16
-		July 2017.}
+		July 2017. The minimum intensity is
+		$I=0.01$~mm/min}
 \end{figure}
 \begin{figure}[b]
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/inten2018.png}
 	\caption[Intensity histogram for 2018 broken down by season]
 	{\label{i2018}Distribution of precipitation intensity in 2018,
-		with a breakdown by seasons.}
+		with a breakdown by seasons. The minimum intensity is 
+		$I=0.01$~mm/min}
 \end{figure}
 \clearpage
 \begin{figure}[t]
@@ -279,7 +309,7 @@ per season.
 	\includegraphics[width=0.675\textwidth]{Figures/inten2019.png}
 	\caption[Intensity histogram for 2019 broken down by season]
 	{\label{i2019}Distribution of precipitation intensity in
-		2019, with a breakdown by seasons. The minimum intensity,
+		2019, with a breakdown by seasons. The minimum intensity is
 		$I=0.01$~mm/min. 
 	}
 \end{figure}
@@ -288,44 +318,21 @@ per season.
 	\includegraphics[width=0.675\textwidth]{Figures/inten2020.png}
 	\caption[Intensity histogram for 2020 broken down by season]
 	{\label{i2020} Distribution of precipitation intensity in
-		2020, with a breakdown by seasons.}
+		2020, with a breakdown by seasons. The minimum intensity is
+		$I=0.01$~mm/min. }
 \end{figure}
 \clearpage
 
+
+Looking at these histograms, we can see that the smallest duration events for both nonprecipitation and precipitation events are the most numerous as seen with the largest bar in the bins that contain 1 minute to 2 minute durations. We can also see the frequency of duration decreases as we increase the duration bins. At the same time, there are differences between the precipitation and non-precipitation events, as we see that the upper limit for duration of precipitation events are about 300 to 400 minutes. However, the upper limit for duration of non-precipitation events is about an order of magnitude greater at about 2000 minutes. Basically non-precipitation events can be as long as one or two whole days, where as precipitation events can only last as long as 5-6 hours. 
+
+The intensity histogram shows an even more aggregation in the lowest intensity bin of 1~mm/hour to 2~mm/hour. It's interesting cause the small intensity bin can include events that are long but less intense and short, less intense precipitation events.  
 \section{Analysis of Precipitation}\label{sec:apc}
 
 % FJS Here I do something. 
 
 \subsection{Methods}\label{sec:methods}
 
-I shall define the following terms. The time series of
-\textbf{precipitation} as recorded by the instrument is denoted $e_i$, where
-$i$ indexes the measurement intervals, each 60~s long. I define a
-precipitation \textbf{event} $E_j^\tau $ as a sequence of \textbf{duration}
-$d_j\ge \tau$ containing contiguous nonzero precipitation measurements
-$e_i>0$, flanked left and right by zeros, $e_i=0$, and where $\tau$ is in
-minutes.
-
-Furthermore, I define a precipitation \textbf{non-event} $N_j^\tau$, as
-having a contiguous set of zeros, $e_i=0$, whose combined duration exceeds
-$\tau$, flanked left and right by non-zero values, $e_i=0$.
-% Basically we want the hand-drawn figure shown here!
-One more term to define is \textbf{precipitation intensity}, which for a
-precipitation event $E_j^\tau$ is the total amount of precipitation divided
-by its duration, i.e.,
-\begin{equation}
-I_j^\tau = \fracd{\sum_i e_i }{d_j} ,
-\quad
-\mbox{for}\,\,\,\, i\,\,\,\, \mbox{belonging to the event}\,\,\,\, E_j^\tau
-.
-\end{equation}
-
-For further analysis, I breaking down the year into seasons, as different
-seasons may have different characteristics with regards to precipitation. I
-will define the seasons as follows: Winter will be December, January, and
-February. ``Winter'' of a certain year contains December of the previous
-year.  Spring will be March, April, and May. Summer is June, July, and
-August. Fall is September, October, November.
 
 Once we have characterized the climatology of precipitation, we will start
 moving towards buidling predictive models for precipitation. In order to see
@@ -415,7 +422,7 @@ intensity of precipitation events.
 \caption[2018 precipitation duration exponentials with contrasting curve fitting]
 {\label{precip18_redone}Curve fitting of the precipitation histogram
   excluding 1 minute duration events for the entire 2018 data. Format is the
-  same as \ref{precip17_redone}, with the understanding that 2018 has
+  same as Figure~\ref{precip17_redone}, with the understanding that 2018 has
   complete data.}
 \end{figure}
 
@@ -427,7 +434,7 @@ intensity of precipitation events.
 \caption[2019 precipitation duration exponentials with contrasting curve fitting]
 {\label{precip19_redone}Curve fitting of the precipitation histogram
   excluding 1 minute duration events for the entire 2019 data. The layout is
-  the same as seen in \ref{precip17_redone}, with 2019 having complete data
+  the same as seen in Figure~\ref{precip17_redone}, with 2019 having complete data
   like 2018. 2018 and 2019 have similar trends and similar curves for both
   best fit curves.}
 \end{figure}
@@ -438,7 +445,7 @@ intensity of precipitation events.
 \caption[2020 precipitation duration exponentials with contrasting curve fitting]
 {\label{precip20_redone}Curve fitting of the histogram excluding 1
   minute duration events for the entire 2020 data. The layout is the same as
-  seen in \ref{precip17_redone} with 2020 having completed data as
+  seen in Fig\ref{precip17_redone} with 2020 having completed data as
   well. 2018, 2019, and 2020 all look similar looking at the histogram and
   the best fit curves.}
 \end{figure}
@@ -477,7 +484,7 @@ intensity of precipitation events.
   \caption[2019 Non-precipitation duration Exponentials with contrasting curve fitting]
   {\label{nonprecip19_redone} Shows curve fitting of the histogram excluding
     1 minute duration events for the entire 2019 data. The layout is the
-    same as seen in \ref{precip18_redone}. 2018 and 2019 have similar trends
+    same as seen in Figure~\ref{precip18_redone}. 2018 and 2019 have similar trends
     and similar curves for both best fit curves.}
 \end{figure}
 
@@ -487,7 +494,7 @@ intensity of precipitation events.
   \caption[2020 Non-precipitation duration Exponentials with contrasting curve fitting]
   {\label{nonprecip20_redone}Curve fitting of the histogram excluding
     1 minute duration events for the entire 2020 data. The layout is the
-    same as seen in \ref{nonprecip18_redone}. 2018, 2019, and 2020 all look
+    same as seen in Figure~\ref{nonprecip18_redone}. 2018, 2019, and 2020 all look
     similar looking at the histogram and the best fit curves.}
 \end{figure}
 
@@ -499,14 +506,14 @@ intensity of precipitation events.
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/inten2017_fit.png}
 	\caption[Fitting Intensity histogram for 2017 with different bins]
-	{\label{i2017_fit} }
+	{\label{i2017_fit} Curve fitting of the histogram excluding the 1~mm/minute intensity bin for the 2017 data that was collected. The black curve fits up to the 98th percentile bin. The red curve fits up to the 100th percentile bin. The black curve fits the lower bins better, but the red curve fits to include the extremes better.  }
 \end{figure}
 
 \begin{figure}[b]
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/inten2018_fit.png}
 	\caption[Fitting Intensity histogram for 2018 with different bins]
-	{\label{i2018_fit} }
+	{\label{i2018_fit} Curve fitting of the histogram excluding the 1 mm/minute intensity bin for the entire 2018 data. The layout is the same as Figure~\ref{i2017_fit}, with the red curve fitting the extremes better, while the black curve fits the lower intensity bins better. }
 \end{figure}
 
 \clearpage
@@ -514,7 +521,7 @@ intensity of precipitation events.
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/inten2019_fit.png}
 	\caption[Fitting Intensity histogram for 2019 with different bins]
-	{\label{i2019_fit}  
+	{\label{i2019_fit}  Curve fitting of the histogram excluding the 1 mm/minute intensity bin for the entire 2019 data. The layout is the same as Figure~\ref{i2017_fit}, with the red curve fitting the extremes better, while the black curve fits the lower intensity bins better. 
 	}
 \end{figure}
 
@@ -522,7 +529,7 @@ intensity of precipitation events.
 	\centering
 	\includegraphics[width=0.675\textwidth]{Figures/inten2020_fit.png}
 	\caption[Fitting Intensity histogram for 2020 with different bins]
-	{\label{i2020_fit}  }
+	{\label{i2020_fit} Curve fitting of the histogram excluding the 1 mm/minute intensity bin for the entire 2020 data. The layout is the same as Figure~\ref{i2017_fit}, with the red curve fitting the extremes better, while the black curve fits the lower intensity bins better.  }
 \end{figure}
 
 \clearpage
@@ -543,24 +550,16 @@ are negative.
 
 In the seasonal variations, we see that Summer has $\alpha$ values
 that are less negative compared to the other seasons as well as having
-a lower $\beta$ compared to the other seasons. However looking at
-Table~\ref{secondtable}, we see that the summers also have a lot of
-precipitation. The fewer amounts of precipitation events in the
-Summer, but with a lot of precipitation gives a higher intensity for
-the Summer. For the Winter, the $\alpha$ are the furthest from 0 and
-the $\beta$ are large. However, Winter tends to have the lowest values
-for total precipitation and the combination of lots of preciptation
-events and low precipitation totals results in the lowest intensities
-among the four seasons.
-
+a lower $\beta$ compared to the other seasons. 
 The Spring appears to mimic the Winter in that there are a lot of
 preciptiation events, but also shares the quality of Summer in having
 fairly high precipitation totals. The Fall shares the Summer quality
 of having relatively few preciptation events, but tends to have
 smaller precipitation totals, so its intensity is less than the
 Summer, but greater than the winter precipitation intensity.
-\input{secondtable} 
 
+\input{thirdtable.tex}
+\input{thirdtable_100.tex}
 Looking at trying to extend the exponential fit towards non-precipitation
 event durations, the exponentials for such duration, $\delta$ is less
 negative overall compared to the exponentials from the precipitation event
@@ -570,8 +569,7 @@ minutes, whereas the duration of precipitation events range from 1 minute to
 just over 300 minutes. At the same time how we bin the durations for both
 precipitation and non-precipitation events will affect how we get the fits.
 
-\input{thirdtable.tex}
-\input{thirdtable_100.tex}
+
 \input{fourthtable.tex}
 \input{fourthtable_100.tex}
 
@@ -582,6 +580,17 @@ there are less bins in the intensity of preciptiation events as seen that
 the vast majority of precipitation events are not particularly intense on
 average.
 
+
+However looking at
+Table~\ref{secondtable}, we see that the summers also have a lot of
+precipitation. The fewer amounts of precipitation events in the
+Summer, but with a lot of precipitation gives a higher intensity for
+the Summer. For the Winter, the $\alpha$ are the furthest from 0 and
+the $\beta$ are large. However, Winter tends to have the lowest values
+for total precipitation and the combination of lots of preciptation
+events and low precipitation totals results in the lowest intensities
+among the four seasons.
+\input{secondtable} 
 \clearpage
 
 \section{Simulation for Prediction}\label{sec:sfp}
