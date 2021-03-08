@@ -106,7 +106,6 @@ This means that two air parcels can the same amount of water vapor, but if one a
 the higher temperature air parcel has a lower relative humidity than the lower 
 temperature air parcel, since warmer air has a higher saturation vapor pressure for water. 
 %At the same time, relative humidity becomes important especially during warmer temperatures, as increases in relative humidity can mean the apparent temperature felt by humans will increase. This is the heat index, in which 
-
 Precipitation accumulation is the amount of water substance that has fallen at a given point over a specified period of time \cite{AMS}. 
 
 
@@ -558,6 +557,8 @@ of having relatively few preciptation events, but tends to have
 smaller precipitation totals, so its intensity is less than the
 Summer, but greater than the winter precipitation intensity.
 
+Compared to Table~\ref{firsttable}, Table~\ref{firsttable_100} seems to show a $\beta$ value that are consistently lower when considering the 100th percentile bins for precipitation event durations. The $\alpha$ values are also less negative, which better reflects the fact there are these extreme durations for precipitation events. 
+ 
 \input{thirdtable.tex}
 \input{thirdtable_100.tex}
 Looking at trying to extend the exponential fit towards non-precipitation
@@ -566,9 +567,11 @@ negative overall compared to the exponentials from the precipitation event
 duration, $\alpha$. Some of this is explained from the fact that the
 duration of non-precipitation events range from 1 minute to over 2000
 minutes, whereas the duration of precipitation events range from 1 minute to
-just over 300 minutes. At the same time how we bin the durations for both
+just over 300 to 400 minutes. At the same time how we bin the durations for both
 precipitation and non-precipitation events will affect how we get the fits.
+\\ 
 
+Once again, taking into the account the most extreme durations for non-precipitation events lowers the frequency value of $\gamma$ and the exponential constant of $\delta$ is less negative, when comparing Table~\ref{thirdtable_98} and Table~\ref{thirdtable_100}
 
 \input{fourthtable.tex}
 \input{fourthtable_100.tex}
@@ -579,6 +582,9 @@ non-precipitation event durations. This is partially due to the fact that
 there are less bins in the intensity of preciptiation events as seen that
 the vast majority of precipitation events are not particularly intense on
 average.
+
+Looking at the different between Table~\ref{fourthtable}
+and Table~\ref{fourthtable_100}, intensity clearly has the biggest changes from using 98th percentile to the 100th percentile. First the $\epsilon$ value actually increases when you use the 100th percentile rather than the 98th percentile. Furthermore, we see that the $\zeta$ value also becomes less negative , but very dramatically compared to non-precipitation and precipitation event durations. 
 
 
 However looking at
@@ -596,7 +602,8 @@ among the four seasons.
 \section{Simulation for Prediction}\label{sec:sfp}
 
 \subsection{Method}\label{sec:sfp_m}
-To make a base line model for us to look at, we need to first use the exponentials that we calculated for the duration of the precipitation event, intensity of the precipitation event, and duration of the non-precipitation events. However, we also need to manually add back in the lowest durations and lowest intensities, since we excluded those values when calculating the exponential distributions. Since the frequencies are in the bins of values that are distributed by percentiles, we make use of the fact that there is an equal chance of pulling a value in the bin ranges. 
+To make a base line model for us to look at, we need to first use the exponentials that we calculated for the duration of the precipitation event, intensity of the precipitation event, and duration of the non-precipitation events. However, we also need to manually add back in the lowest durations and lowest intensities, since we excluded those values when calculating the exponential distributions. Since the frequencies are in the bins of values that are distributed by percentiles, we make use of the fact that there is an equal chance of pulling a value in the bin ranges. Thus once we have all the probabilities in place for precipitation event duration, non-precipitation event duration, and precipitation event intensity, we can start running a simulation based on the values that come from the data that we analyzed. 
+\\ 
 
 \clearpage 
 
@@ -620,6 +627,8 @@ the actual precipitation observed in the Summer of 2018. Furthermore, the
 precipitation seem to be more frequent compared to the observed 2018 Summer
 data.
 
+It is clear that despite the better fit using the curve fit of 98th percentile, we need to use the 100th percentile, 
+since the extremes such as the big 2000 minute non-precipitation even is very important in the nature of the precipitation event. However, it is clear that the accuracy does not improve significantly. The fact that the model total precipitation is still less than from the initial observed precipitation shows how this model needs more improvement. 
 \clearpage
 \begin{figure}[t]
   \centering
@@ -630,8 +639,7 @@ data.
     summer 2018 run.}
 \end{figure}
 
-\clearpage
-\begin{figure}[t]
+\begin{figure}[b]
   \centering
   \includegraphics[width=0.75\textwidth]{Figures/run_with_more_info.png}
   \caption[More  run using Summer 2018 climatology]
@@ -639,10 +647,10 @@ data.
     Summer 2018. Put up some more information such as how much of the time
     was non-dominated by no precipitation.}
 \end{figure}
+\clearpage
 
 \subsection{Discussion}\label{sec:spc_d}
 
-\clearpage
 
 \section{Machine Learning for Prediction}\label{sec:MLP}
 
@@ -666,7 +674,7 @@ data.
 
 \section{Discussion and Conclusions}\label{sec:conclusions}
 
-This section is blank for now. 
+ 
 
 %--References
 \small
