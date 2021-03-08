@@ -88,7 +88,7 @@ the Koppen-Geiger Climate Classification, Princeton, NJ lies in the
 classification Cfa, which denotes a temperate climate, with no dry season,
 and hot summers defined as reaching~22$^\circ$C or higher
 \cite[]{Peel2008}. Princeton having no dry season means that precipitation
-is well spread out throughout the year. 
+is well spread out throughout the year.
 
 % \input{Histogram.tex}
 
@@ -97,61 +97,55 @@ WXT530 series. It measures six weather parameters of air pressure,
 temperature, humidity, rainfall, wind speed, and wind direction. The
 rainfall is measured using an acoustic Vaisala RAINCAP Sensor, which helps
 avoid the complications of flooding, wetting, and evaporation losses
-\cite[]{Vaisala}. 
+\cite[]{Vaisala}.
 
 Air temperature is the temperature that the thermometer measures when
 exposed to the air, while sheltered from direct solar radiation.
-Atmospheric Pressure is measuring the pressure exerted by the atmosphere due
-to gravitation attraction on the air column above a point in question
-\cite[]{AMS}.  Relative Humidity is the ratio of vapor pressure to saturation
+Atmospheric pressure is the pressure exerted by the atmosphere due to
+gravitational attraction on the air column above a point in question
+\cite[]{AMS}. Relative humidity is the ratio of vapor pressure to saturation
 vapor pressure with respect to water \cite{AMS}.  This means that two air
-parcels can the same amount of water vapor, but if one air parcel is a
-warmer temperature than the other parcel, the higher temperature air parcel
-has a lower relative humidity than the lower temperature air parcel, since
-warmer air has a higher saturation vapor pressure for water.
+parcels can hold the same amount of water vapor, but if one air parcel is
+warmer than the other parcel, the higher temperature air parcel has a lower
+relative humidity than the lower temperature air parcel, since warmer air
+has a higher saturation vapor pressure for water.  Precipitation
+accumulation is the amount of water substance that has fallen at a given
+point over a specified period of time \cite[]{AMS}.
+
 %At the same time, relative humidity becomes important especially during
 %warmer temperatures, as increases in relative humidity can mean the
 %apparent temperature felt by humans will increase. This is the heat index,
 %in which
-Precipitation accumulation is the amount of water substance that has fallen
-at a given point over a specified period of time \cite[]{AMS}.
 
-Shown in Figure~\ref{daily}, data are being recorded every minute and air
-pressure, air temperature, relative humidity, and Precipitation accumulation
-is being plotted. This day happens to have precipitation, thus we can see
-some of the variables that could lead to precipitation actually occuring. It
-appears that relative humidity becomes higher before a precipitation event,
-and that the air pressure is low, while a precipitation event
-occurs. However, this is only one event and many precipitation events will
-be
-\begin{figure}
-\centering \includegraphics[trim = 0.5cm 5.0cm 0.5cm 6.0cm,clip,width =1.0\textwidth]{Figures/guyotweather_ywt_feb_22_2021.pdf}
-	\caption[Weather Station Data]{\label{daily} This is a daily plot of
-          the meteorological variables that the Vaisala station measures on
-          top of Guyot Hall.}
+\begin{figure}[thb]
+\centering \includegraphics[trim = 0.5cm 5.0cm 0.5cm 6.0cm,clip,width=1.0\textwidth]
+{Figures/guyotweather_ywt_feb_22_2021.pdf}
+\caption[Weather Station Data]{\label{daily}A daily plot of the
+  meteorological variables that the Vaisala station measures on top
+  of Guyot Hall.}
 \end{figure}
 
 % FJS BASIC CLIMATOLOGY FIGURES TEMPERATURE, PRECIPITATION, RELHUM
 
-From the data that I analyzed, the following is the climatology of Princeton
-from 2017 to 2021. Looking at Figure~\ref{Clim1}, we see that we have
-temperature and precipitation that varies throughout the year. Temperatures
-start increasing before peaking in July, before decreasing until
-January. This is consistent with the fact that Princeton has four seasons,
-which shows cold winters, warm summers, and mild springs and falls. At the
-same time, there is more precipitation in the spring and summer compared to
-the relative lack of precipitation in the fall and winter.
+From the data analyzed, the following is the climatology of Princeton from
+2017 to 2021. Looking at Figure~\ref{Clim1}, we see that we have temperature
+and precipitation that varies throughout the year. Temperatures start
+increasing before peaking in July, before decreasing until January. This is
+consistent with the fact that Princeton has four seasons, which shows cold
+winters, warm summers, and mild Spring and Fall. At the same time, there is
+more precipitation in the Spring and Summer compared to the relative lack of
+precipitation in the Fall and Winter.
 
-The month with the lowest average precipitation appears to be January at an
-average monthly precipitation of 44~mm. Whereas, the month with the highest
-average precipitation is July with 123~mm.
+The month with the lowest average precipitation is January, at an average
+monthly precipitation of 44~mm, whereas the month with the highest average
+precipitation is July with 123~mm.
 
-When looking at Figure~\ref{Temp_range}, we see that the ranges of
-temperature are not equal in throughout the months. For example winter
-months of January and Feburary have a big range that span from about $20
-^\circ $C to $-10 ^\circ$C. Meanwhile we have summer months such as July and
-August whose range of temperatures is smaller, from about $30 ^\circ $C to
-about $15 ^\circ $C.
+Figure~\ref{Temp_range}, shows that the ranges of temperature are not equal
+throughout the months. For example, Winter months of January and Feburary
+have a big range that spans from about $20 ^\circ $C to $-10
+^\circ$C. Meanwhile, we have Summer months such as July and August, whose
+range of temperatures is smaller, from about $30 ^\circ $C to about $15
+^\circ $C.
 
 We also see that relative humidity for Princeton is higher in the months of
 August to October, whereas the lowest relative humidity seems to be in the
@@ -184,7 +178,7 @@ to February have relatively large ranges for atmospheric pressure as well.
 	\caption[Climatology of temperature and precipitation of Princeton
           (2017--2021)]{\label{Clim1} Climatology shown for Princeton from
           August 2017 to January 2021. The black interval lines show the
-          25--75th interpercentile range for temperature of the month. }
+          25--75th interpercentile range for temperature of the month.}
 \end{figure}
 
 \begin{figure}[b]
@@ -193,8 +187,7 @@ to February have relatively large ranges for atmospheric pressure as well.
 	\caption[Temperature range for Princeton
           (2017--2021)]{\label{Temp_range} Shows the interpercentile ranges
           as a bar and the mean temperatures as a line graph. The whiskers
-          goes out to the 0th percentile and 100th percentile
-          respectively. }
+          go out to the 0th percentile and 100th percentile, respectively.}
 \end{figure}
 \clearpage
 
@@ -214,8 +207,8 @@ to February have relatively large ranges for atmospheric pressure as well.
 	\centering
 	\includegraphics[width=0.65\textwidth]{Figures/AP_range.png}
 	\caption[Range of Atmospheric Pressure in Princeton (2017--2021)
-        ]{\label{AP_range} A similar graph with \ref{RH_range} looking at
-          range of atmospheric pressure through out the months.  }
+        ]{\label{AP_range} A graph similar to Figure~\ref{RH_range} looking
+          at range of atmospheric pressure through out the months.}
 \end{figure}
 \clearpage
 \section{Descriptive Climatology of Precipitation}\label{sec:dcp}
@@ -319,7 +312,7 @@ or longer in duration. This covers all potential precipitation events.
 	\caption[Histogram of non-precipitation events for 2018 broken down
           by season]{\label{np2018} Distribution of precipitation duration
           in 2018, with a breakdown by seasons. The minimum duration is
-          $\tau = 1$~min. }
+          $\tau = 1$~min.}
 \end{figure}
 
 \clearpage
@@ -382,7 +375,7 @@ or longer in duration. This covers all potential precipitation events.
 	\caption[Intensity histogram for 2020 broken down by season]
 	{\label{i2020} Distribution of precipitation intensity in
 		2020, with a breakdown by seasons. The minimum intensity is
-		$I=0.01$~mm/min. }
+		$I=0.01$~mm/min.}
 \end{figure}
 \clearpage
 
@@ -441,9 +434,7 @@ well as the gaps between precipitation events being too small.
 I used an exponential fit to the frequency-duration histograms for all 1253
 events $E_j^2$, i.e. $E_j^\tau$ where $\tau=2$~min. For all the other years,
 as shown in Figures~\ref{p2020}, \ref{p2018} and~\ref{p2017}, I used a
-similar procedure.
-
-Excluding the first interval shown, focusing on events of duration
+similar procedure. Excluding the first interval shown, focusing on events of duration
 greater than or equal to 2~min, we propose an exponential model for
 the histogram, with the following equation:
 \begin{equation}\label{expod}
@@ -467,7 +458,7 @@ $ is the exponential coefficient. Table~\ref{thirdtable_98} shows the
 coefficients~$\gamma$ and exponential coefficients~$\delta$ from looking at
 yearly frequency of non-precipitation event durations.
 
-Another similar equation for precipitation intensity can be described by the
+A similar equation for precipitation intensity can be described by the
 following equation:
 \begin{equation}\label{expod_inten}
 	F_{inten} = \epsilon \,e^{\zeta I},
@@ -597,7 +588,7 @@ intensity of precipitation events.
             mm/minute intensity bin for the entire 2018 data. The layout is
             the same as Figure~\ref{i2017_fit}, with the red curve fitting
             the extremes better, while the black curve fits the lower
-            intensity bins better. }
+            intensity bins better.}
 \end{figure}
 
 \clearpage
@@ -627,16 +618,17 @@ intensity of precipitation events.
 
 \subsection{Discussion}\label{sec:apcd}
 
+
+Table~\ref{firsttable} show that $\beta$ values are similar to each other
+with the exception of 2017, which only had partial data starting in the
+Summer. Even with the partial data that we have from 2017 and 2020, it is
+clear that the $\alpha$ values are similar to each other. Focusing on the
+years with complete data, 2018 and 2019, it is clear that yearly variations
+exist between them. All $\alpha$ values are negative.\\[-1.5em]
+
 \input{firsttable}
 
 \input{firsttable_100}
-
-Based on Table~\ref{firsttable}, the $\beta$ values are similar to each
-other with the exception of 2017, which only had partial data starting in
-the Summer. Even, with the partial data we have from 2017 and 2020, it is
-clear that the $\alpha$ values are similar to each other. Focusing on the
-years with complete data, 2018 and 2019, it is clear that yearly variations
-exists between them. All $\alpha$ values are negative.
 
 In the seasonal variations, we see that Summer has $\alpha$ values that are
 less negative compared to the other seasons as well as having a lower
@@ -648,55 +640,62 @@ tends to have smaller precipitation totals, so its intensity is less than
 the Summer, but greater than the winter precipitation intensity.
 
 Compared to Table~\ref{firsttable}, Table~\ref{firsttable_100} seems to show
-a $\beta$ value that are consistently lower when considering the 100th
+$\beta$ values that are consistently lower when considering the 100th
 percentile bins for precipitation event durations. The $\alpha$ values are
-also less negative, which better reflects the fact there are these extreme
-durations for precipitation events.
- 
+also less negative, which better reflects that there are extreme durations
+for precipitation events.
+
+\ 
+
 \input{thirdtable.tex}
 
 \input{thirdtable_100.tex}
 
-Looking at trying to extend the exponential fit towards non-precipitation
-event durations, the exponentials for such duration, $\delta$ is less
-negative overall compared to the exponentials from the precipitation event
-duration, $\alpha$. Some of this is explained from the fact that the
-duration of non-precipitation events range from 1 minute to over 2000
-minutes, whereas the duration of precipitation events range from 1 minute to
-just over 300 to 400 minutes. At the same time how we bin the durations for both
-precipitation and non-precipitation events will affect how we get the fits.
+When fitting non-precipitation event durations using the exponential model,
+the coefficients $\delta$ are less negative overall compared to the
+coefficients of the precipitation event duration, $\alpha$.
+
+Some of this difference is explained by the fact that the durations of
+non-precipitation events range from 1 minute to over 2000 minutes, whereas
+the durations of precipitation events range from 1 minute to just over
+300--400 minutes. Also, how we bin the durations for both precipitation and
+non-precipitation events will affect how we get the fits.
 
 Once again, taking into the account the most extreme durations for
 non-precipitation events lowers the frequency value of $\gamma$ and the
 exponential constant of $\delta$ is less negative, when comparing
-Table~\ref{thirdtable_98} and Table~\ref{thirdtable_100}
+Table~\ref{thirdtable_98} and Table~\ref{thirdtable_100}.
+
+\
 
 \input{fourthtable.tex}
+
 \input{fourthtable_100.tex}
 
 In contrast, Table~\ref{fourthtable} for intensity of precipitation events
 show a more negative exponential compared to either precipitation or
 non-precipitation event durations. This is partially due to the fact that
-there are less bins in the intensity of preciptiation events as seen that
+there are fewer bins in the intensity of preciptiation events as seen that
 the vast majority of precipitation events are not particularly intense on
 average.
 
-Looking at the different between Table~\ref{fourthtable} and
-Table~\ref{fourthtable_100}, intensity clearly has the biggest changes from
-using 98th percentile to the 100th percentile. First the $\epsilon$ value
-actually increases when you use the 100th percentile rather than the 98th
+The differences between Table~\ref{fourthtable} and
+Table~\ref{fourthtable_100} show that the exponential coefficients for
+intensity clearly are changed most when the 98th percentile or the 100th
+percentile are included in the fit. First, the $\epsilon$ value increases
+when we use the 100th percentile rather than the 98th
 percentile. Furthermore, we see that the $\zeta$ value also becomes less
-negative , but very dramatically compared to non-precipitation and
+negative, but very dramatically compared to non-precipitation and
 precipitation event durations.
 
-However looking at Table~\ref{secondtable}, we see that the summers also
-have a lot of precipitation. The fewer amounts of precipitation events in
-the Summer, but with a lot of precipitation gives a higher intensity for the
-Summer. For the Winter, the $\alpha$ are the furthest from 0 and the $\beta$
-are large. However, Winter tends to have the lowest values for total
+However, Table~\ref{secondtable} shows that the Summers also have a lot of
+precipitation. There may be fewer precipitation events, but their total
+precipitation is higher, hence they have a higher intensity.  For the
+Winter, the $\alpha$ are the furthest from 0 and the $\beta$ are
+large. However, Winters tend to have the lowest values for total
 precipitation and the combination of lots of preciptation events and low
 precipitation totals results in the lowest intensities among the four
-seasons.  
+seasons.
 
 \input{secondtable}
 \clearpage
@@ -705,18 +704,14 @@ seasons.
 
 \subsection{Method}\label{sec:sfp_m}
 
-To make a base line model for us to look at, we need to first use the
-exponentials that we calculated for the duration of the precipitation event,
-intensity of the precipitation event, and duration of the non-precipitation
-events. However, we also need to manually add back in the lowest durations
-and lowest intensities, since we excluded those values when calculating the
-exponential distributions. Since the frequencies are in the bins of values
-that are distributed by percentiles, we make use of the fact that there is
-an equal chance of pulling a value in the bin ranges. Thus once we have all
-the probabilities in place for precipitation event duration,
-non-precipitation event duration, and precipitation event intensity, we can
-start running a simulation based on the values that come from the data that
-we analyzed.
+To make a base line model, we need to first use the exponentials that we
+calculated for the duration of the precipitation event, intensity of the
+precipitation event, and duration of the non-precipitation events. However,
+we also need to manually add back in the lowest durations and lowest
+intensities, since we excluded those values when calculating the exponential
+distributions. To perform the simulation, we select bins proportionally to
+their probability under the distributino, and then pick values from a
+uniform distribution with those bins.
 
 \clearpage 
 
@@ -725,9 +720,8 @@ we analyzed.
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.75\textwidth]{Figures/better_one_run.png}
-  \caption[One run using Summer 2018 climatology]
-
-  {\label{crudemodel}One model run using the exponentials calculated from Summer 2018.}
+  \caption[One run using Summer 2018 climatology] {\label{crudemodel}One
+    model run using the exponentials calculated from Summer 2018.}
 \end{figure}
 
 Running the model one hundred times let us look at what the average
