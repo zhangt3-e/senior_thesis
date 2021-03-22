@@ -1,0 +1,670 @@
+\documentclass[12pt]{article}                     %  ARTICLE
+\documentclass[twoside,agupp,10pt]{aguplus-1.6b}  %  JGRC
+\documentclass[twoside,jgrga,10pt]{aguplus-1.6b}  %  JGRG
+\documentclass[twoside,agums,10pt]{aguplus-1.6b}  %  JGRR
+\documentclass[semhelv,12pt,portrait]{seminar}    %  SEMINARP
+\documentclass[semhelv,12pt,landscape]{seminar}   %  SEMINARL
+%\landscapeonly % IF IT'S A MIX                   %  SEMINARL
+%\portraitonly  % IF IT'S A MIX                   %  SEMINARP
+\documentclass[jog]{svjour}                       %  JOG
+\documentclass{rspublic}                          %  PRS
+\documentclass[11pt,openany]{book}               %  BOOK LETTER
+%\documentclass[12pt,openany]{report}              %  BOOK LETTER COMPANY
+%\documentclass[11pt,openany]{report}              %  BOOK LETTER COMPANY
+\documentclass{cupbook}                           %  CUP
+\documentclass[grl]{agu2001}                      %  GRLR
+\documentclass[grl]{agu2001}                      %  GRLC
+\documentclass[camera,extra,draft]{gji}           %  GJIDRAFT
+\documentclass[camera,extra]{gji}                 %  GJIC
+\documentclass[referee,extra]{gji}                %  GJIR
+\documentclass[12pt,titlepage,twoside]{mitthesis} %  THESIS
+\pagestyle{headings}                              %  THESIS
+%\documentstyle[nature,color,psfig,fancyhdr,overcite209,url]{article} %  NATURE
+\documentclass{nature} %  NATURE
+\documentstyle[science]{article}                  %  SCIENCE
+\usepackage{textcomp} % ARTICLE
+\usepackage[margin=1.0in]{geometry} % ARTICLE
+\usepackage{times} % GJIR GJIC BOOK ARTICLE JGRC JGRR JGRG GRLR THESIS LETTER JOG CUP COMPANY
+\usepackage[inline]{/u/fjsimons/IFILES/LATEX/VARIOUS/enumitem/enumitem} % CV AND SOMETIMES BOOK
+%\usepackage[]{geometry} % CUP
+\usepackage{marginnote} % CUP
+\usepackage{amssymb} % CUP BOOK
+\usepackage[fleqn]{amsmath} % GJIC GJIR CUP SEMINARL 
+\usepackage{mathrsfs} % GJIC GJIR CUP SEMINARL 
+\usepackage{amsfonts} % SEMINARL SEMINARP ARTICLE CUP
+\usepackage{color,graphicx,pause,epstopdf,epsfig} % SEMINARP SEMINARL ARTICLE CUP
+%\DeclareGraphicsRule{.eps}{pdf}{.pdf}{`epstopdf #1} % SEMINARP SEMINARL CUP BOOK
+\pdfcompresslevel=9 % SEMINARP SEMINARL ARTICLE CUP
+%\usepackage[]{animate} % BOOK
+\usepackage[format=hang,labelsep=space]{caption} % SEMINARL
+% \usepackage[font={small}]{caption} % CUPCANNOTUSEIT
+\usepackage{amsmath,amssymb,caption} % ARTICLE LETTER 
+%\usepackage{dtklogos,ifpdf} % LETTER BOOK ARTICLE
+\usepackage[colorlinks=false,draft]{hyperref} % ARTICLE
+%\usepackage[dvips]{epsfig,graphicx} % THESIS JOG SEMINARL
+\usepackage{semcolor,eso-pic,upquote} % SEMINARP SEMINARL
+\usepackage{titlesec} % ARTICLE 
+\usepackage{upquote} % ARTICLE 
+\usepackage[dvips]{color,epsfig,graphicx} % GJIR GJIC JGRC JGRR JGRG GRLC GRLR  PRS JOG 
+\usepackage[pdftex]{color,epsfig,graphicx} % BOOK LETTER COMPANY
+% \usepackage{empgeq} % ARTICLE
+\usepackage{paralist,totcount} % BOOK ARTICLE
+\usepackage{afterpage,lineno} % JGRC JGRR ARTICLE
+\usepackage[greek,english]{babel} % SEMINARP SEMINARL ARTICLE BOOK
+% \usepackage{pstcol} % SEMINARP SEMINARL
+\usepackage{pstricks} % SEMINARP SEMINARL
+%% Letter... % SEMINARP SEMINARL
+\pdfpagewidth=11truein % SEMINARP SEMINARL 
+\pdfpageheight=8.5truein % SEMINARP SEMINARL
+%% A4 % SEMINARP SEMINARL
+%% \pdfpagewidth=297truemm % SEMINARP SEMINARL
+%% \pdfpageheight=210truemm % SEMINARP SEMINARL
+\pdfhorigin=1truein % SEMINARP SEMINARL
+\pdfvorigin=1truein % SEMINARP SEMINARL
+\pdfvorigin=0.5truein % BOOK
+\input{/u/fjsimons/IFILES/LATEX/SEMINAR/seminar.bug} % SEMINARP SEMINARL
+\input{/u/fjsimons/IFILES/LATEX/SEMINAR/seminar.bg2}  % SEMINARL SEMINARP
+\usepackage{verbatim} % GJIR GJIC BOOK SEMINARL ARTICLE JGRC JGRR JGRG GRLR THESIS LETTER JOG
+\usepackage{timet} % GRLC PRS JOG 
+\usepackage{helvet} % GRLC PRS JOG SEMINARL SEMINARP
+\usepackage{upgreek} % GRLC PRS JOG  SEMINARL SEMINARP
+\usepackage[square]{natbib} % OPTION SEMINARP SEMINARL THESIS PRS BOOK JOG ARTICLE LETTER 
+%\usepackage{natbib} % OPTION SEMINARP SEMINARL THESIS PRS BOOK JOG ARTICLE LETTER 
+\makeatletter\renewcommand\bibsection % BOOK 
+{\section*{\refname\@mkboth{\MakeUppercase{\refname}} % BOOK 
+{\MakeUppercase{\refname}}}}\makeatother % BOOK
+\usepackage{subeqn,braket} % PRS BOOK JGRC JGRR JGRG GRLC GRLR THESIS JOG  SEMINARP
+\usepackage{braket} % ARTICLE GJIC GJIR
+\usepackage{makeidx} % GJIR GJIC BOOK SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS JOG 
+\usepackage{url,phonetic} % GJIR GJIC BOOK SEMINARP SEMINARL ARTICLE JGRC JGRR JGRG GRLC GRLR THESIS JOG LETTER CUP COMPANY
+\usepackage{html}
+\usepackage{makeidx} %CUP
+%\usepackage{fancybox}
+\usepackage{fancyhdr} % GJIR GJIC BOOK SEMINARP SEMINARL ARTICLE JGRC JGRR JGRG GRLC GRLR THESIS JOG LETTER COMPANY
+%\usepackage{letterspace} % GJIR GJIC BOOK SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS JOG LETTER
+\usepackage{eurosym} % GJIR GJIC BOOK SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS JOG LETTER COMPANY
+%%\usepackage{subfigure} % GJIR GJIC BOOK SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS JOG LETTER
+\usepackage{subfig} % GJIR GJIC BOOK SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS JOG LETTER
+%\usepackage[light]{draftcopy} 
+\usepackage{tabularx} % BOOK ARTICLE
+\usepackage{mathrsfs} % PRS JOG GJIC GJIR ARTICLE
+\usepackage{mathdots} % PRS JOG GJIC GJIR ARTICLE
+\usepackage{multirow} % SEMINARL SEMINARP ARTICLE CUP
+%\setlength{\topmargin}{-1.5cm} %  ARTICLE LETTER COMPANY
+%\setlength{\evensidemargin}{-0.5cm} % LETTER ARTICLE 
+%\setlength{\oddsidemargin}{-0.5cm} % LETTER ARTICLE 
+\setlength{\topmargin}{-1.5cm} % COMPANY
+\setlength{\evensidemargin}{0cm} % COMPANY
+\setlength{\oddsidemargin}{0cm} % COMPANY
+% \setlength{\textheight}{24cm} % ARTICLE 
+%\setlength{\textwidth}{17cm} %  ARTICLE 
+\setlength{\marginparwidth}{2.5cm} % CUP
+\setlength{\marginparsep}{1cm} % CUP
+\setlength{\headsep}{1cm} %  CUP
+\renewcommand{\topfraction}{.90} % BOOK GRLR ARTICLE JOG CUP
+\renewcommand{\bottomfraction}{.90} % BOOK GRLR ARTICLE JOG CUP
+\renewcommand{\textfraction}{0} % BOOK GRLC GRLR ARTICLE JOG CUP
+\renewcommand{\dblfloatpagefraction}{.50} % GRLC JGRC ARTICLE CUP
+\renewcommand{\dbltopfraction}{.90} % GRLC JGRC ARTICLE CUP
+%\printfigures  % JGRC JGRR JGRG
+\setlength{\slidewidth}{26cm} % SEMINARP SEMINARL
+\setlength{\slideheight}{19cm} % SEMINARP SEMINARL
+\raggedslides[0pt] % SEMINARP SEMINARL
+\pagestyle{empty} % SEMINARP SEMINARL
+\slideframe{none} % SEMINARP SEMINARL
+\setlength{\evensidemargin}{-0.5cm} % BOOK LETTER
+\setlength{\oddsidemargin}{-0.5cm} % BOOK LETTER
+\setlength{\evensidemargin}{0cm} % LETTER
+\setlength{\oddsidemargin}{0cm} %  LETTER
+\setlength{\parindent}{0.5cm} % BOOK SEMINARP SEMINARL 
+\setlength{\parindent}{0cm} % LETTER COMPANY
+\setlength{\parskip}{0.75em} % LETTER BOOK COMPANY
+\setlength{\textheight}{23.5cm} % BOOK CV LETTER COMPANY
+\setlength{\textwidth}{16cm} % LETTER COMPANY
+%\setlength{\textwidth}{17cm} % LETTER COMPANY
+\setlength{\textwidth}{18cm} % BOOK CV 
+\setlength{\topmargin}{0cm} % BOOK
+\setlength{\topmargin}{-1.5cm} % LETTER
+\makeindex % BOOK CUP
+\clubpenalty=10000 % BOOK NATURE SCIENCE ARTICLE
+\widowpenalty=10000 % BOOK NATURE SCIENCE ARTICLE
+\doublecaption{35pc} % JGRC JGRR JGRG
+\sectionnumbers  % JGRC JGRR JGRG
+\extraabstract % JGRC JGRR JGRG
+
+\newcommand{\sectionpage}[1]{\newpage\white{b}\\[20cm]\white{b}\hspace{\fill}{\Huge$\blacktriangleright\,\,$#1\white{b}\!\textbar}\thispagestyle{empty}\vfill} % ARTICLE
+\newcommand{\whitepage}{\newpage\thispagestyle{empty}\white{This page intentionally left blank}} % ARTICLE
+\newcommand{\cmat}{\earray\!\!\right)} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\cmats}{\earray\!\!\right]} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\omat}{\left(\!\!\barray} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\omats}{\left[\!\!\barray} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\thus}{\qquad\Rightarrow\qquad}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\where}{\qquad\mbox{where}\qquad}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\also}{\qquad\mbox{and}\qquad} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\for}{\qquad\mbox{for}\qquad} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\CC}{_\mathrm{cc}} % SEMINARL BOOK ARTICLE
+\newcommand{\about}{\mathord{\sim}} % BOOK ARTICLE
+\newcommand{\adoptb}{Adopt-a-Float} % BOOK ARTICLE
+\newcommand{\adopt}{Adopt-a-Float{ }} % BOOK ARTICLE
+\newcommand{\fjss}{\textbf{F.~J.~Simons }} % BOOK
+\newcommand{\fjs}{\textbf{F.~J.~Simons}} % BOOK
+\newcommand{\ghb}{\texttt{GitHub}} % BOOK ARTICLE SEMINARL
+\newcommand{\gh}{\texttt{GitHub}{ }} % BOOK ARTICLE SEMINARL
+\newcommand{\mermaidb}{\textsc{Mermaid}} % BOOK ARTICLE LETTER
+\newcommand{\mermaid}{\textsc{Mermaid}{ }} % BOOK ARTICLE LETTER
+\newcommand{\mlb}{\textsc{Matlab}} % BOOK ARTICLE SEMINARL
+\newcommand{\ml}{\textsc{Matlab}{ }} % BOOK ARTICLE SEMINARL
+\newcommand{\octb}{\textsc{GNU\ Octave}} % BOOK ARTICLE
+\newcommand{\oct}{\textsc{GNU\ Octave}{ }} % BOOK ARTICLE
+\newcommand{\sii}{_{ii}} % SEMINARL BOOK ARTICLE
+\newcommand{\sij}{_{ij}} % SEMINARL BOOK ARTICLE
+\newcommand{\si}{_i}% SEMINARL BOOK ARTICLE
+\newcommand{\sji}{_{ji}} % SEMINARL BOOK ARTICLE
+\newcommand{\sjj}{_{jj}} % SEMINARL BOOK ARTICLE
+\newcommand{\sj}{_j}% SEMINARL BOOK ARTICLE
+\newcommand{\sonob}{Son-O-Mermaid} % BOOK ARTICLE LETTER
+\newcommand{\sono}{Son-O-Mermaid{ }} % BOOK ARTICLE LETTER
+% SPECIAL MATH SYMBOLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareMathOperator*{\argmax}{\arg\!\max} % SEMINARL GJIC GJIR ARTICLE
+\DeclareMathOperator*{\argmin}{\arg\!\min} % SEMINARL GJIC GJIR ARTICLE
+\DeclarePairedDelimiter\abs{\lvert}{\rvert} %  GJIC GJIR 
+\DeclarePairedDelimiter\norm{\lVert}{\rVert} % GJIC GJIR 
+\newcommand{\bde}[1]{\bc$\displaystyle{#1}$\ec} % SEMINARL SEMINARP CUP
+\newcommand{\bbe}[1]{\bc\fbox{$\displaystyle{#1}$}\ec} % SEMINARL SEMINARP CUP
+\newcommand{\bbb}[1]{\be\boxed{#1}\ee} % SEMINARL SEMINARP CUP
+\newcommand{\bc}{\begin{center}} % SEMINARL SEMINARP CUP
+\newcommand{\ec}{\end{center}} % SEMINARL SEMINARP CUP
+\newcommand{\bY}{\mbox{\boldmath$\mathsf{Y}$}} % GJIR
+\newcommand{\bG}{\mbox{\boldmath$\mathsf{G}$}} % GJIR
+\newcommand{\bzero}{\mbf{0}} % ARTICLE CUP
+\newcommand{\Epot}{E_\mathrm{pot}} % ARTICLE 
+\newcommand{\Ekin}{E_\mathrm{kin}} % ARTICLE
+\newcommand{\Etot}{E_\mathrm{tot}} % ARTICLE
+\newcommand{\Ediss}{\Delta E_\mathrm{diss}} % ARTICLE
+\newcommand{\half}{\mbox{$\frac{1}{2}$}} % CUP
+\newcommand{\fourthirds}{\mbox{$\frac{4}{3}$}} % CUP
+\newcommand{\twothirds}{\mbox{$\frac{2}{3}$}} % CUP
+\newcommand{\third}{\mbox{$\frac{1}{3}$}} % CUP
+\newcommand{\filref}{\hfill{\fns\thepage/\pageref{lastpage}}} % SEMINARL SEMINARP
+\newcommand{\filw}{\hfill{\white i}} % SEMINARL SEMINARP
+\newcommand{\domg}{\,d\Omega} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\dt}{\,dt} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\fracd}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}} % PRS JOG SEMINARL BOOK CUP GJIR GJIC SCIENCE JGRR JGRC JGRG ARTICLE
+\newcommand{\intK}{\int_{\raisebox{-0.7ex}{$\scriptstyle{\|{\bf k}\|\le K}$}\hspace{-4.0ex}}} % ARTICLE
+\newcommand{\intinf}{\int_{-\infty}^{\infty}} % ARTICLE
+\newcommand{\intkinf}{\hspace{-4.0ex}\int\limits_{\hspace{5.0ex}\|{\bf k}\|\le\infty}\hspace{-4.0ex}} % ARTICLE
+\newcommand{\intrinf}{\hspace{-4.0ex}\int\limits_{\hspace{5.0ex}\|{\bf r}\|\le\infty}\hspace{-4.0ex}} % ARTICLE
+\newcommand{\intr}{\int_R} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\intbr}{\int_{\bar{R}}} % PRS JOG SEMINARL SEMINARP GJIC GJIR BOOK CUP
+\newcommand{\intlr}{\intl_{R}} % PRS JOG  SEMINARL SEMINARP GJIC GJIR BOOK CUP
+\newcommand{\into}{\int_\Omega} % PRS JOG SEMINARL SEMINARP GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\intlo}{\intl_{\Omega}} % PRS JOG SEMINARL SEMINARP GJIC GJIR BOOK CUP
+\newcommand{\intolt}{\intl_T} % PRS JOG SEMINARL SEMINARP GJIC GJIR BOOK CUP
+\newcommand{\intor}{\int_{\Omega-R}} % PRS JOG SEMINARL SEMINARP GJIC GJIR BOOK CUP
+\newcommand{\intdp}{\int\!\!\!\int_{\tilde{D}}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\DDlta}{D(\Delta)} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\erf}{{\mathrm{erf}}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\erfc}{{\mathrm{erfc}}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\cov}{{\mathrm{cov}}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\var}{{\mathrm{var}}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\covsl}{\langle s_{lm}s_{l'm'}\rangle} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\covnl}{\langle n_{lm}n_{l'm'}\rangle} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\covsr}{\langle s(\rhat)s(\rhat')\rangle} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\covnr}{\langle n(\br)n(\br')\rangle} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\covsa}{\langle s_\alpha s_\beta\rangle} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\lup}{\lambda_{\uparrow}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\ldn}{\lambda_{\downarrow}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfgup}{\sfg_{\uparrow}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfgdn}{\sfg_{\downarrow}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\gup}{g_{\uparrow}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\gdn}{g_{\downarrow}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\gdnlm}{g_{\downarrow\hspace*{0.1em}lm}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\gdna}{g_{\downarrow\hspace*{0.1em}\alpha}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\gupa}{g_{\uparrow\hspace*{0.1em}\alpha}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\hsp}{\hspace*{0.1em}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\hsps}{\hspace*{0.75em}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\hspm}{\hspace*{-0.1em}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\siup}{s_{\uparrow}}% SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\siuph}{\shat_{\uparrow}}% SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\siupa}{s_{\uparrow\hspace*{0.05em}\alpha}}% SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\siupb}{s_{\uparrow\hspace*{0.05em}\beta}}% SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\hsiupa}{\hat{s}_{\uparrow\hspace*{0.05em}\alpha}}% SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\hsidna}{\hat{s}_{\uparrow\hspace*{0.05em}\alpha}}% SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\hsuplmpp}{\hat{s}_{\uparrow\hspace*{0.1em}l''m''}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sidna}{s_{\downarrow\hspace*{0.05em}\alpha}}% SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfgupa}{\sfg_{\uparrow\hspace*{0.05em}\alpha}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfgupb}{\sfg_{\uparrow\hspace*{0.05em}\beta}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfgdna}{\sfg_{\downarrow\hspace*{0.05em}\alpha}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfgdnb}{\sfg_{\downarrow\hspace*{0.05em}\beta}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\guplm}{g_{\uparrow\hspace*{0.1em}lm}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\suplm}{s_{\uparrow\hspace*{0.1em}lm}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\suplmh}{\hat{s}_{\uparrow\hspace*{0.1em}lm}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\suplmp}{s_{\uparrow\hspace*{0.1em}l'm'}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\suplmpp}{s_{\uparrow\hspace*{0.1em}l''m''}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\lstart}{[\lambda_\alpha+\eta(1-\lambda_\alpha)]^{-1}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\lstartw}{[\lambda_\alpha+\eta(1-\lambda_\alpha)]^{-2}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\lstar}{\lambda_\alpha^*(\eta)} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\lstarR}{\lambda_\alpha^*(\eta_R)} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\lstarO}{\lambda_\alpha^*(\eta_\Omega)} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\dab}{\delta_{\alpha\beta}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\Eab}{E_{\alpha\beta}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\dlmp}{\delta_{ll'}\delta_{mm'}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\dllp}{\delta_{ll'}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\dmmp}{\delta_{mm'}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\br}{\mbf{r}}  % SEMINARL GJIC GJIR BOOK CUP SEMINARP JGRR JGRC ARTICLE
+\newcommand{\Ylm}{Y_{lm}}  % GJIC GJIR BOOK CUP SEMINARL JGRR JGRC ARTICLE
+\newcommand{\Ylmr}{Y_{lm}(\br)}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Ylmrp}{Y_{lm}(\br')}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Ylmprp}{Y_{l'm'}(\br')}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Ylmrh}{Y_{lm}(\rhat)}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Ylmrhp}{Y_{lm}(\rhat')}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Ylmrhpp}{Y_{lm}(\rhat'')}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Ynlmrhpp}{Y^{}_{lm}(\rhat'')}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Ylmprh}{Y_{l'm'}(\rhat)}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Yslmprh}{Y^*_{l'm'}(\rhat)}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Yelmprh}{Y_{lm'}(\rhat)}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Ynelmprhp}{Y^{}_{lm'}(\rhat')}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Yelmprhppp}{Y_{lm'}(\rhat''')}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Ynelmprhppp}{Y^{}_{lm'}(\rhat''')}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Yselmprhppp}{Y^*_{lm'}(\rhat''')}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Ylmprhp}{Y_{l'm'}(\rhat')}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Yelmprhp}{Y_{lm'}(\rhat')}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Yselmprhp}{Y^*_{lm'}(\rhat')}  % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Ylmp}{Y_{l'm'}} % GJIC GJIR BOOK CUP SEMINARL ARTICLE
+\newcommand{\Yelmp}{Y_{lm'}} % GJIC GJIR BOOK CUP SEMINARL ARTICLE
+
+\newcommand{\mcYlm}{\mcY_{lm}}  % GJIC GJIR BOOK CUP SEMINARL
+\newcommand{\mcYslm}{\mcY^*_{lm}}  % GJIC GJIR BOOK CUP SEMINARL
+\newcommand{\Yslm}{Y^*_{lm}}  % GJIC GJIR BOOK CUP SEMINARL
+\newcommand{\mcYnlm}{\mcY^{}_{lm}}  % GJIC GJIR BOOK CUP SEMINARL
+\newcommand{\mcYnlmp}{\mcY^{}_{l'm'}}  % GJIC GJIR BOOK CUP SEMINARL
+\newcommand{\mcYlmrh}{\mcY_{lm}(\rhat)}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\mcYslmrh}{\mcY^*_{lm}(\rhat)}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\Yslmrh}{Y^*_{lm}(\rhat)}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\Ynlm}{Y^{}_{lm}}  % GJIC GJIR BOOK CUP SEMINARL
+\newcommand{\Ynlmp}{Y^{}_{l'm'}}  % GJIC GJIR BOOK CUP SEMINARL
+\newcommand{\mcYnlmrh}{\mcY^{}_{lm}(\rhat)}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\Ynlmrh}{Y^{}_{lm}(\rhat)}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\mcYnlmrhp}{\mcY^{}_{lm}(\rhat')}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\Ynlmrhp}{Y^{}_{lm}(\rhat')}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\mcYlmrhp}{\mcY_{lm}(\rhat')}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\mcYlmprh}{\mcY_{l'm'}(\rhat)}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\mcYelmprh}{\mcY_{lm'}(\rhat)}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\mcYlmprhp}{\mcY_{l'm'}(\rhat')}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\mcYelmprhp}{\mcY_{lm'}(\rhat')}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\mcYlmp}{\mcY_{l'm'}} % GJIC GJIR BOOK CUP SEMINARL
+\newcommand{\mcYelmp}{\mcY_{lm'}} % GJIC GJIR BOOK CUP SEMINARL
+
+\newcommand{\Xlm}{X_{lm}}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\Xlmrh}{X_{lm}(\rhat)}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\Xlmp}{X_{l'm'}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Xlmth}{X_{lm}(\theta)}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\Xlmthp}{X_{lm}(\theta')}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\Xlpm}{X_{l'm}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Xlpmth}{X_{l'm}(\theta)} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Xlmpth}{X_{l'm'}(\theta)} % SEMINARL GJIC GJIR BOOK CUP
+
+\newcommand{\Dlmlmp}{D_{lm,l'm'}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\bDlmlmp}{\bar{D}_{lm,l'm'}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Dlmpplmp}{{D}_{l''m'',l'm'}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Dlmplmpp}{{D}_{l'm',l''m''}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\bDlmpplmp}{\bar{D}_{l''m'',l'm'}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Dlmlmpp}{{D}_{lm,l''m''}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\bDlmlmpp}{\bar{D}_{lm,l''m''}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+
+\newcommand{\Dllpm}{D^m_{ll'}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Dllm}{D^m_{ll}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Dllp}{D_{ll'}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Dll}{D_{ll}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\bDllpm}{\bar{D}^m_{ll'}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\bDllp}{\bar{D}_{ll'}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Dllppm}{D^m_{ll''}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Dllpp}{D_{ll''}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\bDllppm}{\bar{D}^m_{ll''}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Dlpplpm}{D^m_{l''l'}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Dlpplp}{D_{l''l'}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\bDlpplpm}{\bar{D}^m_{l''l'}} % SEMINARL GJIC GJIR BOOK CUP
+
+\newcommand{\Slmlmp}{S_{lm,l'm'}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Elmlmp}{E_{lm,l'm'}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Almlmp}{A_{lm,l'm'}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Alma}{C_{lm}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Alm}{(2l+1)\fracd{(l-m)!}{(l+m)!}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Lab}{\Lambda_{\alpha\beta}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Hab}{H_{\alpha\beta}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Elmlpm}{E_{lm,l'm}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Ellpm}{E^m_{ll'}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Ellm}{E^m_{ll}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+
+\newcommand{\diag}{{\rm diag}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Drhrh}{D(\rhat,\rhat)} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Drhrhp}{D(\rhat,\rhat')} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\grh}{g(\rhat)} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\grhp}{g(\rhat')} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\garh}{g_\alpha(\rhat)} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\garhp}{g_\alpha(\rhat')} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\gbrh}{g_\beta(\rhat)} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gbrhp}{g_\beta(\rhat')} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\galm}{g_{\alpha,lm}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\galmp}{g_{\alpha,l'm'}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\halm}{h_{\alpha,lm}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\glma}{g_{\alpha,lm}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\glmap}{g_{l'm',\alpha}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\glmb}{g_{\beta,lm}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gblmp}{g_{\beta,l'm'}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\glmpb}{g_{\beta,l'm'}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\intl}{\int\limits}  % PRS JOG SEMINARL SEMINARP GJIC GJIR BOOK CUP
+\newcommand{\Npot}{(N+1)^2} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Lpot}{(L+1)^2} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\sumNpot}{\sum_{\alpha=1}^{\Npot}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\sumbNpot}{\sum_{\beta=1}^{\Npot}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\sumapot}{\sum_{\alpha=1}^{\Lpot}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\sumbpot}{\sum_{\beta=1}^{\Lpot}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumak}{\sum_{\alpha=1}^{J}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumakR}{\sum_{\alpha>J}^{\Lpot}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumaK}{\sum_{\alpha=1}^{K}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\sumbK}{\sum_{\beta=1}^{K}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\barr}{\bar{R}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sdsind}{\sqrt{\frac{\Delta}{\sin\Delta}}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\suml}{\sum\limits}  % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\sumliL}{\suml_{i=1}^{(L+1)^2}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumlm}{\sum\limits_{lm}}  % PRS JOG SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sumlmp}{\sum\limits_{l'm'}}  % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumel}{\suml_{l=0}^{L}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumem}{\suml_{m=-l}^{l}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumelp}{\suml_{l'=0}^{L}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumelpp}{\suml_{l''=0}^{L}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumsh}{\suml_{l=0}^{\infty}\suml_{m=-l}^{l}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumshort}{\suml_{lm}^{\infty}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\sumshortp}{\suml_{l'm'}^{\infty}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\sumshortpp}{\suml_{l''m''}^{\infty}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumshp}{\suml_{l'=0}^{\infty}\suml_{m'=-l'}^{l'}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumshpp}{\suml_{l''=0}^{\infty}\suml_{m''=-l''}^{l''}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumshL}{\suml_{l=0}^{L}\suml_{m=-l}^{l}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumshortN}{\suml_{lm}^{N}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\sumshortNp}{\suml_{l'm'}^{N}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\sumshortL}{\suml_{lm}^{L}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\sumshortLp}{\suml_{l'm'}^{L}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumshortLpp}{\suml_{l''m''}^{L}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumshLp}{\suml_{l'=0}^{L}\suml_{m'=-l'}^{l'}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumshR}{\suml_{l>L}^{\infty}\suml_{m=-l}^{l}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumshortR}{\suml_{lm>L}^{\infty}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumshortRp}{\suml_{l'm'>L}^{\infty}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumshortRpp}{\suml_{l''m''>L}^{\infty}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumshRp}{\suml_{l'>L}^{\infty}\suml_{m'=-l'}^{l'}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumaR}{\suml_{\alpha>K}^{\Lpot}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumbR}{\suml_{\beta>K}^{\Lpot}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sumshLpp}{\suml_{l''=0}^{L}\suml_{m''=-l''}^{l''}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\tlofp}{\left(\frac{2l+1}{4\pi}\right)} % PRS JOG SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\Plm}{P_{lm}}  % PRS JOG SEMINARL GJIC GJIR BOOK CUP JGRR JGRC
+\newcommand{\Plpm}{P_{l'm}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\Klmlmp}{K_{lm;l'm'}}  % PRS JOG SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\Plmp}{P_{l'm'}} % PRS JOG SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sfD}{{\textsf D}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfG}{{\textsf G}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfw}{{\textsf w}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfH}{{\textsf H}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfC}{{\textsf C}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfone}{{\textsf 1}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfzero}{{\textsf 0}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfa}{{\textsf a}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\sfF}{{\textsf F}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\sfT}{{\textsf T}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfV}{{\textsf V}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfB}{{\textsf B}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfg}{{\textsf{\small{g}}}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfd}{{\textsf{\small{d}}}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfs}{{\textsf{\small{s}}}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sff}{{\textsf{\small{f}}}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sft}{{\textsf{\small{t}}}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\T}{^{\sf{\sst{T}}}} % SEMINARL GJIC GJIR ARTICLE
+\newcommand{\Trm}{^{\rm{\sst{T}}}} % SEMINARL GJIC GJIR ARTICLE BOOK
+\newcommand{\Tcal}{^{\mathcal{\sst{T}}}} % SEMINARL GJIC GJIR ARTICLE
+\newcommand{\Tit}{^{\it{\sst{T}}}} % SEMINARL GJIC GJIR ARTICLE
+\newcommand{\pT}{'^{\sf{\sst{T}}}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfLam}{{\sf\Lambda}} % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\sfE}{{\textsf E}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sfS}{{\textsf S}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sfY}{{\textsf Y}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sfU}{{\textsf U}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sfV}{{\textsf{V}}} % ARTICLE
+\newcommand{\sfW}{{\textsf{W}}} % ARTICLE
+\newcommand{\sfM}{{\textsf M}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\mcD}{{\mathcal{D}}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\mcE}{{\mathcal{E}}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\mcG}{{\mathcal{G}}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\mcH}{{\mathcal{H}}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\mcI}{{\mathcal{I}}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\mcN}{{\mathcal{N}}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\mcP}{{\mathcal{P}}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\mcF}{{\mathcal{F}}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\mcQ}{{\mathcal{Q}}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\mcT}{{\mathcal{T}}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\mcU}{{\mathcal{U}}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\mcV}{{\mathcal{V}}} % SEMINARL GJIC GJIR BOOK CUP ARTICLE
+\newcommand{\mrf}{{\mathrm{f}}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\mrg}{{\mathrm{g}}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\mrh}{{\mathrm{h}}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\mrs}{{\mathrm{s}}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sfA}{{\textsf A}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sfI}{{\textsf I}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\sfbD}{{\bar{\textsf D}}} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\wigner}[6] %  PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP
+{\left(\barray{ccc} #1 & #2 & #3\\ #4 & #5 & #6 \earray\right)} % PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP
+\newcommand{\matt}[4] %  PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP ARTICLE
+{\left(\barray{cc} #1 & #2 \\ #3 & #4 \earray\right)} % PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP ARTICLE
+\newcommand{\fmat}[4] % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+{\left[\barray{cc} #1 & #2\\ #3 & #4 \earray\right]} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\dett}[4] %  PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP
+{\left|\barray{cc} #1 & #2 \\ #3 & #4 \earray\right|} % PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP
+\newcommand{\vect}[2] %  PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP ARTICLE
+{\left[\barray{c} #1 \\ #2 \earray\right]} % PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP ARTICLE
+\newcommand{\vectt}[2] %  PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP ARTICLE
+{\left[\barray{cc} #1 & #2 \earray\right]} % PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP ARTICLE
+\newcommand{\matd}[9] %  PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP
+{\left(\barray{ccc} #1 & #2 & #3\\ #4 & #5 & #6\\ #7 & #8 & #9 \earray\right)} % PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP
+\newcommand{\detd}[9] %  PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP
+{\left|\barray{ccc} #1 & #2 & #3\\ #4 & #5 & #6\\ #7 & #8 & #9 \earray\right|} % PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP
+\newcommand{\vecd}[3] %  PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP ARTICLE
+{\left(\barray{c} #1 \\ #2 \\#3 \earray\right)} % PRS JOG SEMINARL GJIC GJIR BOOK CUP BOOK CUP ARTICLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\mrp}{\mathrm{P}}   % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\mcd}{\mathcal{D}}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\mcY}{\mathcal{Y}}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\mcM}{\mathcal{M}}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\Lcap}{{L_{\mrm{cap}}}} % SEMINARL GJIC GJIR BOOK CUP PRS
+\newcommand{\Lnyq}{{L_{\mrm{N}}}}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\glt}{g_L(\theta)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gls}{g_L^2}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gt}{g(\theta)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gtt}{g_{\theta_0}(\theta)} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gp}{g(\phi)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gpp}{g(\phi')} % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gts}{g^2(\theta)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gtts}{g_{\theta_0}^2(\theta)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gtpr}{g(\theta')}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gttpr}{g_{\theta_0}(\theta')}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gtprs}{g^2(\theta')}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gtp}{g(\theta,\varphi)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gttp}{g_{\theta_0}(\theta,\varphi)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gltp}{g_L(\theta,\varphi)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\glrh}{g_L(\rhat)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\ffae}{\mathcal{R}_\alpha(\eta)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\ffan}{\mathcal{R}_\alpha(0)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\giltp}{g_{L;i}(\theta,\varphi)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gitp}{g_{i}(\theta,\varphi)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\girh}{g_{i}(\rhat)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gjltp}{g_{L;j}(\theta,\varphi)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gLltp}{g_{L;(L+1)^2}(\theta,\varphi)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gil}{g_{L;i}}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gjl}{g_{L;j}}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\giol}{g_{L;i+1}}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\gLl}{g_{L;(L+1)^2}}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\gtpp}{g(\theta',\varphi')}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\gtps}{g^2(\theta,\varphi)}  % SEMINARL GJIC GJIR BOOK CUP 
+\newcommand{\gltps}{g_L^2(\theta,\varphi)}  % SEMINARL GJIC GJIR BOOK CUP
+\newcommand{\gtpps}{g^2(\theta',\varphi')}  % SEMINARL GJIC GJIR BOOK CUP
+% LENGTHS AND WIDTHS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ffigwidth}{\textwidth} % THESIS JGRC JGRR JGRG GRLC GRLR GJIC GJIR BOOK CUP PRS JOG ARTICLE BOOK CUP SEMINARP SEMINARL
+\newcommand{\hfigwidth}{\columnwidth} % JGRC JGRR JGRG GRLC GRLR GJIC GJIR BOOK CUP
+\newcommand{\hfigwidth}{4in} % THESIS
+\newcommand{\mfigwidth}{3in} % THESIS
+\newcommand{\mfigwidth}{\tablewidth} % JGRC JGRR JGRG GRLC GRLR 
+\newcommand{\mfigwidth}{5.25in} %  GJIC GJIR BOOK CUP
+\newcommand{\ffw}{\textwidth} % NATURE SCIENCE GRLR
+\newcommand{\hfw}{8.7cm} % NATURE SCIENCE GRLR
+\newcommand{\tfw}{133.5mm} % NATURE SCIENCE GRLR
+\newcommand{\marginrule}{\marginpar[{\rule[0mm]{0.5pt}{\textheight}}]{\rule[0mm]{0.5pt}{\textheight}}} % NATURE SCIENCE 
+\newcommand{\noin}{\noindent} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE LETTER COMPANY
+\newcommand{\dbar}{d\mkern-6mu\mathchar'26}  % GJIR GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bnabla}{\mbox{\boldmath$\nabla$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bPhi}{\mbf{\Phi}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bphi}{\mbox{\boldmath$\phi$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bphih}{\mbox{\boldmath$\hat{\phi}$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bsfPhi}{\mbox{\boldmath$\mathsf{\Phi}$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\kb}{\mbf{k}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\xb}{\mbf{x}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\brh}{\mbf{\hat{r}}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\rhat}{\mbf{\hat{r}}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\shat}{\hat{s}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\Shat}{\hat{S}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\zhat}{\mbf{\hat{z}}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\btau}{\mbox{\boldmath$\tau$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bkappa}{\mbox{\boldmath$\kappa$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\blambda}{\mbox{\boldmath$\lambda$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bepsilon}{\mbox{\boldmath$\epsilon$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bvarepsilon}{\mbox{\boldmath$\varepsilon$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bomega}{\mbox{\boldmath$\omega$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bdelta}{\mbox{\boldmath$\delta$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\btheta}{\mbox{\boldmath$\theta$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bthetah}{\mbox{\boldmath$\hat{\theta}$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bpi}{\mbox{\boldmath$\pi$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bxi}{\mbox{\boldmath$\xi$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bmu}{\mbox{\boldmath$\mu$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\sump}{\sideset{}{'}\sum} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE LETTER
+\newcommand{\sumpm}{\sum_{-\infty}^{+\infty}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE LETTER
+\newcommand{\zhalf}{z^{\scriptscriptstyle{1/2}}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE LETTER
+\newcommand{\half}{\frac{1}{2}} % GJIR PRS JOG GJIC BOOK SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE LETTER
+\newcommand{\dyadup}{\framebox{$(\uparrow 2)$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE LETTER
+\newcommand{\fildn}{\framebox{$(\downarrow 2)$H}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE LETTER
+\newcommand{\upfil}{\framebox{\hspace{0.575mm}F$(\uparrow 2)$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE LETTER
+\newcommand{\dyaddn}{\framebox{$(\downarrow 2)$}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE LETTER
+% BEGIN AND END COMMANDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\bsl}{\begin{slide}}  % SEMINARL SEMINARP
+\newcommand{\esl}{\end{slide}}  % SEMINARL SEMINARP
+\newcommand{\bslc}{\begin{slide}\center}  % SEMINARL SEMINARP
+\newcommand{\eslc}{\vfill\hrule\end{slide}}  % SEMINARL SEMINARP
+\newcommand{\eslcref}[1]{\vfill\hrule\hfill\tiny{#1}\end{slide}} % SEMINARL
+\newcommand{\bmp}{\begin{minipage}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE LETTER
+\newcommand{\emp}{\end{minipage}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE LETTER
+\newcommand{\be}{\begin{equation}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\ee}{\end{equation}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bt}{\begin{tabular}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\et}{\end{tabular}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\btstar}{\begin{tabular*}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\etstar}{\end{tabular*}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\btx}{\begin{tabularx}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG THESIS NATURE SCIENCE
+\newcommand{\etx}{\end{tabularx}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bn}{\begin{enumerate}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\en}{\end{enumerate}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bqu}{\begin{quote}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\equ}{\end{quote}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bd}{\begin{description}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\ed}{\end{description}}   % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bds}{\begin{description*}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\eds}{\end{description*}}   % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\bdc}{\begin{document}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE COMPANY
+\newcommand{\edc}{\end{document}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE COMPANY 
+\newcommand{\bi}{\begin{itemize}} % GJIR GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\ei}{\end{itemize}} % GJIR GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\ber}{\begin{eqnarray}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\eer}{\end{eqnarray}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\barray}{\begin{array}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\earray}{\end{array}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\mbf}{\mathbf} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\mrm}{\mathrm} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE LETTER
+\newcommand{\mtl}{\mathit} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\pl}{\partial} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\nb}{\nabla} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\al}{\alpha} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\nnr}{\nonumber} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE LETTER
+\newcommand{\fns}{\footnotesize} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\nns}{\normalsize} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS 
+\newcommand{\sst}{\scriptstyle} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\ssts}{\scriptscriptstyle} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\rar}{\rightarrow} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\sct}{\section} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\ssec}{\subsection} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\lbl}{\label} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\Rar}{\Rightarrow} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\red}{\textcolor{red}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\green}{\textcolor{green}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\blue}{\textcolor{blue}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\cyan}{\textcolor{cyan}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\magenta}{\textcolor{magenta}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\yellow}{\textcolor{yellow}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\black}{\textcolor{black}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\white}{\textcolor{white}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\grayte}{\textcolor{gray10}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\graytw}{\textcolor{gray20}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\grayth}{\textcolor{gray30}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\grayfo}{\textcolor{gray40}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\grayfi}{\textcolor{gray50}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\graysi}{\textcolor{gray60}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\grayse}{\textcolor{gray70}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\grayei}{\textcolor{gray80}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\grayni}{\textcolor{gray90}} % GJIR PRS JOG GJIC BOOK CUP ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newlength{\fntxvi}  % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newlength{\fntxvii} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\newcommand{\lsp}[1]{{\bf\letterspace to 1.25 \naturalwidth {#1}}} %GJIC
+\newcommand{\chemical}[1] % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+{{\fontencoding{OMS}\fontfamily{cmsy}\selectfont % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+  \fntxvi\the\fontdimen16\font % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+  \fntxvii\the\fontdimen17\font % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+  \fontdimen16\font=3pt\fontdimen17\font=3pt % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+  $\mathrm{#1}$ % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+  \fontencoding{OMS}\fontfamily{cmys}\selectfont % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+  \fontdimen16\font=\fntxvi\fontdimen17\font=\fntxvii}} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE
+\begin{document} % GJIR PRS JOG GJIC BOOK CUP SEMINARP SEMINARL ARTICLE  JGRC JGRR JGRG GRLC GRLR THESIS NATURE SCIENCE LETTER CUP COMPANY
+%\newcounter{mezzo}
+%\newenvironment{intermezzo}[1]
+%{\stepcounter{mezzo}\begin{minipage}[]{0.9\linewidth}{\sc{\bfseries Intermezzo}
+%\arabic{mezzo}: #1}\\[1ex]
+%\footnotesize}{\end{minipage}}
+% THIS ONE IS BETTER - ALLOWS YOU TO USE LABEL AND REF
+\newtheorem{mezzo}{Intermezzo}[chapter] % BOOK CUP 
+\newtheorem{mezzo}{Intermezzo}[section] % NATURE SCIENCE
+\newenvironment{intermezzo}[1] % BOOK CUP NATURE SCIENCE
+{\begin{minipage}[]{0.9\linewidth}{\begin{mezzo} #1\end{mezzo}} % BOOK CUP NATURE SCIENCE
+\footnotesize}{\end{minipage}} % BOOK CUP NATURE SCIENCE
+\newtheorem{prob}{Problem}[section] % CUP 
+\newenvironment{problem}[1] % CUP
+{\begin{minipage}[t]{0.9\linewidth}{\begin{prob}#1\end{prob}}} % CUP
+{\small\end{minipage}\\} % CUP
+\newcommand{\p}{\stepcounter{paragraph}\hspace{-0.0em}[{\small\arabic{paragraph}}]\hspace{0.5em}} % JGRC JGRR BOOK CUP
+\newcommand{\titsep}{\vspace{-1em}\hrule\vspace{1em}} % SEMINARL
+\newcommand{\titseps}{\vspace{-0.7em}\hrule\vspace{1em}} % SEMINARL
+\newenvironment{yentry}[2] % BOOK
+{\begin{tabbing}% BOOK
+2012 bl \=  \kill% BOOK
+#1 \> \parbox[t]{\pblengthI}{ #2}\end{tabbing}}{}% BOOK
+\newenvironment{lentry}[2] % BOOK
+{\begin{tabbing}% BOOK
+This line sets the  \= 1999 spp\= stuff ble\= \kill% BOOK
+\> \> #1 \> \parbox[t]{\pblengthII}{ #2}\\[-2.5em]\end{tabbing}}{}% BOOK
+\newcommand{\surl}[1]{{\small\url{#1}}} %BOOK
+\newcommand{\marginpars}[1]{\marginpar[\framebox{#1}\hfill]{\hfill\framebox{#1}}} %BOOK CUP
+\newcommand{\marginnoteb}[1]{\marginnote{\fbox{#1}}} %BOOK CUP
+\newcommand{\marginfig}[1]{\marginnote{\includegraphics[width=\marginparwidth]{/u/fjsimons/CLASSES/GEO371/HanddrawnFigures/#1}}} %BOOK CUP
+\newcommand{\marginfigh}[1]{\marginnote{\includegraphics[width=0.5\marginparwidth]{/u/fjsimons/CLASSES/GEO371/HanddrawnFigures/#1}}} %BOOK CUP
+\newcommand{\marginfigt}[1]{\marginnote{\includegraphics[width=0.7\marginparwidth]{/u/fjsimons/CLASSES/GEO371/HanddrawnFigures/#1}}} %BOOK CUP
+\newenvironment{tentry}[3] % BOOK
+{\begin{tabbing}% BOOK
+This line sets the bladib  \= 1999 \= blas \= \kill% BOOK
+\> #1 \> [#2] \> \parbox[t]{\pblengthII}{ #3}\\[-2.5em]\end{tabbing}}{}% BOOK
+\newenvironment{reply}[2] % ARTICLE
+{\item[\blue{\textit{#1}}]{{\blue{#2}}}}{} % ARTICLE
+
+\input{/Users/fjsimons/IFILES/LATEX/CTX/color.ctx}
+\input{thesis.tex}
+\end{document}
