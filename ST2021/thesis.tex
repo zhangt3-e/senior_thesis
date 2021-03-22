@@ -799,7 +799,8 @@ regression model using 2018 data and trying to predict 2019 precipitation.
   \includegraphics[width=0.75\textwidth]{Figures/ML_Linear_reg.png}
   \caption[ML linear regression run] {\label{ML_Linear}Training the model
     using 2018 data and then using the linear regression model to predict
-    2019 data. As seen, the linear regression does not do a good job in
+    2019 data. Observations are the filled circles, predictions are the
+    colored lines. As seen, the linear regression does not do a good job in
     predicting the precipitation, which shows that linear regression is not
     the right method. }
 \end{figure}
@@ -807,12 +808,12 @@ regression model using 2018 data and trying to predict 2019 precipitation.
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.75\textwidth]{Figures/ML_DT_reg.png}
-	\caption[ML Decision Tree regression run] {\label{ML_DT} Training
-          the model using 2018 data and then using the Decision Tree model
-          to predict 2019 data. Decision Tree does a better job in trying to
-          match the patterns that we see with the actual value. At the same
-          time, will need to see how training the model more would do to
-          predictions.  }
+	\caption[ML Decision Tree regression run] {\label{ML_DT}Training the
+          model using 2018 data and then using the decision tree model to
+          predict 2019 data. Decision tree does a better job in matching the
+          patterns that we see with the actual values. At the same time, we
+          will need to see what training the model more would do to
+          predictions.}
 \end{figure}
 
 \begin{figure}
@@ -824,7 +825,7 @@ regression model using 2018 data and trying to predict 2019 precipitation.
           that the total precipitation for observed 2019 is 1029~mm, while
           the linear regression model, which has negative precipitation, has
           a total precipitation of 961~mm. Meanwhile the decision tree
-          regression model, had a total precipitation of 2950~mm. }
+          regression model had a total precipitation of 2950~mm. }
 \end{figure}
 \subsection{Discussion}
 
