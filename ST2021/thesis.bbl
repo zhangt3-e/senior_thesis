@@ -1,5 +1,10 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[Bauer et~al.(2015)Bauer, Thorpe, \& Brunet]{NWP}
+Bauer, P., Thorpe, A., \& Brunet, G., 2015.
+\newblock {T}he quiet revolution of numerical weather prediction, {\it
+  Nature\/}, {\bf 525}, 47 -- 55.
 
 \bibitem[Eagleson(1978)]{Eagleson}
 Eagleson, P., 1978.
