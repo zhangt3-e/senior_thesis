@@ -700,11 +700,11 @@ seasons.
 \section{Simulation for Prediction}\label{sec:sfp}
 
 With the exponential distributions calculated from the dataset, we are able
-to turn these numbers into a model based on climatology. We turned the data
-we have into an exponential for the three parameters we looked at,
-precipitation duration, non-precipitation duration, and intensity. The next
-step is to use these exponentials to make a model to simulate precipitation
-and compare such model results to the actual precipitation data.
+to turn their parameters (precipitation duration, non-precipitation
+duration, and intensity) into a climatology-based model to simulate
+precipitation and compare such model results to the actual precipitation
+data.
+
 \subsection{Method}\label{sec:sfp_m}
 
 To make a baseline model, we need to first use the exponentials that we
@@ -715,14 +715,12 @@ intensities, since we excluded those values when calculating the exponential
 distributions. To perform the simulation, we select bins proportionally to
 their probability under the distribution, and then pick values from a
 uniform distribution with those bins. In order to judge the accuracy of the
-model, we will look at how often it predicts precipitation and compare it to
-whether the recorded data also has precipitation present. So basically if
-predicted and recorded data shows precipitation at the same time, it counts
-towards being accurate. This measure of accuracy is better than simply using
-whether the model matches precipitation events with each other and
-non-precipitation events with each other because non-precipitation events
-accounts for 97\% of the duration, so the acccuracy is kind of skewed
-towards the fact that most of the time series has no precipitation.
+model, we count how often model and data agree in the instances where either
+model or data have precipiattion present.  This measure of accuracy is
+better than simply counting where data and models agree, because
+non-precipitation events account for 97\% of the interval under
+consideration, in which case the acccuracy would be skewed towards the fact
+that most of the time series has no precipitation.
 \clearpage 
 
 \subsection{Results}\label{sec:sfp_r}
@@ -731,26 +729,27 @@ towards the fact that most of the time series has no precipitation.
   \centering
   \includegraphics[width=0.75\textwidth]{Figures/better_one_run.png}
   \caption[First run using Summer 2018 climatology] {\label{crudemodel} One
-    model run based using the 98 percentile exponentials calculated from
-    Summer 2018.}
+    model run using the 98-percentile exponentials calculated from Summer
+    2018.}
 \end{figure}
 
-Running the model one hundred times lets us look at what the average total
-precipitation the model yields. It yields 195 mm compared to the Summer 2018
-total of 268 mm that we used. Furthermore, the accuracy of model
-precipitation matching model precipitation is only 6$\%$. Looking at
-Figure~\ref{crudemodel}, we see that the model precipitation total is lower
-than the actual precipitation observed in the Summer of 2018. Furthermore,
-the precipitation seem to be more frequent compared to the observed 2018
-Summer data.
+Running the model one hundred times lets us look at what average total
+precipitation the model yields. It yields 195~mm compared to the Summer 2018
+total of 268~mm in the data that we used for the exponential
+fitting. Furthermore, the accuracy of model precipitation matching model
+precipitation is only 6$\%$. Looking at Figure~\ref{crudemodel}, we see that
+the model precipitation total is lower than the actual precipitation
+observed in the Summer of 2018. Furthermore, the precipitation seems to be
+more frequent compared to the observed 2018 Summer data.
 
-It is clear that despite the better fit using the curve fit of 98th
-percentile, we need to use the 100th percentile, since the extremes such as
-the big 2000 minute non-precipitation even is very important in the nature
-of the precipitation event. However, it is clear that the accuracy does not
-improve significantly. The fact that the model total precipitation is still
-less than from the initial observed precipitation shows how this model needs
-more improvement.
+It is clear that despite the better fit that is obtained when the
+exponential distributions are fit using data up to the 98th percentile only,
+we should use the full 100th percentile of the data for the model fitting,
+since the extremes, such as the big 2000-minute non-precipitation event, are
+very important. However, doing that, the prediction accuracy does not
+improve significantly, as shown in Figure~\ref{crudermodel}.  The fact that
+the model total precipitation is still smaller than that of the observed
+precipitation shows how this model needs more improvement.
 \clearpage
 
 \begin{figure}[t]
@@ -759,10 +758,10 @@ more improvement.
   \caption[Modified run using Summer 2018 climatology]
           {\label{crudermodel}One model run using the 100th percentile
             exponentials calculated from Summer 2018. The patterns with the
-            modeled precipitation looks closer to actual precipitation when
-            comparing side to side. Further details show they are different
-            as shown with the precipitation accuracy as well as the total
-            precipitation. }
+            modeled precipitation looks closer to actual
+            precipitation. However, the details show they are different, the
+            precipitation accuracy is only 7\% and the total precipitation
+            is still underestimated. }
 \end{figure}
 
 \begin{figure}[b]
@@ -783,6 +782,9 @@ predicting precipitation
 We can see that despite the flaws that we get from the exponential fits,
 this gives us a good baseline to start off.
 
+Discuss the Figure~\ref{crudesmodel_whole2018} as showing the need to do the
+seasonal breakdown.
+
 
 \clearpage
 
@@ -796,17 +798,21 @@ this gives us a good baseline to start off.
 
 % FJS take into account the time frame for lagged prediction
 
-
 % Why you need it. 
 Although we have one model for the baseline for predicting precipitation
-based on climatology, precipitation itself is not based on climatology, but
-on other meteorological variables as well. As a result we turn to machine
-learning, which can produce models based on expereince and the usage of
-data.
+based on seasonally adjusted historical patterns of precipitation istelf, it
+only makes point-based instantaneous predictions.  At 6--7\%, its prediction
+skill is not very high. Other meteorological variables matter as well, as
+will the lead time used for the prediction, and the range of history upon
+which it is based.
+
+As a result we turn to machine learning, which can
+produce models based on experience and the usage of data.
+
 %(Need to cite). 
 
-For weather, forecasts are often based on numerical weather prediction(NWP),
-which involve simulating the atmosphere and its conditions into the
+For weather, forecasts are often based on numerical weather prediction
+(NWP), which involve simulating the atmosphere and its conditions into the
 future. These models are incredibly complex as they need initial conditions
 (often from observations), boundary conditions, and the usage of governing
 equations such as physics conservation laws and ideal gas law. Some
@@ -829,14 +835,14 @@ choices that are made from the root nodes \cite[]{DT}.
 
 \subsection{Method}
 
-There are a couple of methods from machine learning that can be used for
-predicting precipitation. We have two methods, linear regression and
-decision tree, that are used to predict precipitation based on the other
-parameters that we give to the model. Linear regression will use regression
-to compute the best fit based on the variables you give and will yield a
-linear function. Decision tree divides the data up into different sections
-based on certain criterias. The tree can be as small or as big as you want,
-but that will affect how the model predict what you want.
+Two methods from machine learning can be used for predicting
+precipitation. Linear regression and decision tree are used to predict
+precipitation based on the other parameters that we give to the
+model. Linear regression will use regression to compute the best fit based
+on the variables you give and will yield a linear function. Decision tree
+divides the data up into different sections based on certain criteria. The
+tree can be as small or as big as you want, but that will affect how the
+model predict what you want.
 
 % We also have neural networks, which inputs data and outputs data and can be used to simulate
 
