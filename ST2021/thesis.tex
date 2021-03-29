@@ -787,7 +787,8 @@ Although we have one model for the baseline for predicting precipitation based o
 
 \subsection{Method}
 
-How it works.
+There are a couple of methods from machine learning that can be used for predicting precipitation. We have two methods, linear regression and decision tree, that are used to predict precipitation based on the other parameters that we give to the model. Linear regression will use regression to compute the best fit based on the variables you give and will yield a linear function. Decision tree divides the data up into different sections based on certain criterias. The tree can be as small or as big as you want, but that will affect how the model predict what you want. 
+We also have neural networks, which inputs data and outputs data and can be used to simulate 
 
 
 \subsection{Results}
@@ -816,7 +817,12 @@ regression model using 2018 data and trying to predict 2019 precipitation.
           will need to see what training the model more would do to
           predictions.}
 \end{figure}
-
+\begin{figure}
+	\centering
+	\includegraphics[width = 0.75\textwidth]{Figures/predict_and_actual_2019_precip.png}
+	\caption[Comparing ML predicted values to actual precipitation values]{Comparing the predicted values from decision tree regression and the actual values of the 2019 precipitation data.  }
+\end{figure}
+\subsection{Discussion}
 \begin{figure}
 	\centering
 	\includegraphics[width = 0.75\textwidth]{Figures/Comparison.png}
