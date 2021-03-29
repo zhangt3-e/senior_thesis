@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Eagleson(1978)]{Eagleson}
@@ -20,6 +20,11 @@ Peel, M., Finlayson, B., \& McMahon, T., 2007.
 \bibitem[{PRISM}(2020)]{PRISM}
 {PRISM}, 2020.
 \newblock {PRISM} climate data, http://prism.oregonstate.edu.
+
+\bibitem[Song \& Lu(2015)]{DT}
+Song, Y.~Y. \& Lu, Y., 2015.
+\newblock {D}ecision tree methods: applications for classification and
+  prediction, {\it Shanghai Arch Psychiatry\/}, {\bf 27}, 130--135.
 
 \bibitem[Vaisala(2017)]{Vaisala}
 Vaisala, 2017.
