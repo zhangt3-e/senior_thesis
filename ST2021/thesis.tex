@@ -737,11 +737,12 @@ Running the model one hundred times lets us look at what average total
 precipitation the model yields. It yields 195~mm compared to the Summer 2018
 total of 268~mm in the data that we used for the exponential
 fitting. Furthermore, the accuracy of model precipitation matching model
-precipitation is only 6$\%$. Looking at Figure~\ref{crudemodel}, we see that
-the model precipitation total is lower than the actual precipitation
+precipitation is only 2.6$\%$. Looking at Figure~\ref{crudemodel}, we see that the model precipitation total is lower than the actual precipitation
 observed in the Summer of 2018. Furthermore, the precipitation seems to be
-more frequent compared to the observed 2018 Summer data.
-
+more frequent compared to the observed 2018 Summer data. The usage of 98th percentage for all parameters, which are intensity, precipitation event duration, and non-precipitation event duration, shows that the intensity 
+for the model is generally good, except the model lacks the most intense values as expected from the using up to the 98th percentile.
+ 
+ 
 It is clear that despite the better fit that is obtained when the
 exponential distributions are fit using data up to the 98th percentile only,
 we should use the full 100th percentile of the data for the model fitting,
@@ -756,11 +757,11 @@ precipitation shows how this model needs more improvement.
   \centering
   \includegraphics[width=0.65\textwidth]{Figures/best_one_run.png}
   \caption[Modified run using Summer 2018 climatology]
-          {\label{crudermodel}One model run using the 100th percentile
+          {\label{crudermodel} One model run using the 100th percentile
             exponentials calculated from Summer 2018. The patterns with the
             modeled precipitation looks closer to actual
             precipitation. However, the details show they are different, the
-            precipitation accuracy is only 7\% and the total precipitation
+            precipitation accuracy is only 2.6\% and the total precipitation
             is still underestimated. }
 \end{figure}
 
@@ -772,19 +773,43 @@ precipitation shows how this model needs more improvement.
     the entire year of 2018. }
 \end{figure}
 \clearpage
+% We can try to apply our analysis on each of the models to see how the
+% calculations for the exponentials differ between the models and the 
+% observed data. 
+% Need to quickly replace the figure as it flips the two labels, the bottom one is the observed and the top one is the predicted. 
+
 
 \subsection{Discussion}\label{sec:spc_d}
 
-Why you need more work. Making predictions based on random guesses, however
+Making predictions based on random guesses, however
 well informed, has limited success. This is seen with the accuracy of
-predicting precipitation
+predicting precipitation. It shows that no matter how we do with the
+model, such a model that characterizes the distribution of the three
+parameters we analyzed in the precipitation data, can give you a similar
+looking pattern of precipitation, but is not very accurate as seen with
+the different graphs showing about a 3\% accuracy for the model. At the
+same time, we have a dilema in which using the 98th percentile
+exponentials will give you a preciptiation time series that looks nothing
+like the observed model, but is close to the value of total precipitation
+for the observed model. Using the 100th percentile exponentials, will give
+you a preciptation time series that looks a lot like the observed
+precipitation time series, but will have much less total precipitation
+compared to the 98th percentile exponential and the observed total
+precipitation. 
 
 We can see that despite the flaws that we get from the exponential fits,
-this gives us a good baseline to start off.
+this gives us a good baseline to start off. As it tell us that there are other methods to look at in order to get a better model to predict precipitation. 
 
-Discuss the Figure~\ref{crudesmodel_whole2018} as showing the need to do the
-seasonal breakdown.
-
+Figure~\ref{crudesmodel_whole2018} is interesting as we are trying to
+compare the observed 2018 precipitation data to a model run from using the
+calculated exponentials for the three parameters we sought to analyze from
+the precipitation data. It is clear that the observed data shows that
+there are seasonal variations do matter as they have different patterns. 
+Thus it validates the notion to split the analysis of the exponentials 
+into the four seasons, as although its possible to have intense
+precipitation to occur in the winter, it is not at all typical of what we
+usually see in the winter and intense precipitation would usually occur in
+the summer.   
 
 \clearpage
 
