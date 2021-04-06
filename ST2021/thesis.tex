@@ -721,7 +721,6 @@ better than simply counting where data and models agree, because
 non-precipitation events account for 97\% of the interval under
 consideration, in which case the acccuracy would be skewed towards the fact
 that most of the time series has no precipitation.
-\clearpage 
 
 \subsection{Results}\label{sec:sfp_r}
 
@@ -737,12 +736,15 @@ Running the model one hundred times lets us look at what average total
 precipitation the model yields. It yields 195~mm compared to the Summer 2018
 total of 268~mm in the data that we used for the exponential
 fitting. Furthermore, the accuracy of model precipitation matching model
-precipitation is only 2.6$\%$. Looking at Figure~\ref{crudemodel}, we see that the model precipitation total is lower than the actual precipitation
+precipitation is only 2.6$\%$. Looking at Figure~\ref{crudemodel}, we see
+that the model precipitation total is lower than the actual precipitation
 observed in the Summer of 2018. Furthermore, the precipitation seems to be
-more frequent compared to the observed 2018 Summer data. The usage of 98th percentage for all parameters, which are intensity, precipitation event duration, and non-precipitation event duration, shows that the intensity 
-for the model is generally good, except the model lacks the most intense values as expected from the using up to the 98th percentile.
- 
- 
+more frequent compared to the observed 2018 Summer data. The usage of 98th
+percentage for all parameters, which are intensity, precipitation event
+duration, and non-precipitation event duration, shows that the intensity for
+the model is generally good, except the model lacks the most intense values
+as expected from the using up to the 98th percentile.
+
 It is clear that despite the better fit that is obtained when the
 exponential distributions are fit using data up to the 98th percentile only,
 we should use the full 100th percentile of the data for the model fitting,
@@ -751,7 +753,6 @@ very important. However, doing that, the prediction accuracy does not
 improve significantly, as shown in Figure~\ref{crudermodel}.  The fact that
 the model total precipitation is still smaller than that of the observed
 precipitation shows how this model needs more improvement.
-\clearpage
 
 \begin{figure}[t]
   \centering
@@ -772,12 +773,12 @@ precipitation shows how this model needs more improvement.
   {\label{crudesmodel_whole2018}One model run using the exponentials calculated from
     the entire year of 2018. }
 \end{figure}
-\clearpage
+
+%\clearpage
 % We can try to apply our analysis on each of the models to see how the
 % calculations for the exponentials differ between the models and the 
 % observed data. 
 % Need to quickly replace the figure as it flips the two labels, the bottom one is the observed and the top one is the predicted. 
-
 
 \subsection{Discussion}\label{sec:spc_d}
 
