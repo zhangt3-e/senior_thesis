@@ -29,9 +29,9 @@
 \contentsline {figure}{\numberline {28}{\ignorespaces Fitting Intensity histogram for 2019 with different bins}}{21}%
 \contentsline {figure}{\numberline {29}{\ignorespaces Fitting Intensity histogram for 2020 with different bins}}{21}%
 \contentsline {figure}{\numberline {30}{\ignorespaces First run using Summer 2018 climatology}}{27}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Modified run using Summer 2018 climatology}}{29}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Modified run using Summer 2018 climatology}}{27}%
 \contentsline {figure}{\numberline {32}{\ignorespaces Running model for entire 2018 }}{29}%
-\contentsline {figure}{\numberline {33}{\ignorespaces ML linear regression run}}{33}%
-\contentsline {figure}{\numberline {34}{\ignorespaces ML Decision Tree regression run}}{34}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Comparing ML predicted values to actual precipitation values}}{35}%
-\contentsline {figure}{\numberline {36}{\ignorespaces Comparing ML results to actual precipitation values}}{36}%
+\contentsline {figure}{\numberline {33}{\ignorespaces ML linear regression run}}{32}%
+\contentsline {figure}{\numberline {34}{\ignorespaces ML Decision Tree regression run}}{33}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Comparing ML predicted values to actual precipitation values}}{34}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Comparing ML results to actual precipitation values}}{34}%

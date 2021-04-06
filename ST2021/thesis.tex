@@ -1,7 +1,8 @@
 \documentclass[11pt]{report}
 \clubpenalty=10000
 \widowpenalty=10000
-
+%\usepackage[]{graphicx}
+\usepackage[draft]{graphicx}
 % It is handy to define new commands for text that occurs frequently (see Discussion)
 \newcommand{\MT}{^{\mathrm{MT}}}
 \newcommand{\ga}{\gtrsim}
@@ -259,7 +260,7 @@ or longer in duration. This covers all potential precipitation events.
     season]{\label{p2017} Distribution of precipitation duration in 2017,
     with a breakdown by seasons. The minimum duration is $\tau = 1$~min.
     Note that data collection began on 16 July 2017. Which means we only
-    have part of the summer and all of the fall data.  }
+    have part of Summer and all of the fall data.  }
 \end{figure}
 \begin{figure}[b]
   \centering
@@ -722,15 +723,28 @@ non-precipitation events account for 97\% of the interval under
 consideration, in which case the acccuracy would be skewed towards the fact
 that most of the time series has no precipitation.
 
-\subsection{Results}\label{sec:sfp_r}
-
+\clearpage
 \begin{figure}[t]
   \centering
-  \includegraphics[width=0.75\textwidth]{Figures/better_one_run.png}
+  \includegraphics[width=0.65\textwidth]{Figures/better_one_run.png}
   \caption[First run using Summer 2018 climatology] {\label{crudemodel} One
     model run using the 98-percentile exponentials calculated from Summer
     2018.}
 \end{figure}
+\begin{figure}[b]
+  \centering
+  \includegraphics[width=0.65\textwidth]{Figures/best_one_run.png}
+  \caption[Modified run using Summer 2018 climatology] {\label{crudermodel}
+    A model run using the 100th percentile exponentials calculated from
+    Summer 2018. The modeled precipitation looks closer to actual
+    precipitation. However, the details show they are different: the
+    accuracy is only 2.6\% and the total precipitation is still
+    underestimated.}
+\end{figure}
+
+\clearpage
+
+\subsection{Results}\label{sec:sfp_r}
 
 Running the model one hundred times lets us look at what average total
 precipitation the model yields. It yields 195~mm compared to the Summer 2018
@@ -754,27 +768,6 @@ improve significantly, as shown in Figure~\ref{crudermodel}.  The fact that
 the model total precipitation is still smaller than that of the observed
 precipitation shows how this model needs more improvement.
 
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=0.65\textwidth]{Figures/best_one_run.png}
-  \caption[Modified run using Summer 2018 climatology]
-          {\label{crudermodel} One model run using the 100th percentile
-            exponentials calculated from Summer 2018. The patterns with the
-            modeled precipitation looks closer to actual
-            precipitation. However, the details show they are different, the
-            precipitation accuracy is only 2.6\% and the total precipitation
-            is still underestimated. }
-\end{figure}
-
-\begin{figure}[b]
-  \centering
-  \includegraphics[width=0.65\textwidth]{Figures/whole2018_model.png}
-  \caption[Running model for entire 2018 ]
-  {\label{crudesmodel_whole2018}One model run using the exponentials calculated from
-    the entire year of 2018. }
-\end{figure}
-
-%\clearpage
 % We can try to apply our analysis on each of the models to see how the
 % calculations for the exponentials differ between the models and the 
 % observed data. 
@@ -782,35 +775,40 @@ precipitation shows how this model needs more improvement.
 
 \subsection{Discussion}\label{sec:spc_d}
 
-Making predictions based on random guesses, however
-well informed, has limited success. This is seen with the accuracy of
-predicting precipitation. It shows that no matter how we do with the
-model, such a model that characterizes the distribution of the three
-parameters we analyzed in the precipitation data, can give you a similar
-looking pattern of precipitation, but is not very accurate as seen with
-the different graphs showing about a 3\% accuracy for the model. At the
-same time, we have a dilema in which using the 98th percentile
-exponentials will give you a preciptiation time series that looks nothing
-like the observed model, but is close to the value of total precipitation
-for the observed model. Using the 100th percentile exponentials, will give
-you a preciptation time series that looks a lot like the observed
-precipitation time series, but will have much less total precipitation
-compared to the 98th percentile exponential and the observed total
-precipitation. 
+Making predictions based on random guesses, however well informed, has
+limited success. The accuracy of predicting precipitation, which hovers
+around 3\%, shows that no matter how well the three parameters match the
+data distributions, simulated time series may not be very accurate.
 
-We can see that despite the flaws that we get from the exponential fits,
-this gives us a good baseline to start off. As it tell us that there are other methods to look at in order to get a better model to predict precipitation. 
+At the same time, we have a dilemma in which using the 98th percentile
+exponentials will return a preciptiation time series that looks nothing like
+the observed model, but is close to the value of total precipitation for the
+observed model. Using the 100th percentile exponentials will yield a
+preciptation time series that looks a lot like the observed precipitation
+time series, but will have much less total precipitation compared to the
+98th percentile exponential and the observed total precipitation.
+
+Despite its flaws, fitting exponentials gives us a good baseline, and it
+tells us that there are other methods to look at in order to get a better
+model to predict precipitation.
 
 Figure~\ref{crudesmodel_whole2018} is interesting as we are trying to
 compare the observed 2018 precipitation data to a model run from using the
 calculated exponentials for the three parameters we sought to analyze from
-the precipitation data. It is clear that the observed data shows that
-there are seasonal variations do matter as they have different patterns. 
-Thus it validates the notion to split the analysis of the exponentials 
-into the four seasons, as although its possible to have intense
-precipitation to occur in the winter, it is not at all typical of what we
-usually see in the winter and intense precipitation would usually occur in
-the summer.   
+the precipitation data. It is clear that the observed data shows that there
+are seasonal variations do matter as they have different patterns.  Thus it
+validates the notion to split the analysis of the exponentials into the four
+seasons, as although its possible to have intense precipitation to occur in
+the winter, it is not at all typical of what we usually see in the winter
+and intense precipitation would usually occur in Summer.\\[1em]
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.75\textwidth]{Figures/whole2018_model.png}
+  \caption[Running model for entire 2018 ]
+  {\label{crudesmodel_whole2018}One model run using the exponentials calculated from
+    the entire year of 2018. }
+\end{figure}
 
 \clearpage
 
@@ -825,37 +823,34 @@ the summer.
 % FJS take into account the time frame for lagged prediction
 
 % Why you need it. 
-Although we have one model for the baseline for predicting precipitation
-based on seasonally adjusted historical patterns of precipitation istelf, it
-only makes point-based instantaneous predictions.  At 6--7\%, its prediction
+Although we have one baseline model for predicting precipitation based on
+seasonally adjusted historical patterns of precipitation istelf, it only
+makes point-based instantaneous predictions.  At 6--7\%, its prediction
 skill is not very high. Other meteorological variables matter as well, as
 will the lead time used for the prediction, and the range of history upon
 which it is based.
 
-As a result we turn to machine learning, which can
-produce models based on experience and the usage of data.
-
 %(Need to cite). 
 
-For weather, forecasts are often based on numerical weather prediction
-(NWP), which involve simulating the atmosphere and its conditions into the
+Weather forecasts are often based on numerical weather prediction (NWP),
+which involves simulating the atmosphere and its conditions into the
 future. These models are incredibly complex as they need initial conditions
 (often from observations), boundary conditions, and the usage of governing
-equations such as physics conservation laws and ideal gas law. Some
-complications of NWP include unable to simulate small-scale physics that can
-affect outcomes, as well as the usage of ensembles, which try to give
+equations such as physics conservation laws and the ideal gas law. Some
+complications of NWP include its inability to simulate small-scale physics
+that can affect outcomes, as well as the usage of ensembles, which gives a
 variety of predictions based on the small changes in initial conditions
 \cite[]{NWP}.
 
 Machine Learning can look at what conditions could yield us precipitation
-and how intense such precipitation, which can be less computationally
-intensive and can give us a good guide on what to expect if we encounter
-such conditions. A method like Decision Tree can be used to select
-variables, assess how relative importance of variables, handle missing
-values, predict, and manipulate data. Decision Trees are made up of Nodes,
-of which we have a root node, which represents a choice and a leaf node
-which represents the final results of the decision tree. Branches are the
-choices that are made from the root nodes \cite[]{DT}.
+and how intense it is, which can be less computationally intensive than NWP,
+and can give us a good guide on what to expect if we encounter such
+conditions.  A method like Decision Tree can be used to select variables,
+assess their relative importance, handle missing values, predict, and
+manipulate data. Decision Trees are made up of nodes, of which we have a
+root node, which represents a choice and a leaf node which represents the
+final results of the decision tree. Branches are the choices that are made
+from the root nodes \cite[]{DT}.
 
 % Will need a background on so-called "Deep Learning" which is what Neural Networks are part of. 
 
@@ -864,13 +859,14 @@ choices that are made from the root nodes \cite[]{DT}.
 Two methods from machine learning can be used for predicting
 precipitation. Linear regression and decision tree are used to predict
 precipitation based on the other parameters that we give to the
-model. Linear regression will use regression to compute the best fit based
-on the variables you give and will yield a linear function. Decision tree
-divides the data up into different sections based on certain criteria. The
-tree can be as small or as big as you want, but that will affect how the
-model predict what you want.
+model. Linear regression computes the best fit based on the variables you
+give and will yield a linear model that relates input data to outcomes.
+Decision trees divide the data up into different sections based on certain
+criteria. The tree can be as small or as big as you want, but that will
+affect how the model predicts what you want.
 
-% We also have neural networks, which inputs data and outputs data and can be used to simulate
+% We also have neural networks, which inputs data and outputs data and can
+% be used to simulate
 
 \subsection{Results}
 
@@ -881,45 +877,44 @@ regression model using 2018 data and trying to predict 2019 precipitation.
   \centering
   \includegraphics[width=0.75\textwidth]{Figures/ML_Linear_reg.png}
   \caption[ML linear regression run] {\label{ML_Linear}Training the model
-    using 2018 data and then using the linear regression model to predict
-    2019 data. Observations are the filled circles, predictions are the
-    colored lines. As seen, the linear regression does not do a good job in
-    predicting the precipitation, which shows that linear regression is not
-    the right method. }
+    using 2018 data and then using the \textbf{linear regression} model to
+    predict 2019 data. Observations are the filled circles, predictions are
+    the colored lines. As seen, the linear regression does not do a good job
+    in predicting the precipitation, which shows that linear regression is
+    not the right method. }
 \end{figure}
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.75\textwidth]{Figures/ML_DT_reg.png}
+	\includegraphics[width=0.7\textwidth]{Figures/ML_DT_reg.png}
 	\caption[ML Decision Tree regression run] {\label{ML_DT}Training the
-          model using 2018 data and then using the decision tree model to
-          predict 2019 data. Decision tree does a better job in matching the
-          patterns that we see with the actual values. At the same time, we
-          will need to see what training the model more would do to
-          predictions.}
+          model using 2018 data and then using the \textbf{decision tree}
+          model to predict 2019 data. Decision tree does a better job in
+          matching the patterns that we see with the actual values. At the
+          same time, we will need to see what training the model more would
+          do to predictions.}
 \end{figure}
 
-\begin{figure}
-	\centering
-	\includegraphics[width = 0.75\textwidth]{Figures/predict_and_actual_2019_precip.png}
-	\caption[Comparing ML predicted values to actual precipitation
-          values]{Comparing the predicted values from decision tree
-          regression and the actual values of the 2019 precipitation data.
-        }
+\begin{figure}[th!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{Figures/predict_and_actual_2019_precip.png}
+  \caption[Comparing ML predicted values to actual precipitation
+    values]{Comparing the predicted values from decision tree
+    regression and the actual values of the 2019 precipitation data.
+  }
+\end{figure}
+\begin{figure}[bh!]
+  \centering
+  \includegraphics[width = 0.7\textwidth]{Figures/Comparison.png}
+  \caption[Comparing ML results to actual precipitation values]{
+    Comparing the results of linear regression and decision tree
+    regression to actual precipitation values of the year 2019. Note
+    that the total precipitation for observed 2019 is 1029~mm, while
+    the linear regression model, which has negative precipitation, has
+    a total precipitation of 961~mm. Meanwhile the decision tree
+    regression model had a total precipitation of 2785~mm. }
 \end{figure}
 
-
-\begin{figure}
-	\centering
-	\includegraphics[width = 0.75\textwidth]{Figures/Comparison.png}
-	\caption[Comparing ML results to actual precipitation values]{
-          Comparing the results of linear regression and decision tree
-          regression to actual precipitation values of the year 2019. Note
-          that the total precipitation for observed 2019 is 1029~mm, while
-          the linear regression model, which has negative precipitation, has
-          a total precipitation of 961~mm. Meanwhile the decision tree
-          regression model had a total precipitation of 2785~mm. }
-\end{figure}
 \subsection{Discussion}
 
 One worry is with Decision Trees, if you have too many branches, it can
@@ -930,6 +925,26 @@ precipitation of 2019. Granted I trained the model using 2018 precipitation
 data to at least have a basis for prediction.
 
 \clearpage
+
+\section{Deep Learning for Prediction}\label{sec:neural}
+
+Why? 
+
+\subsection{Method}
+
+How?
+
+\subsection{Results}
+
+What?
+
+\subsection{Discussion}
+
+
+How well? What else?
+
+\clearpage
+
 
 \section{Discussion and Conclusions}\label{sec:conclusions}
 
