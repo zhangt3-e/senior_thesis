@@ -873,6 +873,11 @@ affect how the model predicts what you want.
 Here is a traditional multiple linear regression, training the linear
 regression model using 2018 data and trying to predict 2019 precipitation.
 
+As we see, the linear regression model is not good at predicting precipitation data. When inputting the 2019 data into the linear regression model, we see consistent precipitation that is less intense. Now, precipitation does tend to see the most precipitation events having a small intensity, however what does not match is the fact that the linear regression model does not have any precipitation events that are more intense than [Fill it in]~mm/minute. The accuracy of predicting precipitation for the model is calculated to be (tbd)~\%, which is (blank) than the accuracy from using exponentials to generate random precipitation events. 
+
+In fact, the linear regression model seems to have events that correspond to negative precipitation intensity, which is physically impossible. Despite a lot of these issue with the linear regression model, the total precipitation does get close to the actual precipitation total of 2019. 
+
+With decision tree, we have a better predictor of precipitation and how intense the precipitation event is. We see more intense precipitation events as well as less intense precipitation events present when putting in 2019 data to put out a time series for precipitation. It does seem like the 2019 predicted data seems to have more intense precipitation that occur more often compared to the observed data. This is confirmed to be the case as we found (blank) instances of precipitation intensity of 0.1 mm/minute or greater in the 2019 predicted time series. For the observed 2019 precipitation data, we have () instances of precipitation intensity of 0.1 mm/minute. Also, the 2019 predicted time series ended up having a precipitation total of 2950~mm for the entire year, which is three times higher than the observed 2019 total precipitation. For the accuracy of predicting precipitation, we end up having a total of (tbd)\%. This is (blank) accurate than (blank).    
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.75\textwidth]{Figures/ML_Linear_reg.png}
@@ -928,9 +933,11 @@ data to at least have a basis for prediction.
 
 \section{Deep Learning for Prediction}\label{sec:neural}
 
-Why? 
-
+% Why? 
+Decision tree and linear regression do lack one thing, in which that time does not matter, so I can put in the data in random order and should get the same results. This should not be a case, in which the data is spaced out in time. Thus we try using Neural Networks and Deep Learning. 
 \subsection{Method}
+The structure of neural networks of having an input go into a model then having an output can be adapted to predict in time. It will start with time = t and then we can output to get time = t+1, which would mean we input current data to predict what the conditions are for the next time step. We can vary how much time data can be inputted as well as how much time and how many time steps should be outputted to predict the future. We will also need to train the data, so we split our data up into training, validation, and prediction sets. Training data is used to train the model,
+ % validation, and prediction. 
 
 How?
 
