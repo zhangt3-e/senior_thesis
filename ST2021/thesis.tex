@@ -939,7 +939,7 @@ Decision tree and linear regression do lack one thing, in which that time does n
 The structure of neural networks of having an input go into a model then having an output can be adapted to predict in time. It will start with time = t and then we can output to get time = t+1, which would mean we input current data to predict what the conditions are for the next time step. We can vary how much time data can be inputted as well as how much time and how many time steps should be outputted to predict the future. We will also need to train the data, so we split our data up into training, validation, and prediction sets. Training data is used to train the model,
  % validation, and prediction. 
 
-How?
+
 
 \subsection{Results}
 
@@ -962,5 +962,45 @@ How well? What else?
 \renewcommand{\bibname}{References}
 \bibliographystyle{Latex/gji}
 \bibliography{refs}
+
+\clearpage
+\section{Appendix} 
+If you were curious as to how I did my analysis, you are able to replicate such analysis by finding my github account zhangt3-e and going to the repository of senior\_thesis. All the code is under the folder "Code" where you can see many Juypter Notebooks present. Now I will describe the following files to tell you what each file does in alphabetical order. 
+
+Climatology.ipynb takes in all the completed data and summarizes them with climatology. For example, we summarize all the different months using average temperature, monthly precipitation, relative humidity, and air pressure. There is also the summary of the ranges of temperature, relative humidity, and air pressure, as averages can often mask the variations that are present in weather. 
+
+ConvertData.ipynb uses 2018 and 2019 as an example and puts all the data into one text file. It will be useful for those who are not familiar with ASCII files. 
+
+Data\_extract\_and\_histogram.iypnb can be ignored, it was just trying to understand how to deal with the ASCII files that are collected from the weather station. 
+
+Downloadfiles.ipynb is extremely useful if you want to download the ASCII files from Professor Frederik Simon's website. If you want these files for your own local use, this python notebook is extremely useful. 
+
+exponentials.ipynb is the first file to start the actually analysis of the data. This particular file starts the analysis of precipitation event duration and exponential distribution is assumed and thus calculated for both the 98th percentile and the 100th percentile. 
+
+Hist\_func.iypnb 
+
+histplot.ipynb 
+
+intensity\_and\_non\_precip.ipynb 
+
+ML.ipynb 
+
+Moredetails.ipynb 
+
+Neural Networks.ipynb 
+
+season.ipynb 
+
+Simulation.ipynb 
+
+Windrose.ipynb 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width = 0.7\textwidth]{Figures/weather_station.jpg}
+	\caption[Vaisala Weather Station]{
+		Here is the Vaisala Weather Station on top of Guyot Hall.  
+		 }
+\end{figure}
 
 \end{document}
