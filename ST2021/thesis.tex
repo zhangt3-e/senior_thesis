@@ -875,9 +875,14 @@ regression model using 2018 data and trying to predict 2019 precipitation.
 
 As we see, the linear regression model is not good at predicting precipitation data. When inputting the 2019 data into the linear regression model, we see consistent precipitation that is less intense. Now, precipitation does tend to see the most precipitation events having a small intensity, however what does not match is the fact that the linear regression model does not have any precipitation events that are more intense than [Fill it in]~mm/minute. The accuracy of predicting precipitation for the model is calculated to be (tbd)~\%, which is (blank) than the accuracy from using exponentials to generate random precipitation events. 
 
-In fact, the linear regression model seems to have events that correspond to negative precipitation intensity, which is physically impossible. Despite a lot of these issue with the linear regression model, the total precipitation does get close to the actual precipitation total of 2019. 
 
-With decision tree, we have a better predictor of precipitation and how intense the precipitation event is. We see more intense precipitation events as well as less intense precipitation events present when putting in 2019 data to put out a time series for precipitation. It does seem like the 2019 predicted data seems to have more intense precipitation that occur more often compared to the observed data. This is confirmed to be the case as we found (blank) instances of precipitation intensity of 0.1 mm/minute or greater in the 2019 predicted time series. For the observed 2019 precipitation data, we have () instances of precipitation intensity of 0.1 mm/minute. Also, the 2019 predicted time series ended up having a precipitation total of 2950~mm for the entire year, which is three times higher than the observed 2019 total precipitation. For the accuracy of predicting precipitation, we end up having a total of (tbd)\%. This is (blank) accurate than (blank).    
+
+With decision tree, we have a better predictor of precipitation and how intense the precipitation event is. We see more intense precipitation events as well as less intense precipitation events present when putting in 2019 data to put out a time series for precipitation. It does seem like the 2019 predicted data seems to have more intense precipitation that occur more often compared to the observed data. This is confirmed to be the case as we found 
+%(blank) 
+instances of precipitation intensity of 0.1 mm/minute or greater in the 2019 predicted time series. For the observed 2019 precipitation data, we have 
+%() 
+instances of precipitation intensity of 0.1 mm/minute. Also, the 2019 predicted time series ended up having a precipitation total of 2950~mm for the entire year, which is three times higher than the observed 2019 total precipitation. For the accuracy of predicting precipitation, we end up having a total of 
+% (tbd)\%. This is (blank) accurate than (blank).    
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.75\textwidth]{Figures/ML_Linear_reg.png}
@@ -917,17 +922,24 @@ With decision tree, we have a better predictor of precipitation and how intense 
     that the total precipitation for observed 2019 is 1029~mm, while
     the linear regression model, which has negative precipitation, has
     a total precipitation of 961~mm. Meanwhile the decision tree
-    regression model had a total precipitation of 2785~mm. }
+    regression model had a total precipitation of 2941~mm. }
 \end{figure}
 
 \subsection{Discussion}
+It is clear that using linear regression will not do a good job in
+predicting precipitation. The low precipitation intensities that come
+about is not a problem if not for the fact that there are no intensities
+that are larger than 0.05 mm/hour. The extreme precipitation intensities
+do exists and can contribute to the total precipitation. In fact, the
+linear regression model seems to have events that correspond to negative
+precipitation intensity, which is physically impossible. Despite a lot of
+these issue with the linear regression model, the total precipitation
+does get close to the actual precipitation total of 2019. 
 
 One worry is with Decision Trees, if you have too many branches, it can
 result in overfitting the data, which is not ideal. We may have a case
-overfitting, due to the fact that the total precipitation from the decision
-tree model gave us 2950~mm, which is 3 times higher than the total observed
-precipitation of 2019. Granted I trained the model using 2018 precipitation
-data to at least have a basis for prediction.
+overfitting, due to the fact that the total precipitation from the decision tree model gave us 2941~mm, which is 3 times higher than the total observed precipitation of 2019.
+
 
 \clearpage
 
@@ -936,11 +948,12 @@ data to at least have a basis for prediction.
 % Why? 
 Decision tree and linear regression do lack one thing, in which that time does not matter, so I can put in the data in random order and should get the same results. This should not be a case, in which the data was collected at a specific time. Thus we try using Neural Networks and Deep Learning. 
 
-With \cite{Norway}, we see the usage of Tensorflow on weather data to 
-predict temperature hours ahead with good accuracy. However, a variable like temperature is much easier to predict because of the cyclical nature of temperature in both the daily cycle and the annual cycle.  
+With \cite{Norway}, we see the usage of Deep Learning on weather data to 
+predict temperature hours ahead with good accuracy. However, a variable like temperature is much easier to predict because of the cyclical nature of temperature in both the daily cycle and the annual cycle. The two neural networks I will use are the Long short-term memory(LSTM) variant of recurrent neural network(RNN) and the 
 \subsection{Method}
-The structure of neural networks of having an input go into a model then having an output can be adapted to predict in time. It will start with time = t and then we can output to get time = t+1, which would mean we input current data to predict what the conditions are for the next time step. We can vary how much time data can be inputted as well as how much time and how many time steps should be outputted to predict the future. We will also need to train the data, so we split our data up into training, validation, and prediction sets. Training data is used to train the model,
- % validation, and prediction. 
+The structure of neural networks of having an input go into a model then having an output can be adapted to predict in time. In the input, one can have time steps $1 $ to $n$, where n is the number of time steps you want to input. Then the output could be $1+ m$ to $m+n$, where $m$ is how many time steps in the future you want to predict based on the time steps inputted.  
+
+We will also split the data into at two different datasets, one being the training set and the other being the test dataset. The training dataset is used to fit the model and will consists of 70\% of the data. The test dataset is used to put into the trained model and to evaluate how accurate the model is.
 
 
 
@@ -960,17 +973,29 @@ How well? What else?
 
 
 % For the 98 vs. 100th percentile precipitation aspect. 
-It is not surprising that looking at two different ranges of data could affect our analysis. However, it is clear there are benefits and pitfalls regarding using either percentile. Perhaps the most glaring aspect might be the handling of extreme precipitation intensity, precipitation event duration
-, and non-precipitation event duration. It is clear from the model based on exponential distribution that the extremes are needed to get a similar looking time series for precipitation. However, there are other distributions to consider especially concerning the extremes for our three parameters. For extreme precipitation intensity, we see that in hydrology that the generalized extreme value(GEV) distribution is used. We see that such distribution is used to confirm the behavior of the tail of rainfall extremes as seen in \cite[]{Hydro_dist}, which confirmed previous studies about the distribution of extreme rainfall.  
+It is not surprising that looking at two different ranges of data could
+affect our analysis. However, it is clear there are benefits and pitfalls
+regarding using either percentile. Perhaps the most glaring aspect might
+be the handling of extreme precipitation intensity, precipitation event
+duration, and non-precipitation event duration. It is clear from the
+model based on exponential distribution that the extremes are needed to
+get a similar looking time series for precipitation. However, there are
+other distributions to consider especially concerning the extremes for
+our three parameters. For extreme precipitation intensity, we see that in
+hydrology that the generalized extreme value(GEV) distribution is used.
+We see that such distribution is used to confirm the behavior of the tail
+of rainfall extremes as seen in \cite[]{Hydro_dist}, which confirmed
+previous studies about the distribution of extreme rainfall.  
 
 
 
-Some further work that can be done include, using wind as another weather variable to
-use to predict precipitation, as one can convert wind direction and magnitude into 2
-components of a wind vector. Furthermore, by expanding such analysis to data
-collected in other stations may be an interesting path to consider, especially
-considering that precipitation can often be predicted based on whether there is
-precipitation in other stations/locations as well. 
+Some further work that can be done include, using wind as another weather
+variable to use to predict precipitation, as one can convert wind
+direction and magnitude into 2 components of a wind vector. Furthermore,
+by expanding such analysis to data collected in other stations may be an
+interesting path to consider, especially considering that precipitation
+can often be predicted based on whether there is precipitation in other
+stations/locations as well. 
 
 Also looking at the frequency of the most extreme precipitation over a longer period of time may show us climate changing happening in Princeton, as  increasing frequency of the most intense rainfall rates may point to climate change . But also looking at the precipitation may also further confirm the pattern discussed in \cite{Held}, where wetter gets wetter and drier gets drier. In order to even see such a pattern, one would need more data from years in the past to the near present to confirm such a trend. 
 %--References
