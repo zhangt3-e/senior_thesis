@@ -5,44 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 10 items.
 The style file: Latex/gji.bst
 Reallocating 'name_of_file' (item size: 1) to 5 items.
 Database file #1: refs.bib
-You've used 7 entries,
+You've used 9 entries,
             2773 wiz_defined-function locations,
-            1042 strings with 9100 characters,
-and the built_in function-call counts, 2580 in all, are:
-= -- 220
-> -- 123
-< -- 7
-+ -- 43
-- -- 36
-* -- 252
-:= -- 429
-add.period$ -- 14
-call.type$ -- 7
-change.case$ -- 34
-chr.to.int$ -- 13
-cite$ -- 21
-duplicate$ -- 114
-empty$ -- 194
-format.name$ -- 45
-if$ -- 498
+            1058 strings with 9509 characters,
+and the built_in function-call counts, 3741 in all, are:
+= -- 329
+> -- 174
+< -- 10
++ -- 60
+- -- 51
+* -- 356
+:= -- 587
+add.period$ -- 18
+call.type$ -- 9
+change.case$ -- 45
+chr.to.int$ -- 15
+cite$ -- 27
+duplicate$ -- 171
+empty$ -- 283
+format.name$ -- 64
+if$ -- 754
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 6
-newline$ -- 32
-num.names$ -- 28
-pop$ -- 36
+missing$ -- 8
+newline$ -- 40
+num.names$ -- 36
+pop$ -- 54
 preamble$ -- 1
-purify$ -- 26
+purify$ -- 35
 quote$ -- 0
-skip$ -- 82
+skip$ -- 136
 stack$ -- 0
-substring$ -- 119
-swap$ -- 26
-text.length$ -- 0
+substring$ -- 193
+swap$ -- 55
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
+type$ -- 78
 warning$ -- 0
-while$ -- 27
+while$ -- 38
 width$ -- 0
-write$ -- 85
+write$ -- 110

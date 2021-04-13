@@ -1,5 +1,12 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{9}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[Abrahamsen et~al.(2018)Abrahamsen, Brastein, \& Lie]{Norway}
+Abrahamsen, E., Brastein, O., \& Lie, B., 2018.
+\newblock {Machine Learning in Python for Weather Forecast based on Freely
+  Available Weather Data}, in {\em {Proceedings of The 59th Conference on
+  Simulation and Modelling (SIMS 59)}\/}, pp. 169--176, Linkoping Electronic
+  Conference Proceedings, Oslo, Norway.
 
 \bibitem[Bauer et~al.(2015)Bauer, Thorpe, \& Brunet]{NWP}
 Bauer, P., Thorpe, A., \& Brunet, G., 2015.
@@ -16,6 +23,11 @@ Eagleson, P., 1978.
 Glickman, T.~S., 2000.
 \newblock {\it Glossary of Meteorology\/}, Am. Meteorol. Soc., Boston, Mass,
   2nd edn.
+
+\bibitem[Held \& Soden(2006)]{Held}
+Held, I. \& Soden, B., 2006.
+\newblock {Robust Responses of the Hydrological Cycle to Global Warming}, {\it
+  Journal of Climate\/}, pp. 5686--5699.
 
 \bibitem[Peel et~al.(2007)Peel, Finlayson, \& McMahon]{Peel2008}
 Peel, M., Finlayson, B., \& McMahon, T., 2007.
