@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abrahamsen et~al.(2018)Abrahamsen, Brastein, \& Lie]{Norway}
@@ -28,6 +28,12 @@ Glickman, T.~S., 2000.
 Held, I. \& Soden, B., 2006.
 \newblock {Robust Responses of the Hydrological Cycle to Global Warming}, {\it
   Journal of Climate\/}, pp. 5686--5699.
+
+\bibitem[Koutsoyiannis(2004)]{Hydro_dist}
+Koutsoyiannis, D., 2004.
+\newblock {S}tatistics of extremes and estimation of extreme rainfall: Ii.
+  {E}mperical investigation of long rainfall records, {\it Hydrol. Sci.
+  Jou.\/}, {\bf 49(4)}, 591--610.
 
 \bibitem[Peel et~al.(2007)Peel, Finlayson, \& McMahon]{Peel2008}
 Peel, M., Finlayson, B., \& McMahon, T., 2007.

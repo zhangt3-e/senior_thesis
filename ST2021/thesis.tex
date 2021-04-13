@@ -936,7 +936,8 @@ data to at least have a basis for prediction.
 % Why? 
 Decision tree and linear regression do lack one thing, in which that time does not matter, so I can put in the data in random order and should get the same results. This should not be a case, in which the data was collected at a specific time. Thus we try using Neural Networks and Deep Learning. 
 
-With \cite{Norway}, we see that using Tensorflow have been done. Now they predicted temperature at various amounts of hours into the future.  
+With \cite{Norway}, we see the usage of Tensorflow on weather data to 
+predict temperature hours ahead with good accuracy. However, a variable like temperature is much easier to predict because of the cyclical nature of temperature in both the daily cycle and the annual cycle.  
 \subsection{Method}
 The structure of neural networks of having an input go into a model then having an output can be adapted to predict in time. It will start with time = t and then we can output to get time = t+1, which would mean we input current data to predict what the conditions are for the next time step. We can vary how much time data can be inputted as well as how much time and how many time steps should be outputted to predict the future. We will also need to train the data, so we split our data up into training, validation, and prediction sets. Training data is used to train the model,
  % validation, and prediction. 
@@ -958,6 +959,11 @@ How well? What else?
 \section{Discussion and Conclusions}\label{sec:conclusions}
 
 
+% For the 98 vs. 100th percentile precipitation aspect. 
+It is not surprising that looking at two different ranges of data could affect our analysis. However, it is clear there are benefits and pitfalls regarding using either percentile. Perhaps the most glaring aspect might be the handling of extreme precipitation intensity, precipitation event duration
+, and non-precipitation event duration. It is clear from the model based on exponential distribution that the extremes are needed to get a similar looking time series for precipitation. However, there are other distributions to consider especially concerning the extremes for our three parameters. For extreme precipitation intensity, we see that in hydrology that the generalized extreme value(GEV) distribution is used. We see that such distribution is used to confirm the behavior of the tail of rainfall extremes as seen in \cite[]{Hydro_dist}, which confirmed previous studies about the distribution of extreme rainfall.  
+
+
 
 Some further work that can be done include, using wind as another weather variable to
 use to predict precipitation, as one can convert wind direction and magnitude into 2
@@ -966,7 +972,7 @@ collected in other stations may be an interesting path to consider, especially
 considering that precipitation can often be predicted based on whether there is
 precipitation in other stations/locations as well. 
 
-Also looking at the frequency of the most extreme precipitation over a longer period of time may show us climate changing happening in Princeton, as  increasing frequency of the most intense rainfall rates may point to climate change \cite[]{Held}.
+Also looking at the frequency of the most extreme precipitation over a longer period of time may show us climate changing happening in Princeton, as  increasing frequency of the most intense rainfall rates may point to climate change . But also looking at the precipitation may also further confirm the pattern discussed in \cite{Held}, where wetter gets wetter and drier gets drier. In order to even see such a pattern, one would need more data from years in the past to the near present to confirm such a trend. 
 %--References
 \small
 \renewcommand{\bibsep}{0em}
