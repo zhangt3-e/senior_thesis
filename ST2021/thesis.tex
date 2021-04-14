@@ -918,11 +918,12 @@ instances of precipitation intensity of 0.1 mm/minute. Also, the 2019 predicted 
   \includegraphics[width = 0.7\textwidth]{Figures/Comparison.png}
   \caption[Comparing ML results to actual precipitation values]{
     Comparing the results of linear regression and decision tree
-    regression to actual precipitation values of the year 2019. Note
-    that the total precipitation for observed 2019 is 1029~mm, while
-    the linear regression model, which has negative precipitation, has
-    a total precipitation of 961~mm. Meanwhile the decision tree
-    regression model had a total precipitation of 2941~mm. }
+    regression to actual precipitation values of the year 2019. % Note
+    %that the total precipitation for observed 2019 is 1029~mm, while
+    %the linear regression model, which has negative precipitation, has
+    %a total precipitation of 961~mm. Meanwhile the decision tree
+    %regression model had a total precipitation of 2941~mm. 
+}
 \end{figure}
 
 \subsection{Discussion}
@@ -1032,11 +1033,11 @@ Moredetails.ipynb
 
 Neural Networks.ipynb 
 
-season.ipynb 
+season.ipynb is a notebook that analyzed the precipitation data by breaking it down by seasons. It is the blueprint for any analysis of season for any aspect of precipitation. 
 
-Simulation.ipynb 
+Simulation.ipynb is the notebook that contains how to generate a random time series for precipitation based on the exponential distributions of precipitation intensity, precipitation event duration, and non-precipitation event duration. 
 
-Windrose.ipynb was not used in the analysis. However windrose graphs are used to denote direction and magnitude of wind. Of course to be of use, it would be best to convert wind direction and magnitude into vectors that have components of north and east 
+Windrose.ipynb was not used in the analysis. However windrose graphs are used to denote direction and magnitude of wind. Of course to be of use, it would be best to convert wind direction and magnitude into vectors that have components of north and east. This can be the starting off of looking at wind as another weather parameter to consider. 
 
 \begin{figure}[h]
 	\centering
