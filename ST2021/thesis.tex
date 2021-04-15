@@ -1,8 +1,8 @@
 \documentclass[11pt]{report}
 \clubpenalty=10000
 \widowpenalty=10000
-%\usepackage[]{graphicx}
-\usepackage[draft]{graphicx}
+\usepackage[]{graphicx}
+%\usepackage[draft]{graphicx}
 % It is handy to define new commands for text that occurs frequently (see Discussion)
 \newcommand{\MT}{^{\mathrm{MT}}}
 \newcommand{\ga}{\gtrsim}
@@ -939,7 +939,7 @@ does get close to the actual precipitation total of 2019.
 
 One worry is with Decision Trees, if you have too many branches, it can
 result in overfitting the data, which is not ideal. We may have a case
-overfitting, due to the fact that the total precipitation from the decision tree model gave us 2941~mm, which is 3 times higher than the total observed precipitation of 2019.
+overfitting, due to the fact that the total precipitation from the decision tree model gave us 2897~mm, which is 3 times higher than the total observed precipitation of 2019.
 
 
 \clearpage
@@ -949,8 +949,8 @@ overfitting, due to the fact that the total precipitation from the decision tree
 % Why? 
 Decision tree and linear regression do lack one thing, in which that time does not matter, so I can put in the data in random order and should get the same results. This should not be a case, in which the data was collected at a specific time. Thus we try using Neural Networks and Deep Learning. 
 
-With \cite{Norway}, we see the usage of Deep Learning on weather data to 
-predict temperature hours ahead with good accuracy. However, a variable like temperature is much easier to predict because of the cyclical nature of temperature in both the daily cycle and the annual cycle. The two neural networks I will use are the Long short-term memory(LSTM) variant of recurrent neural network(RNN) and the 
+With \cite{Norway}, the usage of Deep Learning on weather data to 
+predict temperature hours ahead with good accuracy. However, a variable like temperature is much easier to predict because of the cyclical nature of temperature in both the daily cycle and the annual cycle. LSTM is used because of how it is able to store some memory of previous aspects of the neural network \cite[]{LSTM}.  
 \subsection{Method}
 The structure of neural networks of having an input go into a model then having an output can be adapted to predict in time. In the input, one can have time steps $1 $ to $n$, where n is the number of time steps you want to input. Then the output could be $1+ m$ to $m+n$, where $m$ is how many time steps in the future you want to predict based on the time steps inputted.  
 
@@ -959,13 +959,59 @@ We will also split the data into at two different datasets, one being the traini
 
 
 \subsection{Results}
+\clearpage
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width = 0.7\textwidth]{Figures/LSTM_hour.png}
+	\caption[Comparing LSTM results to observed precipitation in 2019 by hour]{
+		 % Note
+		%that the total precipitation for observed 2019 is 1029~mm, while
+		%the linear regression model, which has negative precipitation, has
+		%a total precipitation of 961~mm. Meanwhile the decision tree
+		%regression model had a total precipitation of 2941~mm. 
+	}
+\end{figure}
 
-What?
+\begin{figure}[bh!]
+	\centering
+	\includegraphics[width = 0.7\textwidth]{Figures/LSTM_minute.png}
+	\caption[Comparing LSTM results to observed precipitation in 2019 by minute]{\label{LSTM_minute}
+		 % Note
+		%that the total precipitation for observed 2019 is 1029~mm, while
+		%the linear regression model, which has negative precipitation, has
+		%a total precipitation of 961~mm. Meanwhile the decision tree
+		%regression model had a total precipitation of 2941~mm. 
+	}
+\end{figure}
+\clearpage
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width = 0.65\textwidth]{Figures/LSTM_hour_compare.png}
+	\caption[LSTM hour prediction vs. actual data]{
+		% Note
+		%that the total precipitation for observed 2019 is 1029~mm, while
+		%the linear regression model, which has negative precipitation, has
+		%a total precipitation of 961~mm. Meanwhile the decision tree
+		%regression model had a total precipitation of 2941~mm. 
+	}
+\end{figure}
 
+\begin{figure}[bh!]
+	\centering
+	\includegraphics[width = 0.65\textwidth]{Figures/LSTM_minute_compare.png}
+	\caption[LSTM minute prediction vs. actual data ]{\label{LSTM_minute_compare}
+		% Note
+		%that the total precipitation for observed 2019 is 1029~mm, while
+		%the linear regression model, which has negative precipitation, has
+		%a total precipitation of 961~mm. Meanwhile the decision tree
+		%regression model had a total precipitation of 2941~mm. 
+	}
+\end{figure}
+\clearpage
 \subsection{Discussion}
+The accuracy of the LSTM model when inputting minute data is higher than the accuracy of the LSTM model when inputting hourly data. However, there are so caveats. In both cases, the predicted precipitation from the LSTM model had more precipitation minutes than actual observed precipitation minutes. Now I figured that many of these cases could be precipitation that lie between 0 mm/minute and 0.01 mm/minute in intensity. Now by rounding the data to the nearest hundredth intensity helped decrease the amount of precipitation minutes that existed in the minute LSTM model. However, there was still a lot more precipitation minutes in the LSTM model than the observed data. This suggests that the LSTM predicts many precipitation events 
 
 
-How well? What else?
 
 \clearpage
 
@@ -988,7 +1034,11 @@ We see that such distribution is used to confirm the behavior of the tail
 of rainfall extremes as seen in \cite[]{Hydro_dist}, which confirmed
 previous studies about the distribution of extreme rainfall.  
 
+It is also not surprising that using the exponentials to make a model that tries to simulate the behavior of the season also does not do too well in terms of accuracy. As we are just simply replicating structure based on the data, the model is not matching with the observed data in any sense. Thus any matches between the model and the observed data are just coincendences. 
 
+Linear regression and Decision Tree
+
+LSTM usage is interesting because it clearly has the most accurate graph, in which \ref{LSTM_minute} has the LSTM prediction and the observed data to be very similar to each other, with careful observation to see that the two are not mirror images of each other.  
 
 Some further work that can be done include, using wind as another weather
 variable to use to predict precipitation, as one can convert wind
