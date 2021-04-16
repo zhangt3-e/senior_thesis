@@ -826,7 +826,7 @@ equations such as physics conservation laws and the ideal gas law. Some
 complications of NWP include its inability to simulate small-scale physics
 that can affect outcomes, as well as the usage of ensembles, which gives a
 variety of predictions based on the small changes in initial conditions
-\cite[]{NWP}. Weather forecasts are also 
+\cite[]{NWP}. 
 
 Machine Learning can look at what conditions could yield us precipitation
 and how intense it is, which can be less computationally intensive than NWP,
@@ -890,14 +890,14 @@ With decision tree, we have a better predictor of precipitation and how intense 
   \centering
   \includegraphics[width=0.7\textwidth]{Figures/predict_and_actual_2019_precip.png}
   \caption[Comparing ML predicted values to actual precipitation
-    values]{Comparing the predicted values from decision tree
+    values]{\label{DT_compare}Comparing the predicted values from decision tree
     regression and the actual values of the 2019 precipitation data.
   }
 \end{figure}
 \begin{figure}[bh!]
   \centering
   \includegraphics[width = 0.7\textwidth]{Figures/Comparison.png}
-  \caption[Comparing ML results to actual precipitation values]{
+  \caption[Comparing ML results to actual precipitation values]{\label{LR_DT_series}
     Comparing the results of linear regression and decision tree
     regression to actual precipitation values of the year 2019. % Note
     %that the total precipitation for observed 2019 is 1029~mm, while
@@ -929,24 +929,26 @@ When looking at how many minutes precipitation takes up, the observed 2019 preci
 \section{Deep Learning for Prediction}\label{sec:neural}
 
 % Why? 
-Decision tree and linear regression do lack one thing, in which that time does not matter, so I can put in the data in random order and should get the same results. This should not be a case, in which the data was collected at a specific time. Thus we try using Neural Networks and Deep Learning. 
+Decision tree and linear regression do lack one thing, in which that time does not matter, so I can put in the data in random order and should get the same results. This should not be a case, in which the data was collected at a specific time. Thus we try using Neural Networks.
 
+Artificial Neural Networks(ANN) are parallel-distributed information processing system that resembles biological neural network of the human brain \cite[]{ANN}.
 With \cite{Norway}, the usage of Deep Learning on weather data to 
 predict temperature hours ahead with good accuracy. However, a variable like temperature is much easier to predict because of the cyclical nature of temperature in both the daily cycle and the annual cycle. LSTM is used because of how it is able to store some memory of previous aspects of the neural network \cite[]{LSTM}.  
 \subsection{Method}
-The structure of neural networks of having an input go into a model then having an output can be adapted to predict in time. In the input, one can have time steps $1 $ to $n$, where n is the number of time steps you want to input. Then the output could be $1+ m$ to $m+n$, where $m$ is how many time steps in the future you want to predict based on the time steps inputted.  
+ANN are made up of three parts. One part is the input layer, which includes a number of input nodes. The second part is one or more hidden layers which include the activation function. The third part is a number of output layer nodes \cite[]{ART}. 
+
 
 We will also split the data into at two different datasets, one being the training set and the other being the test dataset. The training dataset is used to fit the model and will consists of 70\% of the data. The test dataset is used to put into the trained model and to evaluate how accurate the model is. To measure how good the model is, we will use precipitation accuracy as well 
 
 
 
 \subsection{Results}
-For the LSTM by hour model, we end up getting a precipitation accuracy of 9.9\% and an MAE of 0.13~mm/hour. For the LSTM by minute model, we end up getting a precipitation accuracy of 16.8\% and an MAE of 0.0036~mm/minute. Furthermore, we see the 
+For the LSTM by hour model, we end up getting a precipitation accuracy of 9.9\% and an MAE of 0.13~mm/hour. For the LSTM by minute model, we end up getting a precipitation accuracy of 16.8\% and an MAE of 0.0036~mm/minute. Furthermore, we see the behaviors of LSTM better reflect the observed precipitation. 
 \clearpage
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width = 0.7\textwidth]{Figures/LSTM_hour.png}
-	\caption[Comparing LSTM results to observed precipitation in 2019 by hour]{Comparing the results of LSTM by hour to the observed
+	\caption[Comparing LSTM results to observed precipitation in 2019 by hour]{\label{LSTM_hour} Comparing the results of LSTM by hour to the observed
 		 precipitation values of the year 2019.
 	}
 \end{figure}
@@ -963,7 +965,7 @@ For the LSTM by hour model, we end up getting a precipitation accuracy of 9.9\% 
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width = 0.65\textwidth]{Figures/LSTM_hour_compare.png}
-	\caption[LSTM hour prediction vs. actual data]{
+	\caption[\label{LSTM_hour_compare}LSTM hour prediction vs. actual data]{
 		Comparing the predicted values from LSTM by hour and the actual values of the 2019 precipitation data.
 	}
 \end{figure}
@@ -980,7 +982,7 @@ For the LSTM by hour model, we end up getting a precipitation accuracy of 9.9\% 
 The accuracy of the LSTM model when inputting minute data is higher than the accuracy of the LSTM model when inputting hourly data. However, there are so caveats. In both cases, the predicted precipitation from the LSTM model had more precipitation minutes than actual observed precipitation minutes. Now I figured that many of these cases could be precipitation that lie between 0 mm/minute and 0.01 mm/minute in intensity. Now by rounding the data to the nearest hundredth intensity helped decrease the amount of precipitation minutes that existed in the minute LSTM model. However, there was still a lot more precipitation minutes in the LSTM model than the observed data. This suggests that the LSTM predicts many precipitation events that are not supported by the actual observed data. 
 Furthermore, this helps confirm the idea from \cite{CNN} that more frequent inputs improves the accuracy of forecasts. They used the difference between hourly and daily inputs, while we used minute and hourly inputs. Obviously, minute inputs are very numerous and would take a much longer time running such inputs into models in general compared to the hourly inputs. 
 
-The better accuracy is also reflected in the pattern between the predicted LSTM and the observed data. In Figure~\ref{LSTM_minute_compare}, we have a pattern that more closely aligns to a diagonal, which would represent that both the predicted and observed data are of the same precipitation intensity. 
+The better accuracy is also reflected in the pattern between the predicted LSTM and the observed data. In Figure~\ref{LSTM_minute_compare}, we have a pattern that more closely aligns to a diagonal, which would represent that both the predicted and observed data are of the same precipitation intensity. This is in start contrast to Figure~\ref{LSTM_hour}, which does not have a good overlap between predicted and observed values and looks closer to the Figure~\ref{DT_compare} of poor fits, particularly values that are not small like 0.01~mm or 0~mm. 
 
 
 \clearpage
@@ -1006,9 +1008,9 @@ previous studies about the distribution of extreme rainfall.
 
 It is also not surprising that using the exponentials to make a model that tries to simulate the behavior of the season also does not do too well in terms of accuracy. As we are just simply replicating structure based on the data, the model is not matching with the observed data in any sense. Thus any matches between the model and the observed data are just coincendences. 
 
-Linear regression and Decision Tree
+Linear regression and decision tree give interesting results, where linear regression can give you a closer total precipitation amount, but decision tree has a larger precipiation accuracy as well as being closer in terms of precipitation minutes that the observed 2019 precipitation data had. 
 
-LSTM usage is interesting because it clearly has the most accurate graph, in which Figure~\ref{LSTM_minute} has the LSTM prediction and the observed data to be very similar to each other, with careful observation to see that the two are not mirror images of each other.  
+LSTM usage is interesting because it clearly has the most accurate graph, in which Figure~\ref{LSTM_minute} has the LSTM prediction and the observed data to be very similar to each other, with careful observation to see that the two are not mirror images of each other. At the same time, this similarity is less apparent when looking into how many precipitation minutes were found in LSTM minute, predicted way more minutes than the observed precipitation data. 
 
 Some further work that can be done include, using wind as another weather
 variable to use to predict precipitation, as one can convert wind
@@ -1021,6 +1023,8 @@ stations/locations as well.
 For Neural Networks, its clear we can also use Auto-regressive integrated moving average(ARIMA) models. At least for daily weather conditions, ARIMA can be used to forecast meteorological conditions \cite[]{ARIMA}.   Future work can implement ARIMA to the weather data to see how it compares to the LSTM model. At the same time, we can explore Convoluted Neural Network (CNN), which had been found to have been better than LSTM in prediction of temperature \cite[]{CNN}. 
 
 Also looking at the frequency of the most extreme precipitation over a longer period of time may show us climate changing happening in Princeton, as  increasing frequency of the most intense rainfall rates may point to climate change . But also looking at the precipitation may also further confirm the pattern discussed in \cite{Held}, where wetter gets wetter and drier gets drier. In order to even see such a pattern, one would need more data from years in the past to the near present to confirm such a trend. Other work can be done using the exponential nature of the three parameters that we used as seen in \cite{Tucker} in looking drainage basin in the context of erosion from precipitation. 
+
+As expected, the exponential model was the least accurate in terms of predicting precipitation, with 2-3\% precipitation accuracy. Linear regression and decision tree do a better job of predicting precipitation, with linear regression having a 4.7\% precipitation accuracy and decision tree having a 11.9\% precipitation accuracy. However both linear regression and decision tree suffer from predicting too many precipitation minutes, which is a problem since most of a precipitation time series will be full of zeros. Finally we look at ANN and using LSTM model for hourly and minute inputs. Hourly inputs for LSTM end up having a precipitation accuracy of 9.9\%, while the minute inputs for LSTM have a precipitation accuracy of 16.8\%. Thus the accuracy does increase as we go from the exponential model to the ML models to ANN. Further work can help improve the accuracy of such forecasts and to understand the factors that improve or degrade such accuracy. 
 %--References
 \small
 \renewcommand{\bibsep}{0em}

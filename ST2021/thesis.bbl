@@ -1,4 +1,4 @@
-\begin{thebibliography}{15}
+\begin{thebibliography}{17}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abrahamsen et~al.(2018)Abrahamsen, Brastein, \& Lie]{Norway}
@@ -24,6 +24,11 @@ Glickman, T.~S., 2000.
 \newblock {\it Glossary of Meteorology\/}, Am. Meteorol. Soc., Boston, Mass,
   2nd edn.
 
+\bibitem[Haykin(1994)]{ANN}
+Haykin, S., 1994.
+\newblock {\it {Neural Networks: A Comprehensive Foundation}\/}, Macmillan
+  College Publishing Company Inc.
+
 \bibitem[Held \& Soden(2006)]{Held}
 Held, I. \& Soden, B., 2006.
 \newblock {Robust Responses of the Hydrological Cycle to Global Warming}, {\it
@@ -43,7 +48,7 @@ Koutsoyiannis, D., 2004.
 \bibitem[Lee et~al.(2020)Lee, Lee, \& Son]{CNN}
 Lee, S., Lee, Y., \& Son, Y., 2020.
 \newblock {Forecasting Daily Temperatures with Different Time Interval Data
-  using Deep Neural Networks}, {\it Appl. Sci.\/}, {\bf 10(5}.
+  using Deep Neural Networks}, {\it Appl. Sci.\/}, {\bf 10(5)}.
 
 \bibitem[Lorenz(1969)]{WF}
 Lorenz, E., 1969.
@@ -78,5 +83,10 @@ Tucker, G.~E. \& Bras, R.~L., 2000.
 Vaisala, 2017.
 \newblock Vaisala weather transmitter {WXT530} series,
   \url{https://www.vaisala.com/sites/default/files/documents/WEA-MET-G-WXT530\%20Datasheet__Low.pdf}.
+
+\bibitem[Yaseen et~al.(2015)Yaseen, El-shafie, Jaafar, Afan, \& Sayl]{ART}
+Yaseen, Z., El-shafie, A., Jaafar, O., Afan, H.~A., \& Sayl, K.~N., 2015.
+\newblock {Artificial intelligence based models for stream-flow forecasting:
+  2000-2015}, {\it Jour. of Hydrol.\/}, {\bf 530}, 829--844.
 
 \end{thebibliography}

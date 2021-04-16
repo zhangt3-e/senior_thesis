@@ -6,45 +6,45 @@ The style file: Latex/gji.bst
 Reallocating 'name_of_file' (item size: 1) to 5 items.
 Database file #1: refs.bib
 Warning--empty title in WF
-You've used 15 entries,
+You've used 17 entries,
             2773 wiz_defined-function locations,
-            1105 strings with 10345 characters,
-and the built_in function-call counts, 6270 in all, are:
-= -- 553
-> -- 305
-< -- 14
-+ -- 105
-- -- 90
-* -- 626
-:= -- 991
-add.period$ -- 30
-call.type$ -- 15
-change.case$ -- 75
-chr.to.int$ -- 21
-cite$ -- 46
-duplicate$ -- 274
-empty$ -- 467
-format.name$ -- 113
-if$ -- 1239
+            1118 strings with 10632 characters,
+and the built_in function-call counts, 7109 in all, are:
+= -- 617
+> -- 363
+< -- 15
++ -- 125
+- -- 108
+* -- 712
+:= -- 1130
+add.period$ -- 34
+call.type$ -- 17
+change.case$ -- 86
+chr.to.int$ -- 23
+cite$ -- 52
+duplicate$ -- 307
+empty$ -- 527
+format.name$ -- 133
+if$ -- 1402
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 14
-newline$ -- 64
-num.names$ -- 60
-pop$ -- 83
+missing$ -- 17
+newline$ -- 72
+num.names$ -- 68
+pop$ -- 101
 preamble$ -- 1
-purify$ -- 60
+purify$ -- 70
 quote$ -- 0
-skip$ -- 214
+skip$ -- 240
 stack$ -- 0
-substring$ -- 344
-swap$ -- 83
+substring$ -- 371
+swap$ -- 90
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 132
+type$ -- 147
 warning$ -- 1
-while$ -- 65
+while$ -- 72
 width$ -- 0
-write$ -- 181
+write$ -- 204
 (There was 1 warning)
