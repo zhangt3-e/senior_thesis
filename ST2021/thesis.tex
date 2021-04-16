@@ -402,20 +402,17 @@ less intense precipitation events.
 
 \subsection{Methods}\label{sec:methods}
 
-Once we have characterized the climatology of precipitation, we will start
-moving towards buidling predictive models for precipitation. In order to see
-how accurate such models are in comparison to observed precipitation. Such
-accuracy we shall use is to see whether the model and the observed data
-match in terms of whether there exists precipitation at a given minute. We
+Once we have characterized the climatology of precipitation, we will start moving towards building predictive models for precipitation. These models need a way to compare with each other as well as comparing the model results to the observed data. Such
+accuracy we shall use is to see whether the model and the observed data match in terms of whether there exists precipitation at a given minute. We
 ignore the non-precipitation when looking at accuracy because by matching
 non-precipitation minutes in both the model and the observed data, we end up
-getting an accuracy of over 90\%, which not useful. So, if the model and the
+getting an accuracy of over 90\%, which is not useful. So, if the model and the
 observed data do not match in terms whether there exists precipitation, this
 contributes to the model being deemed less accurate. We can have a stricter
 definition of accuracy, in which we set up the precipitation condition, in
 addition to saying that the intensity must match too, otherwise we can not
 say the model and observed data match. This stricter definition of model
-accuracy might be used when thinking about
+accuracy might be used when thinking about whether the intensity is being matched as well. Although this strict definition will not be used for this paper. 
 
 \subsection{Results}\label{sec:apcr}
 
@@ -812,7 +809,7 @@ and intense precipitation would usually occur in Summer.\\[1em]
 
 % Why you need it. 
 Although we have one baseline model for predicting precipitation based on
-seasonally adjusted historical patterns of precipitation istelf, it only
+seasonally adjusted historical patterns of precipitation itself, it only
 makes point-based instantaneous predictions.  At 2--3\%, its prediction
 skill is not very high. Other meteorological variables matter as well, as
 will the lead time used for the prediction, and the range of history upon
@@ -828,12 +825,12 @@ that can affect outcomes, as well as the usage of ensembles, which gives a
 variety of predictions based on the small changes in initial conditions
 \cite[]{NWP}. 
 
-Machine Learning can look at what conditions could yield us precipitation
+Machine learning can look at what conditions could yield us precipitation
 and how intense it is, which can be less computationally intensive than NWP,
 and can give us a good guide on what to expect if we encounter such
-conditions.  A method like Decision Tree can be used to select variables,
+conditions.  A method like decision tree can be used to select variables,
 assess their relative importance, handle missing values, predict, and
-manipulate data. Decision Trees are made up of nodes, of which we have a
+manipulate data. Decision trees are made up of nodes, of which we have a
 root node, which represents a choice and a leaf node which represents the
 final results of the decision tree. Branches are the choices that are made
 from the root nodes \cite[]{DT}.
@@ -929,7 +926,7 @@ When looking at how many minutes precipitation takes up, the observed 2019 preci
 \section{Deep Learning for Prediction}\label{sec:neural}
 
 % Why? 
-Decision tree and linear regression do lack one thing, in which that time does not matter, so I can put in the data in random order and should get the same results. This should not be a case, in which the data was collected at a specific time. Thus we try using Neural Networks.
+Decision tree and linear regression do lack one thing, in which that time does not matter, so I can put in the data in random order and should get the same results. This should not be a case, in which the data was collected at a specific time. Thus we try using neural networks.
 
 Artificial Neural Networks(ANN) are parallel-distributed information processing system that resembles biological neural network of the human brain \cite[]{ANN}.
 With \cite{Norway}, the usage of Deep Learning on weather data to 
@@ -938,7 +935,7 @@ predict temperature hours ahead with good accuracy. However, a variable like tem
 ANN are made up of three parts. One part is the input layer, which includes a number of input nodes. The second part is one or more hidden layers which include the activation function. The third part is a number of output layer nodes \cite[]{ART}. 
 
 
-We will also split the data into at two different datasets, one being the training set and the other being the test dataset. The training dataset is used to fit the model and will consists of 70\% of the data. The test dataset is used to put into the trained model and to evaluate how accurate the model is. To measure how good the model is, we will use precipitation accuracy as well 
+We will also split the data into at two different datasets, one being the training set and the other being the test dataset. The training dataset is used to fit the model and will consist of 70\% of the data. The test dataset is used to put into the trained model and to evaluate how accurate the model is. To measure how good the model is, we will use precipitation accuracy as well. 
 
 
 
@@ -979,10 +976,10 @@ For the LSTM by hour model, we end up getting a precipitation accuracy of 9.9\% 
 \end{figure}
 \clearpage
 \subsection{Discussion}
-The accuracy of the LSTM model when inputting minute data is higher than the accuracy of the LSTM model when inputting hourly data. However, there are so caveats. In both cases, the predicted precipitation from the LSTM model had more precipitation minutes than actual observed precipitation minutes. Now I figured that many of these cases could be precipitation that lie between 0 mm/minute and 0.01 mm/minute in intensity. Now by rounding the data to the nearest hundredth intensity helped decrease the amount of precipitation minutes that existed in the minute LSTM model. However, there was still a lot more precipitation minutes in the LSTM model than the observed data. This suggests that the LSTM predicts many precipitation events that are not supported by the actual observed data. 
+The accuracy of the LSTM model when inputting minute data is higher than the accuracy of the LSTM model when inputting hourly data. However, there are many caveats. In both cases, the predicted precipitation from the LSTM model had more precipitation minutes than actual observed precipitation minutes. Now I figured that many of these cases could be precipitation that lie between 0 mm/minute and 0.01 mm/minute in intensity. Now by rounding the data to the nearest hundredth intensity helped decrease the amount of precipitation minutes that existed in the minute LSTM model. However, there was still a lot more precipitation minutes in the LSTM model than the observed data. This suggests that the LSTM predicts many precipitation events that are not supported by the actual observed data. 
 Furthermore, this helps confirm the idea from \cite{CNN} that more frequent inputs improves the accuracy of forecasts. They used the difference between hourly and daily inputs, while we used minute and hourly inputs. Obviously, minute inputs are very numerous and would take a much longer time running such inputs into models in general compared to the hourly inputs. 
 
-The better accuracy is also reflected in the pattern between the predicted LSTM and the observed data. In Figure~\ref{LSTM_minute_compare}, we have a pattern that more closely aligns to a diagonal, which would represent that both the predicted and observed data are of the same precipitation intensity. This is in start contrast to Figure~\ref{LSTM_hour}, which does not have a good overlap between predicted and observed values and looks closer to the Figure~\ref{DT_compare} of poor fits, particularly values that are not small like 0.01~mm or 0~mm. 
+The better accuracy is also reflected in the pattern between the predicted LSTM and the observed data. In Figure~\ref{LSTM_minute_compare}, we have a pattern that more closely aligns to a diagonal, which would represent that both the predicted and observed data are of the same precipitation intensity. This is in stark contrast to Figure~\ref{LSTM_hour}, which does not have a good overlap between predicted and observed values and looks closer to Figure~\ref{DT_compare} of poor fits, particularly values that are larger than 0-0.01~mm. 
 
 
 \clearpage
@@ -1020,7 +1017,7 @@ interesting path to consider, especially considering that precipitation
 can often be predicted based on whether there is precipitation in other
 stations/locations as well. 
 
-For Neural Networks, its clear we can also use Auto-regressive integrated moving average(ARIMA) models. At least for daily weather conditions, ARIMA can be used to forecast meteorological conditions \cite[]{ARIMA}.   Future work can implement ARIMA to the weather data to see how it compares to the LSTM model. At the same time, we can explore Convoluted Neural Network (CNN), which had been found to have been better than LSTM in prediction of temperature \cite[]{CNN}. 
+For neural networks, its clear we can also use Auto-Regressive Integrated Moving Average(ARIMA) models. At least for daily weather conditions, ARIMA can be used to forecast meteorological conditions \cite[]{ARIMA}. Future work can implement ARIMA to the weather data to see how it compares to the LSTM model. At the same time, we can explore Convoluted Neural Network (CNN), which had been found to have been better than LSTM in prediction of temperature \cite[]{CNN}. 
 
 Also looking at the frequency of the most extreme precipitation over a longer period of time may show us climate changing happening in Princeton, as  increasing frequency of the most intense rainfall rates may point to climate change . But also looking at the precipitation may also further confirm the pattern discussed in \cite{Held}, where wetter gets wetter and drier gets drier. In order to even see such a pattern, one would need more data from years in the past to the near present to confirm such a trend. Other work can be done using the exponential nature of the three parameters that we used as seen in \cite{Tucker} in looking drainage basin in the context of erosion from precipitation. 
 
@@ -1048,17 +1045,19 @@ As expected, the exponential model was the least accurate in terms of predicting
 	
 	exponentials.ipynb is the first file to start the actually analysis of the data. This particular file starts the analysis of precipitation event duration and exponential distribution is assumed and thus calculated for both the 98th percentile and the 100th percentile. 
 	
-	Hist\_func.iypnb 
+	Hist\_func.iypnb was an early attempt to make histograms, but ran into problems of some bins having no frequency, making it harder to do an analysis of histograms. I learned to then use percentiles to make sure I have non-empty bins.
 	
-	histplot.ipynb 
+	histplot.ipynb contains many essential functions that will be necessary. When trying to use functions from any juypter notebook, you need the import\_ipynb library to be able to import this particular file and to be able to use the function stored here. 
 	
-	intensity\_and\_non\_precip.ipynb 
+	intensity\_and\_non\_precip.ipynb is the file to replicate the analysis of exponentials.ipynb for precipitation intensity and nonprecipitation event durations. 
 	
-	ML.ipynb 
+	LSTM.ipynb is the file where I made LSTM analysis on the precipitation data and to predict precipitation data from the trained model. 
 	
-	Moredetails.ipynb 
+	ML.ipynb is the file to make predictions using linear regression and decision tree regression on the precipitation data. 
 	
-	Neural Networks.ipynb 
+	Moredetails.ipynb was the first instance of being able to do a histogram breakdown by seasons as well analysis of the histogram using exponential distribution. 
+	
+	Neural Networks.ipynb is one attempt at neural networks, although I did not use the results here for my paper. 
 	
 	season.ipynb is a notebook that analyzed the precipitation data by breaking it down by seasons. It is the blueprint for any analysis of season for any aspect of precipitation. 
 	

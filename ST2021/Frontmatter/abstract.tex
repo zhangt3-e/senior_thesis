@@ -14,5 +14,4 @@ located on the roof of Guyot Hall, I first summarize the data in terms
 of exponential distributions and their parameters, by season and by
 year. Subsequently, I evaluate the skill in predicting the arrival,
 duration and intensity of precipitation events solely based on this
-local ``climatology'', before including other variables logged by the
-weather station.
+local ``climatology'', before including other variables logged by the weather station. Predicting precipitation events using this climatology yielded 2-3 \% precipitation accuracy. Thus, we proceeded to use linear regression and decision trees regression to improve the precipitation accuracy. Linear regression yielded 4.7 \%, while decision tree yielded 11.9\%. Then neural networks were used in the form of LSTM, which hourly and minute inputs were used for the LSTM model. The hourly input resulted in 9.9\%, while the minute inputs resulted in 16.8\%. Clearly with each new model, we are able to see improvements in the accuracy of predicting precipitation. However, there are further improvements to be made with many pathways forward to improve the precipitation accuracy.  
