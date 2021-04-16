@@ -24,6 +24,13 @@ Glickman, T.~S., 2000.
 \newblock {\it Glossary of Meteorology\/}, Am. Meteorol. Soc., Boston, Mass,
   2nd edn.
 
+\bibitem[Greff et~al.(2017)Greff, Srivastava, Koutnik, Steunebrink, \&
+  Schmindhuber]{LSTM_a}
+Greff, K., Srivastava, R., Koutnik, J., Steunebrink, B., \& Schmindhuber, J.,
+  2017.
+\newblock {LSTM: A Search Space Odyssey}, {\it {IEEE Transactions on Neural
+  Networks and Learning Systems}\/}, {\bf 28(10}, 2222 -- 2232.
+
 \bibitem[Haidar \& Verma(2018)]{Month_CNN}
 Haidar, A. \& Verma, B., 2018.
 \newblock {Monthly Rainfall Forecasting Using One-Dimensional Deep
@@ -44,13 +51,6 @@ Held, I. \& Soden, B., 2006.
 Hochreiter, S. \& Schmidhuber, J., 1997.
 \newblock {Long Short-Term Memory}, {\it {Neural Computation}\/}, {\bf 9(8)},
   1735--1780.
-
-\bibitem[{K. Greff and R.K. Srivastava and J. Koutnik and B.R. Steunebrink and
-  J. Schmindhuber}(2017)]{LSTM_a}
-{K. Greff and R.K. Srivastava and J. Koutnik and B.R. Steunebrink and J.
-  Schmindhuber}, 2017.
-\newblock {LSTM: A Search Space Odyssey}, {\it {IEEE Transactions on Neural
-  Networks and Learning Systems}\/}, {\bf 28(10}, 2222 -- 2232.
 
 \bibitem[Koutsoyiannis(2004)]{Hydro_dist}
 Koutsoyiannis, D., 2004.
@@ -82,12 +82,6 @@ Peel, M., Finlayson, B., \& McMahon, T., 2007.
 {PRISM}, 2020.
 \newblock {PRISM} climate data, http://prism.oregonstate.edu.
 
-\bibitem[{R. Suppiah and K. J. Hennessy}(1998)]{AUST}
-{R. Suppiah and K. J. Hennessy}, 1998.
-\newblock {Trends in total rainfall, heavy rain events and the number of dry
-  days in Australia, 1910-1990}, {\it Int. J. Climatol.\/}, {\bf 10},
-  1141--1164.
-
 \bibitem[Scher \& Messori(2018)]{Scher}
 Scher, S. \& Messori, G., 2018.
 \newblock {Predicting weather forecast uncertainty with machine learning}, {\it
@@ -103,6 +97,12 @@ Shi, X., Chen, Z., Wang, H., Yeung, D., Wong, W., \& Woo, W., 2015.
 Song, Y.~Y. \& Lu, Y., 2015.
 \newblock {D}ecision tree methods: applications for classification and
   prediction, {\it Shanghai Arch Psychiatry\/}, {\bf 27}, 130--135.
+
+\bibitem[Suppiah \& Hennessy(1998)]{AUST}
+Suppiah, R. \& Hennessy, K.~J., 1998.
+\newblock {Trends in total rainfall, heavy rain events and the number of dry
+  days in Australia, 1910-1990}, {\it Int. J. Climatol.\/}, {\bf 10},
+  1141--1164.
 
 \bibitem[Tucker \& Bras(2000)]{Tucker}
 Tucker, G.~E. \& Bras, R.~L., 2000.

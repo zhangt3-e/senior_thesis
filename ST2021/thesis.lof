@@ -35,8 +35,8 @@
 \contentsline {figure}{\numberline {34}{\ignorespaces ML Decision Tree regression run}}{34}%
 \contentsline {figure}{\numberline {35}{\ignorespaces Comparing ML predicted values to actual precipitation values}}{35}%
 \contentsline {figure}{\numberline {36}{\ignorespaces Comparing ML results to actual precipitation values}}{35}%
-\contentsline {figure}{\numberline {37}{\ignorespaces Comparing LSTM results to observed precipitation in 2019 by hour}}{37}%
-\contentsline {figure}{\numberline {38}{\ignorespaces Comparing LSTM results to observed precipitation in 2019 by minute}}{37}%
+\contentsline {figure}{\numberline {37}{\ignorespaces LSTM time series to observed precipitation time series in 2019 by hour}}{37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces LSTM time series to observed precipitation time series in 2019 by minute}}{37}%
 \contentsline {figure}{\numberline {39}{\ignorespaces LSTM hour prediction vs. actual data}}{38}%
 \contentsline {figure}{\numberline {40}{\ignorespaces LSTM minute prediction vs. actual data }}{38}%
 \contentsline {figure}{\numberline {41}{\ignorespaces Vaisala Weather Station}}{47}%
