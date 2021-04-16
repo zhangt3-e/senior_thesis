@@ -1,4 +1,4 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{22}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abrahamsen et~al.(2018)Abrahamsen, Brastein, \& Lie]{Norway}
@@ -23,6 +23,12 @@ Eagleson, P., 1978.
 Glickman, T.~S., 2000.
 \newblock {\it Glossary of Meteorology\/}, Am. Meteorol. Soc., Boston, Mass,
   2nd edn.
+
+\bibitem[Haidar \& Verma(2018)]{Month_CNN}
+Haidar, A. \& Verma, B., 2018.
+\newblock {Monthly Rainfall Forecasting Using One-Dimensional Deep
+  Convolutional Neural Network}, {\it {IEEE Access}\/}, {\bf 6}, 69053 --
+  69063.
 
 \bibitem[Haykin(1994)]{ANN}
 Haykin, S., 1994.
@@ -76,10 +82,22 @@ Peel, M., Finlayson, B., \& McMahon, T., 2007.
 {PRISM}, 2020.
 \newblock {PRISM} climate data, http://prism.oregonstate.edu.
 
+\bibitem[{R. Suppiah and K. J. Hennessy}(1998)]{AUST}
+{R. Suppiah and K. J. Hennessy}, 1998.
+\newblock {Trends in total rainfall, heavy rain events and the number of dry
+  days in Australia, 1910-1990}, {\it Int. J. Climatol.\/}, {\bf 10},
+  1141--1164.
+
 \bibitem[Scher \& Messori(2018)]{Scher}
 Scher, S. \& Messori, G., 2018.
 \newblock {Predicting weather forecast uncertainty with machine learning}, {\it
   Q J R Meteorol Soc.\/}, {\bf 144}, 2830--2841.
+
+\bibitem[Shi et~al.(2015)Shi, Chen, Wang, Yeung, Wong, \&
+  Woo]{shi2015convolutional}
+Shi, X., Chen, Z., Wang, H., Yeung, D., Wong, W., \& Woo, W., 2015.
+\newblock Convolutional lstm network: A machine learning approach for
+  precipitation nowcasting.
 
 \bibitem[Song \& Lu(2015)]{DT}
 Song, Y.~Y. \& Lu, Y., 2015.
