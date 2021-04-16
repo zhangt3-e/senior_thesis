@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{15}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abrahamsen et~al.(2018)Abrahamsen, Brastein, \& Lie]{Norway}
@@ -40,6 +40,20 @@ Koutsoyiannis, D., 2004.
   {E}mperical investigation of long rainfall records, {\it Hydrol. Sci.
   Jou.\/}, {\bf 49(4)}, 591--610.
 
+\bibitem[Lee et~al.(2020)Lee, Lee, \& Son]{CNN}
+Lee, S., Lee, Y., \& Son, Y., 2020.
+\newblock {Forecasting Daily Temperatures with Different Time Interval Data
+  using Deep Neural Networks}, {\it Appl. Sci.\/}, {\bf 10(5}.
+
+\bibitem[Lorenz(1969)]{WF}
+Lorenz, E., 1969.
+\newblock {\it {Bull. Am. Meterol. Soc.}\/}, {\bf 50}, 345--349.
+
+\bibitem[Murat et~al.(2018)Murat, Malinowska, Gos, \& Krzyszczak]{ARIMA}
+Murat, M., Malinowska, I., Gos, M., \& Krzyszczak, J., 2018.
+\newblock {Forecasting daily meteorological time series using ARIMA and
+  regression models}, {\it Int. Agrophys.\/}, {\bf 32}, 253--264.
+
 \bibitem[Peel et~al.(2007)Peel, Finlayson, \& McMahon]{Peel2008}
 Peel, M., Finlayson, B., \& McMahon, T., 2007.
 \newblock Updated world map of the {K}oppen-{G}eiger climate classification,
@@ -53,6 +67,12 @@ Peel, M., Finlayson, B., \& McMahon, T., 2007.
 Song, Y.~Y. \& Lu, Y., 2015.
 \newblock {D}ecision tree methods: applications for classification and
   prediction, {\it Shanghai Arch Psychiatry\/}, {\bf 27}, 130--135.
+
+\bibitem[Tucker \& Bras(2000)]{Tucker}
+Tucker, G.~E. \& Bras, R.~L., 2000.
+\newblock A stochastic approach to modeling the role of rainfall variability in
+  draingage basin evolution, {\it Water. Resource Res.\/}, {\bf 36}(5),
+  1953--1964.
 
 \bibitem[Vaisala(2017)]{Vaisala}
 Vaisala, 2017.
