@@ -1011,6 +1011,7 @@ We will also split the data into at two different datasets, one being the traini
 \subsection{Discussion}
 The accuracy of the LSTM model when inputting minute data is higher than the accuracy of the LSTM model when inputting hourly data. However, there are so caveats. In both cases, the predicted precipitation from the LSTM model had more precipitation minutes than actual observed precipitation minutes. Now I figured that many of these cases could be precipitation that lie between 0 mm/minute and 0.01 mm/minute in intensity. Now by rounding the data to the nearest hundredth intensity helped decrease the amount of precipitation minutes that existed in the minute LSTM model. However, there was still a lot more precipitation minutes in the LSTM model than the observed data. This suggests that the LSTM predicts many precipitation events 
 
+The better accuracy is also reflected in the pattern between the predicted LSTM and the observed data. In Figure~\ref{LSTM_minute_compare}, we have a pattern that more closely aligns to a diagonal, which would represent that both the predicted and observed data are of the same precipitation intensity. 
 
 
 \clearpage
@@ -1038,7 +1039,7 @@ It is also not surprising that using the exponentials to make a model that tries
 
 Linear regression and Decision Tree
 
-LSTM usage is interesting because it clearly has the most accurate graph, in which \ref{LSTM_minute} has the LSTM prediction and the observed data to be very similar to each other, with careful observation to see that the two are not mirror images of each other.  
+LSTM usage is interesting because it clearly has the most accurate graph, in which Figure~\ref{LSTM_minute} has the LSTM prediction and the observed data to be very similar to each other, with careful observation to see that the two are not mirror images of each other.  
 
 Some further work that can be done include, using wind as another weather
 variable to use to predict precipitation, as one can convert wind
