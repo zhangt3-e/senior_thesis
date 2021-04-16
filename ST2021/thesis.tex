@@ -1,8 +1,8 @@
 \documentclass[11pt]{report}
 \clubpenalty=10000
 \widowpenalty=10000
-\usepackage[]{graphicx}
-%\usepackage[draft]{graphicx}
+%\usepackage[]{graphicx}
+\usepackage[draft]{graphicx}
 % It is handy to define new commands for text that occurs frequently (see Discussion)
 \newcommand{\MT}{^{\mathrm{MT}}}
 \newcommand{\ga}{\gtrsim}
@@ -93,22 +93,23 @@ is well spread out throughout the year.
 
 % \input{Histogram.tex}
 
-Our weather station on the top of Guyot Hall is Vaisala weather transmitter
+The weather station on the top of Guyot Hall is Vaisala weather transmitter
 WXT530 series. It measures six weather parameters of air pressure,
 temperature, humidity, rainfall, wind speed, and wind direction. The
 rainfall is measured using an acoustic Vaisala RAINCAP Sensor, which helps
 avoid the complications of flooding, wetting, and evaporation losses
-\cite[]{Vaisala}.
+\cite[]{Vaisala}. In Figure~\ref{daily}, the fluctuations of 
+meteorological variables occurs throughout the day.   
 
 Air temperature is the temperature that the thermometer measures when
 exposed to the air, while sheltered from direct solar radiation.
 Atmospheric pressure is the pressure exerted by the atmosphere due to
 gravitational attraction on the air column above a point in question
 \cite[]{AMS}. Relative humidity is the ratio of vapor pressure to saturation
-vapor pressure with respect to water \cite{AMS}.  This means that two air
+vapor pressure with respect to water \cite[]{AMS}.  This means that two air
 parcels can hold the same amount of water vapor, but if one air parcel is
 warmer than the other parcel, the higher temperature air parcel has a lower
-relative humidity than the lower temperature air parcel, since warmer air
+relative humidity than the lower temperature air parcel because warmer air
 has a higher saturation vapor pressure for water.  Precipitation
 accumulation is the amount of water substance that has fallen at a given
 point over a specified period of time \cite[]{AMS}.
@@ -129,31 +130,31 @@ point over a specified period of time \cite[]{AMS}.
 % FJS BASIC CLIMATOLOGY FIGURES TEMPERATURE, PRECIPITATION, RELHUM
 
 From the data analyzed, the following is the climatology of Princeton from
-2017 to 2021. Looking at Figure~\ref{Clim1}, we see that we have temperature
+2017 to 2021. Looking at Figure~\ref{Clim1}, temperature
 and precipitation that varies throughout the year. Temperatures start
 increasing before peaking in July, before decreasing until January. This is
 consistent with the fact that Princeton has four seasons, which shows cold
-winters, warm summers, and mild Spring and Fall. At the same time, there is
-more precipitation in the Spring and Summer compared to the relative lack of
-precipitation in the Fall and Winter.
+winters, warm summers, and mild spring and fall. At the same time, there is
+more precipitation in the spring and summer compared to the relative lack of
+precipitation in the fall and winter.
 
 The month with the lowest average precipitation is January, at an average
 monthly precipitation of 44~mm, whereas the month with the highest average
 precipitation is July with 123~mm.
 
 Figure~\ref{Temp_range}, shows that the ranges of temperature are not equal
-throughout the months. For example, Winter months of January and Feburary
+throughout the months. For example, winter months of January and Feburary
 have a big range that spans from about $20 ^\circ $C to $-10
-^\circ$C. Meanwhile, we have Summer months such as July and August, whose
+^\circ$C. Meanwhile, summer months such as July and August, whose
 range of temperatures is smaller, from about $30 ^\circ $C to about $15
 ^\circ $C.
 
-We also see that relative humidity for Princeton is higher in the months of
+The relative humidity for Princeton is higher in the months of
 August to October, whereas the lowest relative humidity seems to be in the
-months of March and April.  With Figure~\ref{RH_range}, we can see that all
+months of March and April.  With Figure~\ref{RH_range}, all
 the months have similar upper extremes of about 90\% for relative humidity,
 which can indicate precipitation. At the same time, the range for relative
-humidity is largest in the Spring time, with March, April, and May seem to
+humidity is largest in the spring time, with March, April, and May seem to
 have a range between 15\% to 90\% for relative humidity, with caution that
 this is just data from 3 years.
 
@@ -164,13 +165,13 @@ pressure are all pretty close to each other ranging from about 1.00~bar to
 1.01~bar. The more interesting aspects of atmospheric pressure comes from
 the range of atmospheric pressure, where the months of May to September all
 seem to have a small range that vary between 0.995~bar to about
-1.02~bar. Meanwhile we have months like October, which have a larger range
+1.02~bar. Meanwhile months like October, which have a larger range
 of atmospheric pressure, which ranges from 0.97~bar to 1.03~bar. Clearly
 these low atmospheric pressure must come from an intense low pressure that
-passed near Princeton and it turns out that for the month of October from
-2017-2020, we see that the values between 0.97~bar to 0.985~bar represent
+passed near Princeton. It turns out that for the month of October from
+2017-2020, the values between 0.97~bar to 0.985~bar represent
 the 0 to 1st percentile of all atmospheric pressures for the month of
-October, so they are extremely low pressures. Other months such as November
+October, so they are relatively low pressures. Other months such as November
 to February have relatively large ranges for atmospheric pressure as well.
 \clearpage
 \begin{figure}[b]
@@ -225,7 +226,7 @@ sequence of \textbf{duration} $d_j\ge \tau$ containing contiguous nonzero
 precipitation measurements $e_i>0$, flanked left and right by zeros,
 $e_i=0$, and where $\tau$ is in minutes \cite[]{Eagleson}.
 
-Furthermore, I define a precipitation \textbf{non-event} $N_j^\tau$, as
+Furthermore, I define a non-precipitation \textbf{event} $N_j^\tau$, as
 having a contiguous set of zeros, $e_i=0$, whose combined duration exceeds
 $\tau$, flanked left and right by non-zero values, $e_i=0$ \cite{Eagleson}.
 % Basically we want the hand-drawn figure shown here!
@@ -246,11 +247,11 @@ February. `Winter' of a certain year contains December of the previous
 year. Spring will be March, April, and May. Summer is June, July, and
 August. Fall is September, October, November.
 
-These following histograms show the distribution of precipitation event
+The following histograms show the distribution of precipitation event
 duration in terms of minutes and shows the different duration distributions
 per season. For precipitation and non-precipitation events, $\tau = 1$~min,
-which means we will be recording all precipitation events that are 1 minute
-or longer in duration. This covers all potential precipitation events.
+which means all precipitation and non-precipitation events that are 1 minute
+or longer in duration accounted for. 
 
 \clearpage
 \begin{figure}[t]
@@ -259,8 +260,8 @@ or longer in duration. This covers all potential precipitation events.
   \caption[Precipitation histogram for 2017 broken down by
     season]{\label{p2017} Distribution of precipitation duration in 2017,
     with a breakdown by seasons. The minimum duration is $\tau = 1$~min.
-    Note that data collection began on 16 July 2017. Which means we only
-    have part of Summer and all of the fall data.  }
+    Note that data collection began on 16 July 2017. Which means only
+    part of summer and all of the fall data are represented.  }
 \end{figure}
 \begin{figure}[b]
   \centering
@@ -305,7 +306,7 @@ or longer in duration. This covers all potential precipitation events.
           by season]{\label{np2017} Distribution of non-precipitation event
           duration in 2017, with a breakdown by seasons. The minimum
           duration is $\tau = 1$~min. Note that data collection began on 16
-          July 2017, which means that Summer is only partially complete.}
+          July 2017, which means that summer is only partially complete.}
 \end{figure}
 \begin{figure}[b]
 	\centering
@@ -382,7 +383,7 @@ or longer in duration. This covers all potential precipitation events.
 These histograms show that the smallest duration events for both
 nonprecipitation and precipitation events are the most numerous as seen with
 the largest bar in the bins that contain 1 minute to 2 minute durations. The
-frequency of duration decreases as we increase the duration bins. At the
+frequency of duration decreases as duration bins increase in value. At the
 same time, there are differences between the precipitation and
 non-precipitation events: the upper limit for duration of precipitation
 events are about 300 to 400 minutes. However, the upper limit for duration
@@ -402,16 +403,14 @@ less intense precipitation events.
 
 \subsection{Methods}\label{sec:methods}
 
-Once we have characterized the climatology of precipitation, we will start moving towards building predictive models for precipitation. These models need a way to compare with each other as well as comparing the model results to the observed data. Such
-accuracy we shall use is to see whether the model and the observed data match in terms of whether there exists precipitation at a given minute. We
-ignore the non-precipitation when looking at accuracy because by matching
-non-precipitation minutes in both the model and the observed data, we end up
-getting an accuracy of over 90\%, which is not useful. So, if the model and the
+With the climatology of precipitation characterized,the building predictive models for precipitation can be started. These models need a way to compare with each other as well as comparing the model results to the observed data. Such accuracy can be defined to check whether the model and the observed data match in terms existing precipitation at a given minute. The non-precipitation events should be ignored when looking at accuracy because by matching non-precipitation minutes in both the model and the observed data, the accuracy is over 90\%, which is not as useful. So, if the model and the
 observed data do not match in terms whether there exists precipitation, this
-contributes to the model being deemed less accurate. We can have a stricter
-definition of accuracy, in which we set up the precipitation condition, in
-addition to saying that the intensity must match too, otherwise we can not
-say the model and observed data match. This stricter definition of model
+contributes to the model being deemed less accurate. The accuracy will also measure the performance of the model, so the correct minutes to overall amount of minutes will be based on the model's total precipitation duration. 
+
+%We can have a stricter
+%definition of accuracy, in which we set up the precipitation condition, in
+%addition to saying that the intensity must match too, otherwise we can not
+%say the model and observed data match. This stricter definition of model
 accuracy might be used when thinking about whether the intensity is being matched as well. Although this strict definition will not be used for this paper. 
 
 \subsection{Results}\label{sec:apcr}
@@ -432,7 +431,7 @@ I used an exponential fit to the frequency-duration histograms for all 1253
 events $E_j^2$, i.e. $E_j^\tau$ where $\tau=2$~min. For all the other years,
 as shown in Figures~\ref{p2020}, \ref{p2018} and~\ref{p2017}, I used a
 similar procedure. Excluding the first interval shown, focusing on events of
-duration greater than or equal to 2~min, we propose an exponential model for
+duration greater than or equal to 2~min, I propose an exponential model for
 the histogram, with the following equation:
 \begin{equation}\label{expod}
   F = \beta \,e^{\alpha d},
@@ -443,7 +442,7 @@ unitless frequency coefficient and $\alpha$ is the exponential coefficient
 coefficients~$\beta$ and the exponential coefficients~$\alpha$ from looking
 at the yearly frequency of precipitation duration.
 
-We shall also propose the following equations which will also describe an
+I shall also propose the following equations which will also describe an
 exponential model for the histogram regarding non-precipitation events,
 which is described by the following equation:
 \begin{equation}\label{expod_np}
@@ -616,7 +615,7 @@ intensity of precipitation events.
 
 Table~\ref{firsttable} show that $\beta$ values are similar to each other
 with the exception of 2017, which only had partial data starting in the
-Summer. Even with the partial data that we have from 2017 and 2020, it is
+summer. Even with the partial data that I have from 2017 and 2020, it is
 clear that the $\alpha$ values are similar to each other. Focusing on the
 years with complete data, 2018 and 2019, it is clear that yearly variations
 exist between them. All $\alpha$ values are negative.\\[-1.5em]
@@ -625,14 +624,14 @@ exist between them. All $\alpha$ values are negative.\\[-1.5em]
 
 \input{firsttable_100}
 
-In the seasonal variations, we see that Summer has $\alpha$ values that are
+In the seasonal variations, summer has $\alpha$ values that are
 less negative compared to the other seasons as well as having a lower
-$\beta$ compared to the other seasons.  The Spring appears to mimic the
-Winter in that there are a lot of preciptiation events, but also shares the
-quality of Summer in having fairly high precipitation totals. The Fall
-shares the Summer quality of having relatively few preciptation events, but
+$\beta$ compared to the other seasons.  The spring appears to mimic the
+winter in that there are a lot of preciptiation events, but also shares the
+quality of summer in having fairly high precipitation totals. The fall
+shares the summer quality of having relatively few preciptation events, but
 tends to have smaller precipitation totals, so its intensity is less than
-the Summer, but greater than the winter precipitation intensity.
+the summer, but greater than the winter precipitation intensity.
 
 Compared to Table~\ref{firsttable}, Table~\ref{firsttable_100} seems to show
 $\beta$ values that are consistently lower when considering the 100th
@@ -653,8 +652,8 @@ coefficients of the precipitation event duration, $\alpha$.
 Some of this difference is explained by the fact that the durations of
 non-precipitation events range from 1 minute to over 2000 minutes, whereas
 the durations of precipitation events range from 1 minute to just over
-300--400 minutes. Also, how we bin the durations for both precipitation and
-non-precipitation events will affect how we get the fits.
+300--400 minutes. Also, how I bin the durations for both precipitation and
+non-precipitation events will affect how the fits are obtained.
 
 Once again, taking into the account the most extreme durations for
 non-precipitation events lowers the frequency value of $\gamma$ and the
@@ -678,16 +677,16 @@ The differences between Table~\ref{fourthtable} and
 Table~\ref{fourthtable_100} show that the exponential coefficients for
 intensity clearly are changed most when the 98th percentile or the 100th
 percentile are included in the fit. First, the $\epsilon$ value increases
-when we use the 100th percentile rather than the 98th
-percentile. Furthermore, we see that the $\zeta$ value also becomes less
+when I use the 100th percentile rather than the 98th
+percentile. Furthermore, the $\zeta$ value also becomes less
 negative, but very dramatically compared to non-precipitation and
 precipitation event durations.
 
-However, Table~\ref{secondtable} shows that the Summers also have a lot of
+However, Table~\ref{secondtable} shows that the summers also have a lot of
 precipitation. There may be fewer precipitation events, but their total
 precipitation is higher, hence they have a higher intensity.  For the
-Winter, the $\alpha$ are the furthest from 0 and the $\beta$ are
-large. However, Winters tend to have the lowest values for total
+winter, the $\alpha$ are the furthest from 0 and the $\beta$ are
+large. However, winters tend to have the lowest values for total
 precipitation and the combination of lots of preciptation events and low
 precipitation totals results in the lowest intensities among the four
 seasons.
@@ -697,7 +696,7 @@ seasons.
 
 \section{Simulation for Prediction}\label{sec:sfp}
 
-With the exponential distributions calculated from the dataset, we are able
+With the exponential distributions calculated from the dataset, I am able
 to turn their parameters (precipitation duration, non-precipitation
 duration, and intensity) into a climatology-based model to simulate
 precipitation and compare such model results to the actual precipitation
@@ -705,28 +704,30 @@ data.
 
 \subsection{Method}\label{sec:sfp_m}
 
-To make a baseline model, we need to first use the exponentials that we
-calculated for the duration of the precipitation event, intensity of the
+To make a baseline model, the exponentials are used to
+calculate the duration of the precipitation event, intensity of the
 precipitation event, and duration of the non-precipitation events. However,
-we also need to manually add back in the lowest durations and lowest
-intensities, since we excluded those values when calculating the exponential
-distributions. To perform the simulation, we select bins proportionally to
+I also need to manually add back in the lowest durations and lowest
+intensities, since I excluded those values when calculating the exponential
+distributions. To perform the simulation, I select bins proportionally to
 their probability under the distribution, and then pick values from a
 uniform distribution with those bins. In order to judge the accuracy of the
-model, we count how often model and data agree in the instances where either
+model, I count how often model and data agree in the instances where either
 model or data have precipiattion present.  This measure of accuracy is
 better than simply counting where data and models agree, because
 non-precipitation events account for 97\% of the interval under
 consideration, in which case the acccuracy would be skewed towards the fact
 that most of the time series has no precipitation. 
-Another metric we can consider is the mean absolute error(MAE), which is measured when looking time series forecasts. Thus both precipitation accuracy and mean absolute error will be calculated for all the following models to come. 
+Another metric that is used is the mean absolute error(MAE), which is measured
+when looking time series forecasts. Thus both precipitation accuracy and mean 
+absolute error will be calculated for all the following models to come. 
 
 \clearpage
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.65\textwidth]{Figures/better_one_run.png}
   \caption[First run using Summer 2018 climatology] {\label{crudemodel} One
-    model run using the 98-percentile exponentials calculated from Summer
+    model run using the 98-percentile exponentials calculated from summer
     2018.}
 \end{figure}
 \begin{figure}[b]
@@ -734,7 +735,7 @@ Another metric we can consider is the mean absolute error(MAE), which is measure
   \includegraphics[width=0.65\textwidth]{Figures/best_one_run.png}
   \caption[Modified run using Summer 2018 climatology] {\label{crudermodel}
     A model run using the 100th percentile exponentials calculated from
-    Summer 2018. The modeled precipitation looks closer to actual
+    summer 2018. The modeled precipitation looks closer to actual
     precipitation. However, the details show they are different: the
     accuracy is only 2.6\% and the total precipitation is still
     underestimated.}
@@ -745,17 +746,17 @@ Another metric we can consider is the mean absolute error(MAE), which is measure
 \subsection{Results}\label{sec:sfp_r}
 
 Running the model one hundred times lets us look at what average total
-precipitation the model yields. It yields 215~mm compared to the Summer 2018
-total of 268~mm in the data that we used for the exponential
+precipitation the model yields. It yields 215~mm compared to the summer 2018
+total of 268~mm in the data that was used for the exponential
 fitting. Furthermore, the accuracy of model precipitation matching model
-precipitation is only 2.0$\%$ and the MAE is 0.0035~mm/hour. Though running the model 100 times, we end up getting 2.5\%. Looking at Figure~\ref{crudemodel}, we see that the model precipitation total is lower than the actual precipitation observed in the Summer of 2018. Furthermore, the precipitation seems to be more frequent compared to the observed 2018 Summer data. The usage of 98th percentage for all parameters, which are intensity, precipitation event
+precipitation is only 2.0$\%$ and the MAE is 0.0035~mm/hour. Though running the model 100 times, the model precipitation is 2.5\%. Looking at Figure~\ref{crudemodel}, the model precipitation total is lower than the actual precipitation observed in the summer of 2018. Furthermore, the precipitation seems to be more frequent compared to the observed 2018 summer data. The usage of 98th percentage for all parameters, which are intensity, precipitation event
 duration, and non-precipitation event duration, shows that the intensity for
 the model is generally good, except the model lacks the most intense values
 as expected from the using up to the 98th percentile.
 
 It is clear that despite the better fit that is obtained when the
-exponential distributions are fit using data up to the 98th percentile only,
-we should use the full 100th percentile of the data for the model fitting,
+exponential distributions are fit using data up to the 98th percentile,
+the full 100th percentile of the data for the model fitting is useful as well,
 since the extremes, such as the big 2000-minute non-precipitation event, are
 very important. However, doing that, the precipitation accuracy only goes up 4.0\% and the MAE is 0.0028~mm/hour, as shown in Figure~\ref{crudermodel}. Taking 100 model runs end up giving a precipitation accuracy of 2.6\%. The model total precipitation also gives 118~mm, which is much smaller than the observed precipitation total. 
 
@@ -767,7 +768,7 @@ limited success. The accuracy of predicting precipitation, which hovers
 around 3\%, shows that no matter how well the three parameters match the
 data distributions, simulated time series may not be very accurate.
 
-At the same time, we have a dilemma in which using the 98th percentile
+At the same time, a dilemma arises in which using the 98th percentile
 exponentials will return a preciptiation time series that looks nothing like
 the observed model, but is close to the value of total precipitation for the
 observed model. Using the 100th percentile exponentials will yield a
@@ -777,15 +778,15 @@ time series, but will have much less total precipitation compared to the
 tells us that there are other methods to look at in order to get a better
 model to predict precipitation.
 
-Figure~\ref{crudesmodel_whole2018} is interesting as we are trying to
-compare the observed 2018 precipitation data to a model run from using the
-calculated exponentials for the three parameters we sought to analyze from
+Figure~\ref{crudesmodel_whole2018} is interesting as comparing
+the observed 2018 precipitation data to a model run from using the
+calculated exponentials for the three parameters I sought to analyze from
 the precipitation data. It is clear that the observed data shows that there
 are seasonal variations do matter as they have different patterns.  Thus it
 validates the notion to split the analysis of the exponentials into the four
 seasons, as although its possible to have intense precipitation to occur in
-the winter, it is not at all typical of what we usually see in the winter
-and intense precipitation would usually occur in Summer.\\[1em]
+the winter, it is not at all typical of what is usually seen in the winter
+and intense precipitation would usually occur in summer.\\[1em]
 
 \begin{figure}[h!]
   \centering
@@ -808,16 +809,14 @@ and intense precipitation would usually occur in Summer.\\[1em]
 % FJS take into account the time frame for lagged prediction
 
 % Why you need it. 
-Although we have one baseline model for predicting precipitation based on
+Although I have one baseline model for predicting precipitation based on
 seasonally adjusted historical patterns of precipitation itself, it only
 makes point-based instantaneous predictions.  At 2--3\%, its prediction
 skill is not very high. Other meteorological variables matter as well, as
 will the lead time used for the prediction, and the range of history upon
 which it is based.
 
-Two ways to forecast weather, one in which you base forecasting from having lots of emperical data from climatology and weather records. The other is the dynamics-based forecasts, which involve dynamics equation that govern the atmosphere \cite[]{WF}. Such forecasts use numerical weather prediction (NWP),
-which involves simulating the atmosphere and its conditions into the
-future. These models are incredibly complex as they need initial conditions
+There are two ways to forecast weather, one is you base forecasting from having lots of emperical data from climatology and weather records. This is the method I had been using up to this point. The other is  dynamics-based forecasts, which involve dynamics equation that govern the atmosphere \cite[]{WF}. Such forecasts use numerical weather prediction (NWP), which involves simulating the atmosphere and its conditions into the future. These models are incredibly complex as they need initial conditions
 (often from observations), boundary conditions, and the usage of governing
 equations such as physics conservation laws and the ideal gas law. Some
 complications of NWP include its inability to simulate small-scale physics
@@ -825,12 +824,16 @@ that can affect outcomes, as well as the usage of ensembles, which gives a
 variety of predictions based on the small changes in initial conditions
 \cite[]{NWP}. 
 
+Now machine learning has arisen as a way to start to evaluate NWPs, such as
+predicting at the uncertainity generated by weather forecasts, which 
+underperforms NWP uncertainty, it is less computational intensive and beats
+other non-NWP methods in calculating uncertainity \cite[]{Scher}.
 Machine learning can look at what conditions could yield us precipitation
 and how intense it is, which can be less computationally intensive than NWP,
-and can give us a good guide on what to expect if we encounter such
+and can give us a good guide on what to expect given certain
 conditions.  A method like decision tree can be used to select variables,
 assess their relative importance, handle missing values, predict, and
-manipulate data. Decision trees are made up of nodes, of which we have a
+manipulate data. Decision trees are made up of nodes, of which there is the
 root node, which represents a choice and a leaf node which represents the
 final results of the decision tree. Branches are the choices that are made
 from the root nodes \cite[]{DT}.
@@ -841,25 +844,24 @@ from the root nodes \cite[]{DT}.
 
 Two methods from machine learning can be used for predicting
 precipitation. Linear regression and decision tree are used to predict
-precipitation based on the other parameters that we give to the
+precipitation based on the other parameters that are given to the
 model. Linear regression computes the best fit based on the variables you
 give and will yield a linear model that relates input data to outcomes.
 Decision trees divide the data up into different sections based on certain
-criteria. The tree can be as small or as big as you want, but that will
-affect how the model predicts what you want.
+criteria. The decision tree can be made to any size, although the size will 
+affect how the model divides the data and ultimately the regression. 
 
-% We also have neural networks, which inputs data and outputs data and can
-% be used to simulate
+
 
 \subsection{Results}
 
 Here is a traditional multiple linear regression, training the linear
 regression model using 2018 data and trying to predict 2019 precipitation.
 
-As we see, the linear regression model is not good at predicting precipitation data. When inputting the 2019 data into the linear regression model, we see consistent precipitation that is less intense. Now, precipitation does tend to see the most precipitation events having a small intensity, however what does not match is the fact that the linear regression model does not have any precipitation events that are more intense than 0.01~mm/minute. The accuracy of predicting precipitation for the model is calculated to be 4.7~\%, which is better than the accuracy from using exponentials to generate random precipitation events. The MAE for the linear regression model is 0.004~mm/hour.
+The linear regression model is not good at predicting precipitation data. When inputting the 2019 data into the linear regression model, the precipitation that is predicted has a very small intensity. Now, precipitation does tend to see the most precipitation events having a small intensity, however what does not match is the fact that the linear regression model does not have any precipitation events that are more intense than 0.01~mm/minute. The accuracy of predicting precipitation for the model is calculated to be 4.7~\%, which is better than the accuracy from using exponentials to generate random precipitation events. The MAE for the linear regression model is 0.004~mm/hour.
 
 
-With decision tree, we have a better predictor of precipitation and how intense the precipitation event is. We see more intense precipitation events as well as less intense precipitation events present when putting in 2019 data to put out a time series for precipitation. It does seem like the 2019 predicted data seems to have more intense precipitation that occur more often compared to the observed data. This is confirmed to be the case as we found 6685 minutes of precipitation intensity of 0.1 mm/minute or greater in the 2019 predicted time series. For the observed 2019 precipitation data, we have 2496 minutes of precipitation intensity of 0.1 mm/minute. Also, the 2019 predicted time series ended up having a precipitation total of 2897~mm for the entire year, which is three times higher than the observed 2019 total precipitation. For the accuracy of predicting precipitation, we end up having a total of 11.9\%. The MAE for the Decision Tree model is 0.007~mm/hour.
+Decision tree is a better predictor of precipitation and how intense the precipitation event is. There are more intense precipitation events as well as less intense precipitation events present when putting in 2019 data to put out a time series for precipitation. The 2019 predicted data have more intense precipitation that occur more often compared to the observed data. There are 6685 minutes of precipitation intensity of 0.1 mm/minute or greater in the 2019 predicted time series. For the observed 2019 precipitation data, there are 2496 minutes of precipitation intensity of 0.1 mm/minute. Also, the 2019 predicted time series ended up having a precipitation total of 2897~mm for the entire year, which is three times higher than the observed 2019 total precipitation. The accuracy of predicting precipitation for decision tree is 11.9\%. The MAE for the decision tree model is 0.007~mm/hour.
 
 \begin{figure}[t]
   \centering
@@ -878,9 +880,8 @@ With decision tree, we have a better predictor of precipitation and how intense 
 	\caption[ML Decision Tree regression run] {\label{ML_DT}Training the
           model using 2018 data and then using the \textbf{decision tree}
           model to predict 2019 data. Decision tree does a better job in
-          matching the patterns that we see with the actual values. At the
-          same time, we will need to see what training the model more would
-          do to predictions.}
+          matching the patterns that are seen with the actual values. At the
+          same time, the precipitation accuracy from this one run is 11.9\%}
 \end{figure}
 
 \begin{figure}[th!]
@@ -908,43 +909,43 @@ With decision tree, we have a better predictor of precipitation and how intense 
 It is clear that using linear regression will not do a good job in
 predicting precipitation. The low precipitation intensities that come
 about is not a problem if not for the fact that there are no intensities
-that are larger than 0.05 mm/hour. The extreme precipitation intensities
+that are larger than 0.01 mm/hour. The extreme precipitation intensities
 do exists and can contribute to the total precipitation. In fact, the
 linear regression model seems to have events that correspond to negative
-precipitation intensity, which is physically impossible. Despite a lot of
-these issue with the linear regression model, the total precipitation
-does get close to the actual precipitation total of 2019. 
+precipitation intensity, which is physically impossible. It is a surprise that
+the total precipitation does get close to the actual precipitation total of 2019. 
 
 One worry is with decision trees, if you have too many branches, it can
-result in overfitting the data, which is not ideal. We may have a case
-overfitting, due to the fact that the total precipitation from the decision tree model gave us 2897~mm, which is 3 times higher than the total observed precipitation of 2019. At first glance, it seems interesting that the linear regression model has a lower precipitation and also a lower MAE compared to the decision tree model. However just looking at how much smaller in magnitude the linear regression model has for the intensity of precipitation and the fact that most of the observed precipitation data is no precipitation at all, so calculating the MAE for linear regression will end up smaller, compared to the decision tree. 
+result in overfitting the data, which is not ideal. Our decision tree may
+be overfitting, since the total precipitation from the decision tree model gave us 2897~mm, which is 3 times higher than the total observed precipitation of 2019. At first glance, it seems interesting that the linear regression model has a lower precipitation and also a lower MAE compared to the decision tree model. However just looking at how much smaller in magnitude the linear regression model has for the intensity of precipitation and the fact that most of the observed precipitation data is no precipitation at all, so calculating the MAE for linear regression will end up smaller, compared to the decision tree. 
 
-When looking at how many minutes precipitation takes up, the observed 2019 precipitation has 17,000 minutes of precipitation, while the decision tree model has 32,000 minutes of precipitation, and the linear regression model has 362,000 minutes of precipitation. Of course the linear regression model has a maximum precipitation intensity of 0.01~mm/minute. Since the accuracy is calculated from the model precipitation minutes, we see that about 3200 minutes from DT matches with the observed precipiation and that 17,000 minutes of precipiation from the linear regression model matches with the observed precipitation data. That means we see that the linear regression makes a lot of predictions of precipitation when there is not any precipitation, which explains the lower precipitation accuracy, even if it captures all of the observed precipitation. 
+When looking at how many minutes precipitation takes up, the observed 2019 precipitation has 17,000 minutes of precipitation, while the decision tree model has 32,000 minutes of precipitation, and the linear regression model has 362,000 minutes of precipitation. Of course the linear regression model has a maximum precipitation intensity of 0.01~mm/minute. Since the accuracy is calculated from the model precipitation minutes, 3200 minutes from DT matches with the observed precipiation and that 17,000 minutes of precipiation from the linear regression model matches with the observed precipitation data. The linear regression makes a lot of predictions of precipitation when there is not any precipitation, which explains the lower precipitation accuracy, even if it captures all of the observed precipitation. 
 
 \clearpage
 
 \section{Deep Learning for Prediction}\label{sec:neural}
 
 % Why? 
-Decision tree and linear regression do lack one thing, in which that time does not matter, so I can put in the data in random order and should get the same results. This should not be a case, in which the data was collected at a specific time. Thus we try using neural networks.
+Decision tree and linear regression do lack one thing, in which that time does not matter, so I can put in the data in random order and should get the same results. This should not be a case, in which the data was collected at a specific time. Thus I try using neural networks.
 
 Artificial Neural Networks(ANN) are parallel-distributed information processing system that resembles biological neural network of the human brain \cite[]{ANN}.
-With \cite{Norway}, the usage of Deep Learning on weather data to 
-predict temperature hours ahead with good accuracy. However, a variable like temperature is much easier to predict because of the cyclical nature of temperature in both the daily cycle and the annual cycle. LSTM is used because of how it is able to store some memory of previous aspects of the neural network \cite[]{LSTM}.  
+With \cite{Norway}, the usage of deep learning on weather data to 
+predict temperature hours ahead with good accuracy. However, a variable like temperature is much easier to predict because of the cyclical nature of temperature in both the daily cycle and the annual cycle. LSTM is used because of how it is able to store some memory over an arbitrary amount of time\cite[]{LSTM}. Furthermore, LSTM are good at capturing long-term temporal depedences and the memory cell can maintain its state over time, with gates regulating the flow of information in and out of the cell \cite[]{LSTM_a}. 
+  
 \subsection{Method}
 ANN are made up of three parts. One part is the input layer, which includes a number of input nodes. The second part is one or more hidden layers which include the activation function. The third part is a number of output layer nodes \cite[]{ART}. 
 
 
-We will also split the data into at two different datasets, one being the training set and the other being the test dataset. The training dataset is used to fit the model and will consist of 70\% of the data. The test dataset is used to put into the trained model and to evaluate how accurate the model is. To measure how good the model is, we will use precipitation accuracy as well. 
+The data is split into at two different datasets, one being the training set and the other being the test dataset. The training dataset is used to fit the model and will consist of one year of the data. When running the model to get the fit based on the training set, the "loss" is calculated by the MAE and a lower MAE is preferred. The test dataset is used to put into the trained model and to evaluate how accurate the model is. To measure how good the model is, precipitation accuracy and MAE are the metrics to use.  
 
 
+\clearpage
 
 \subsection{Results}
-For the LSTM by hour model, we end up getting a precipitation accuracy of 9.9\% and an MAE of 0.13~mm/hour. For the LSTM by minute model, we end up getting a precipitation accuracy of 16.8\% and an MAE of 0.0036~mm/minute. Furthermore, we see the behaviors of LSTM better reflect the observed precipitation. 
-\clearpage
+
 \begin{figure}[th!]
 	\centering
-	\includegraphics[width = 0.7\textwidth]{Figures/LSTM_hour.png}
+	\includegraphics[width = 0.65\textwidth]{Figures/LSTM_hour.png}
 	\caption[Comparing LSTM results to observed precipitation in 2019 by hour]{\label{LSTM_hour} Comparing the results of LSTM by hour to the observed
 		 precipitation values of the year 2019.
 	}
@@ -952,7 +953,7 @@ For the LSTM by hour model, we end up getting a precipitation accuracy of 9.9\% 
 
 \begin{figure}[bh!]
 	\centering
-	\includegraphics[width = 0.7\textwidth]{Figures/LSTM_minute.png}
+	\includegraphics[width = 0.65\textwidth]{Figures/LSTM_minute.png}
 	\caption[Comparing LSTM results to observed precipitation in 2019 by minute]{\label{LSTM_minute}
 		Comparing the results of LSTM by minute to the observed
 		precipitation values of the year 2019.
@@ -975,13 +976,14 @@ For the LSTM by hour model, we end up getting a precipitation accuracy of 9.9\% 
 	}
 \end{figure}
 \clearpage
+For the LSTM by hour model, we end up getting a precipitation accuracy of 9.9\% and an MAE of 0.13~mm/hour. For the LSTM by minute model, we end up getting a precipitation accuracy of 16.8\% and an MAE of 0.0036~mm/minute. Furthermore, we see the behaviors of LSTM better reflect the observed precipitation, with the minute input doing better than the hourly input.  
+
 \subsection{Discussion}
 The accuracy of the LSTM model when inputting minute data is higher than the accuracy of the LSTM model when inputting hourly data. However, there are many caveats. In both cases, the predicted precipitation from the LSTM model had more precipitation minutes than actual observed precipitation minutes. Now I figured that many of these cases could be precipitation that lie between 0 mm/minute and 0.01 mm/minute in intensity. Now by rounding the data to the nearest hundredth intensity helped decrease the amount of precipitation minutes that existed in the minute LSTM model. However, there was still a lot more precipitation minutes in the LSTM model than the observed data. This suggests that the LSTM predicts many precipitation events that are not supported by the actual observed data. 
-Furthermore, this helps confirm the idea from \cite{CNN} that more frequent inputs improves the accuracy of forecasts. They used the difference between hourly and daily inputs, while we used minute and hourly inputs. Obviously, minute inputs are very numerous and would take a much longer time running such inputs into models in general compared to the hourly inputs. 
 
-The better accuracy is also reflected in the pattern between the predicted LSTM and the observed data. In Figure~\ref{LSTM_minute_compare}, we have a pattern that more closely aligns to a diagonal, which would represent that both the predicted and observed data are of the same precipitation intensity. This is in stark contrast to Figure~\ref{LSTM_hour}, which does not have a good overlap between predicted and observed values and looks closer to Figure~\ref{DT_compare} of poor fits, particularly values that are larger than 0-0.01~mm. 
+Furthermore, this helps confirm the idea from \cite{CNN} that more frequent inputs improves the accuracy of forecasts. They used the difference between hourly and daily inputs, while I used minute and hourly inputs. Obviously, minute inputs are very numerous and would take a much longer time running such inputs into models in general compared to the hourly inputs. 
 
-
+The better accuracy is also reflected in the pattern between the predicted LSTM and the observed data. In Figure~\ref{LSTM_minute_compare}, there is a pattern that more closely aligns to a straight diagonal line, which would represent that both the predicted and observed data are of the same precipitation intensity. This is in stark contrast to Figure~\ref{LSTM_hour}, which does not have a good overlap between predicted and observed values and looks closer to Figure~\ref{DT_compare} of poor fits, particularly values that are larger than 0-0.01~mm. 
 \clearpage
 
 
@@ -997,17 +999,23 @@ duration, and non-precipitation event duration. It is clear from the
 model based on exponential distribution that the extremes are needed to
 get a similar looking time series for precipitation. However, there are
 other distributions to consider especially concerning the extremes for
-our three parameters. For extreme precipitation intensity, we see that in
-hydrology that the generalized extreme value(GEV) distribution is used.
-We see that such distribution is used to confirm the behavior of the tail
-of rainfall extremes as seen in \cite[]{Hydro_dist}, which confirmed
-previous studies about the distribution of extreme rainfall.  
+our three parameters. In hydrology,  extreme precipitation intensity uses 
+the generalized extreme value (GEV) distribution. This distribution is 
+used to confirm the behavior of the tail of rainfall extremes as seen 
+in \cite[]{Hydro_dist}, which confirmed previous studies about the 
+distribution of extreme rainfall.  
 
-It is also not surprising that using the exponentials to make a model that tries to simulate the behavior of the season also does not do too well in terms of accuracy. As we are just simply replicating structure based on the data, the model is not matching with the observed data in any sense. Thus any matches between the model and the observed data are just coincendences. 
+It is also not surprising that using the exponentials to make a model 
+that tries to simulate the behavior of the season also does not do too 
+well in terms of accuracy. By replicating structure based on the data, 
+the model is not trying to match observed precipitation events. 
+Thus any matches between the model and the observed data are just 
+coincendences. At the same time, it is great that the structures can be
+replicated, even if the exact precipitation event can't be predicted. 
 
-Linear regression and decision tree give interesting results, where linear regression can give you a closer total precipitation amount, but decision tree has a larger precipiation accuracy as well as being closer in terms of precipitation minutes that the observed 2019 precipitation data had. 
+Linear regression and decision tree give interesting results, where linear regression can give you a closer total precipitation amount, but decision tree has a larger precipiation accuracy as well as being closer in terms of precipitation minutes that the observed 2019 precipitation data had. Linear regression having a lower MAE compared to the decision tree regression was a surprise at first, but realizing that linear regression being close to 0~mm, meant that its MAE would be calculated to be low, even if it encountered a relatively high precipitation intensity. However, does that mean MAE is not as good of a metric? Hard to say, as the nuances might be with linear regression rather than MAE. 
 
-LSTM usage is interesting because it clearly has the most accurate graph, in which Figure~\ref{LSTM_minute} has the LSTM prediction and the observed data to be very similar to each other, with careful observation to see that the two are not mirror images of each other. At the same time, this similarity is less apparent when looking into how many precipitation minutes were found in LSTM minute, predicted way more minutes than the observed precipitation data. 
+LSTM usage is interesting because it clearly has the most accurate graph, in which Figure~\ref{LSTM_minute} has the LSTM prediction and the observed data to be very similar to each other, with careful observation to see that the two are not mirror images of each other. At the same time, this similarity is less apparent when looking into how many precipitation minutes were found in LSTM minute, predicted way more minutes than the observed precipitation data. At the same time, LSTM with hourly input having less precipitation accuracy compared to decision tree using minute input was an unexpected find. However, such comparisons are hard to make given different inputs. The precipitation accuracy did improve when going from decision tree with the minute input to LSTM with minute input. 
 
 Some further work that can be done include, using wind as another weather
 variable to use to predict precipitation, as one can convert wind
@@ -1017,9 +1025,9 @@ interesting path to consider, especially considering that precipitation
 can often be predicted based on whether there is precipitation in other
 stations/locations as well. 
 
-For neural networks, its clear we can also use Auto-Regressive Integrated Moving Average(ARIMA) models. At least for daily weather conditions, ARIMA can be used to forecast meteorological conditions \cite[]{ARIMA}. Future work can implement ARIMA to the weather data to see how it compares to the LSTM model. At the same time, we can explore Convoluted Neural Network (CNN), which had been found to have been better than LSTM in prediction of temperature \cite[]{CNN}. 
+For neural networks, Auto-Regressive Integrated Moving Average(ARIMA) models can be used. At least for daily weather conditions, ARIMA can be used to forecast meteorological conditions \cite[]{ARIMA}. Future work can implement ARIMA to the weather data to see how it compares to the LSTM model. At the same time, Convoluted Neural Network (CNN) can be used as well. CNNs had been found to have been better than LSTM in prediction of temperature \cite[]{CNN}. 
 
-Also looking at the frequency of the most extreme precipitation over a longer period of time may show us climate changing happening in Princeton, as  increasing frequency of the most intense rainfall rates may point to climate change . But also looking at the precipitation may also further confirm the pattern discussed in \cite{Held}, where wetter gets wetter and drier gets drier. In order to even see such a pattern, one would need more data from years in the past to the near present to confirm such a trend. Other work can be done using the exponential nature of the three parameters that we used as seen in \cite{Tucker} in looking drainage basin in the context of erosion from precipitation. 
+Also looking at the frequency of the most extreme precipitation over a longer period of time may show us climate changing happening in Princeton, as  increasing frequency of the most intense rainfall rates may point to climate change . But also looking at the precipitation may also further confirm the pattern discussed in \cite{Held}, where wetter gets wetter and drier gets drier. In order to even see such a pattern, one would need more data from years in the past to the near present to confirm such a trend. Other work can be done using the exponential nature of the three parameters as seen in \cite{Tucker} in looking drainage basin in the context of erosion from precipitation. 
 
 As expected, the exponential model was the least accurate in terms of predicting precipitation, with 2-3\% precipitation accuracy. Linear regression and decision tree do a better job of predicting precipitation, with linear regression having a 4.7\% precipitation accuracy and decision tree having a 11.9\% precipitation accuracy. However both linear regression and decision tree suffer from predicting too many precipitation minutes, which is a problem since most of a precipitation time series will be full of zeros. Finally we look at ANN and using LSTM model for hourly and minute inputs. Hourly inputs for LSTM end up having a precipitation accuracy of 9.9\%, while the minute inputs for LSTM have a precipitation accuracy of 16.8\%. Thus the accuracy does increase as we go from the exponential model to the ML models to ANN. Further work can help improve the accuracy of such forecasts and to understand the factors that improve or degrade such accuracy. 
 %--References

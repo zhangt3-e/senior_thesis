@@ -1,4 +1,4 @@
-\begin{thebibliography}{17}
+\begin{thebibliography}{19}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abrahamsen et~al.(2018)Abrahamsen, Brastein, \& Lie]{Norway}
@@ -39,6 +39,13 @@ Hochreiter, S. \& Schmidhuber, J., 1997.
 \newblock {Long Short-Term Memory}, {\it {Neural Computation}\/}, {\bf 9(8)},
   1735--1780.
 
+\bibitem[{K. Greff and R.K. Srivastava and J. Koutnik and B.R. Steunebrink and
+  J. Schmindhuber}(2017)]{LSTM_a}
+{K. Greff and R.K. Srivastava and J. Koutnik and B.R. Steunebrink and J.
+  Schmindhuber}, 2017.
+\newblock {LSTM: A Search Space Odyssey}, {\it {IEEE Transactions on Neural
+  Networks and Learning Systems}\/}, {\bf 28(10}, 2222 -- 2232.
+
 \bibitem[Koutsoyiannis(2004)]{Hydro_dist}
 Koutsoyiannis, D., 2004.
 \newblock {S}tatistics of extremes and estimation of extreme rainfall: Ii.
@@ -52,7 +59,8 @@ Lee, S., Lee, Y., \& Son, Y., 2020.
 
 \bibitem[Lorenz(1969)]{WF}
 Lorenz, E., 1969.
-\newblock {\it {Bull. Am. Meterol. Soc.}\/}, {\bf 50}, 345--349.
+\newblock {Three Approaches to Atmospheric Predictability}, {\it {Bull. Am.
+  Meterol. Soc.}\/}, {\bf 50}, 345--349.
 
 \bibitem[Murat et~al.(2018)Murat, Malinowska, Gos, \& Krzyszczak]{ARIMA}
 Murat, M., Malinowska, I., Gos, M., \& Krzyszczak, J., 2018.
@@ -67,6 +75,11 @@ Peel, M., Finlayson, B., \& McMahon, T., 2007.
 \bibitem[{PRISM}(2020)]{PRISM}
 {PRISM}, 2020.
 \newblock {PRISM} climate data, http://prism.oregonstate.edu.
+
+\bibitem[Scher \& Messori(2018)]{Scher}
+Scher, S. \& Messori, G., 2018.
+\newblock {Predicting weather forecast uncertainty with machine learning}, {\it
+  Q J R Meteorol Soc.\/}, {\bf 144}, 2830--2841.
 
 \bibitem[Song \& Lu(2015)]{DT}
 Song, Y.~Y. \& Lu, Y., 2015.
